@@ -22,7 +22,7 @@ When reusing the database in your app, docs, or research:
 ```
 Data from the Dolly Legacy Moments Database
 by Dolly Legacy contributors — CC BY 4.0
-https://github.com/YOUR_USERNAME/dolly-legacy
+https://github.com/dat-angel/dolly-legacy
 ```
 
 ## What is licensed?

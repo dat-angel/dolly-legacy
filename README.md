@@ -24,7 +24,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Deploy
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/YOUR_USERNAME/dolly-legacy)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/dat-angel/dolly-legacy)
 
 Or:
 

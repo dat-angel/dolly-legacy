@@ -20,7 +20,7 @@ Under the following terms:
 ```
 Dolly Legacy Moments Database by Dolly Legacy contributors
 Licensed under CC BY 4.0
-https://github.com/YOUR_USERNAME/dolly-legacy
+https://github.com/dat-angel/dolly-legacy
 ```
 
 ## Files
