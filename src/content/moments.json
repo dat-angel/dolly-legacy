@@ -1,0 +1,918 @@
+{
+  "meta": {
+    "name": "dolly-legacy-moments",
+    "version": "1.0.0",
+    "description": "Open curated database of Dolly Parton moments, quotes, philanthropy, and advocacy — for tribute sites, research, and education.",
+    "license": "CC-BY-4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "Dolly Legacy contributors",
+    "repository": "https://github.com/YOUR_USERNAME/dolly-legacy",
+    "schema": "moments.schema.json",
+    "thirdPartyNotice": "Song lyrics and interview quotations may be subject to separate copyrights held by their original authors or publishers. Factual summaries, curation, metadata, and original prose in this database are licensed under CC BY 4.0."
+  },
+  "moments": [
+    {
+      "id": "appalachian-roots",
+      "title": "Born in a One-Room Cabin",
+      "year": 1946,
+      "era": "1950s",
+      "category": "personal",
+      "tags": [
+        "Tennessee",
+        "Appalachia",
+        "family"
+      ],
+      "summary": "Dolly Rebecca Parton was born January 19, 1946, in a one-room cabin in Locust Ridge, Sevier County, Tennessee — the fourth of twelve children.",
+      "body": "She grew up in deep Appalachian poverty, but her family was rich in music, storytelling, and love. Her mother sang old ballads; her father worked the land despite being unable to read or write — a fact that would later inspire her greatest philanthropic work.",
+      "hiddenFact": "Dolly wrote her first song, \"Little Tiny Tassletop,\" about a corn cob doll before she knew how to hold a pencil. Her father recalled she was writing songs from the very beginning.",
+      "quote": "We were rich in kindness and love and understanding.",
+      "featured": true,
+      "chapter": "origins",
+      "relatedIds": [
+        "coat-of-many-colors",
+        "imagination-library",
+        "first-song"
+      ],
+      "moodTags": [
+        "facts",
+        "courage"
+      ],
+      "dollySayKeywords": [
+        "poor",
+        "poverty",
+        "family",
+        "home",
+        "childhood",
+        "roots",
+        "start"
+      ]
+    },
+    {
+      "id": "first-song",
+      "title": "First Song at Age Seven",
+      "year": 1953,
+      "era": "1950s",
+      "category": "music",
+      "tags": [
+        "songwriting",
+        "Tennessee"
+      ],
+      "summary": "Dolly wrote her first song before she could properly hold a pencil — a tribute to a homemade corn cob doll.",
+      "body": "Songwriting came naturally from childhood. She would go on to write more than 3,000 songs, but that first one — \"Little Tiny Tassletop\" — marked the beginning of a lifetime of turning life into lyrics.",
+      "hiddenFact": "Dolly says she is \"first and foremost a songwriter\" — singing, acting, and business came after the words.",
+      "quote": "I've been writing since I was seven — serious songs.",
+      "featured": true,
+      "chapter": "origins",
+      "relatedIds": [
+        "appalachian-roots",
+        "coat-of-many-colors",
+        "jolene-and-iwill"
+      ],
+      "moodTags": [
+        "facts",
+        "courage"
+      ],
+      "dollySayKeywords": [
+        "write",
+        "song",
+        "creative",
+        "begin",
+        "dream"
+      ]
+    },
+    {
+      "id": "coat-of-many-colors",
+      "title": "Coat of Many Colors",
+      "year": 1971,
+      "era": "1970s",
+      "category": "lyrics",
+      "tags": [
+        "women",
+        "Tennessee",
+        "acceptance"
+      ],
+      "summary": "Her favorite song she ever wrote — a true story about her mother sewing a coat from fabric scraps and the bullying she faced at school.",
+      "body": "When Dolly needed a winter coat, her mother sewed one from rags and told her the Bible story of Joseph's coat of many colors. At school, classmates laughed. Her mother said: \"I don't want to ever hear you say that we're poor. We are rich in kindness and love and understanding.\"",
+      "hiddenFact": "The song has been adopted as a gay pride anthem for its themes of acceptance, otherness, and love — something Dolly has embraced with warmth.",
+      "quote": "Although we had no money, I was rich as I could be in my coat of many colors my mama made for me.",
+      "source": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Coat-of-Many-Colors_Hamessley.pdf",
+      "featured": true,
+      "chapter": "origins",
+      "relatedIds": [
+        "appalachian-roots",
+        "lgbtq-allyship",
+        "first-song"
+      ],
+      "moodTags": [
+        "courage",
+        "facts"
+      ],
+      "dollySayKeywords": [
+        "bullied",
+        "different",
+        "acceptance",
+        "poor",
+        "poverty",
+        "mother",
+        "love",
+        "outcast",
+        "belong"
+      ]
+    },
+    {
+      "id": "porter-wagoner",
+      "title": "The Porter Wagoner Show",
+      "year": 1967,
+      "era": "1960s",
+      "category": "career",
+      "tags": [
+        "Tennessee",
+        "country music"
+      ],
+      "summary": "Dolly joined Porter Wagoner's syndicated TV show and gained coast-to-coast recognition — then fought to launch her solo career.",
+      "body": "Wagoner became her mentor and duet partner. They won CMA Vocal Group of the Year in 1968. But Dolly's ambition outgrew the partnership. Leaving was painful — she wrote \"I Will Always Love You\" as her farewell.",
+      "hiddenFact": "Dolly signed away significant songwriting credits early in her career — a lesson that fueled her later insistence on owning her work.",
+      "featured": true,
+      "chapter": "music",
+      "relatedIds": [
+        "i-will-always-love-you",
+        "jolene-and-iwill",
+        "songwriters-hall"
+      ],
+      "moodTags": [
+        "courage",
+        "facts"
+      ],
+      "dollySayKeywords": [
+        "leave",
+        "career",
+        "boss",
+        "partner",
+        "goodbye",
+        "move on"
+      ]
+    },
+    {
+      "id": "jolene-and-iwill",
+      "title": "Jolene & I Will Always Love You — Same Day",
+      "year": 1973,
+      "era": "1970s",
+      "category": "music",
+      "tags": [
+        "songwriting",
+        "women"
+      ],
+      "summary": "Two of the most recorded songs in history were written on the same day.",
+      "body": "\"Jolene\" — a plea to a beautiful rival — and \"I Will Always Love You\" — a graceful goodbye — came from one extraordinary songwriting session. Whitney Houston's cover of the latter became one of the best-selling singles of all time.",
+      "hiddenFact": "Dolly donated royalties from Whitney Houston's version to support Black neighborhoods in Nashville — investing in an office complex in a predominantly Black area.",
+      "quote": "Jolene, Jolene, Jolene, Jolene — I'm begging of you, please don't take my man.",
+      "featured": true,
+      "chapter": "music",
+      "relatedIds": [
+        "i-will-always-love-you",
+        "whitney-royalties",
+        "porter-wagoner"
+      ],
+      "moodTags": [
+        "facts",
+        "surprise"
+      ],
+      "dollySayKeywords": [
+        "jealous",
+        "rival",
+        "love",
+        "heartbreak",
+        "leave",
+        "jolene"
+      ]
+    },
+    {
+      "id": "i-will-always-love-you",
+      "title": "I Will Always Love You",
+      "year": 1974,
+      "era": "1970s",
+      "category": "lyrics",
+      "tags": [
+        "songwriting",
+        "women"
+      ],
+      "summary": "Written as a farewell to Porter Wagoner when Dolly left his show to go solo — one of the most covered songs ever written.",
+      "body": "The song is a masterclass in graceful parting: love without possession, goodbye without bitterness. It hit #1 for Dolly in 1974 and again in 1982. Whitney Houston's 1992 version spent 14 weeks at #1.",
+      "hiddenFact": "Dolly has said she wrote it in about twenty minutes on the day she told Porter she was leaving.",
+      "quote": "And I will always love you. I will always love you.",
+      "featured": true,
+      "chapter": "music",
+      "relatedIds": [
+        "porter-wagoner",
+        "whitney-royalties",
+        "jolene-and-iwill"
+      ],
+      "moodTags": [
+        "courage"
+      ],
+      "dollySayKeywords": [
+        "goodbye",
+        "leave",
+        "love",
+        "heartbreak",
+        "miss",
+        "end",
+        "relationship"
+      ]
+    },
+    {
+      "id": "nine-to-five",
+      "title": "9 to 5 — The Workplace Anthem",
+      "year": 1980,
+      "era": "1980s",
+      "category": "lyrics",
+      "tags": [
+        "women",
+        "workers"
+      ],
+      "summary": "Written for the film starring Dolly, Jane Fonda, and Lily Tomlin — a jaunty song with razor-sharp lyrics about workplace inequality.",
+      "body": "Dolly wrote the title track while filming, clicking her acrylic fingernails on a typewriter to create the rhythm. The film's three women take on a \"sexist, egotistical, lying, hypocritical bigot\" of a boss. The song became an enduring anthem for working women.",
+      "hiddenFact": "Dolly has called \"Pour myself a cup of ambition\" one of her favorite lines she ever wrote — she knew it was good the moment it landed.",
+      "quote": "Tumble outta bed and stumble to the kitchen. Pour myself a cup of ambition, and yawn and stretch and try to come to life.",
+      "featured": true,
+      "chapter": "music",
+      "relatedIds": [
+        "just-because-woman",
+        "nine-to-five-film",
+        "business-autonomy"
+      ],
+      "moodTags": [
+        "courage",
+        "laugh"
+      ],
+      "dollySayKeywords": [
+        "work",
+        "job",
+        "boss",
+        "office",
+        "tired",
+        "ambition",
+        "career",
+        "underpaid",
+        "9 to 5",
+        "nine to five",
+        "workplace",
+        "monday"
+      ]
+    },
+    {
+      "id": "nine-to-five-film",
+      "title": "Nine to Five — The Film",
+      "year": 1980,
+      "era": "1980s",
+      "category": "career",
+      "tags": [
+        "women",
+        "LGBTQ+"
+      ],
+      "summary": "A comedy that made workplace sexism impossible to ignore — with a huge LGBTQ+ following.",
+      "body": "Dolly starred alongside Jane Fonda and Lily Tomlin as three office workers who kidnap and humiliate their abusive boss. Writer Patricia Resnick originally envisioned a much darker comedy. The film became a feel-good classic with serious undertones.",
+      "hiddenFact": "The film's writer Patricia Resnick was one of few openly lesbian writers in Hollywood at the time — which may explain the movie's enormous gay following.",
+      "featured": true,
+      "chapter": "music",
+      "relatedIds": [
+        "nine-to-five",
+        "just-because-woman",
+        "lgbtq-allyship"
+      ],
+      "moodTags": [
+        "laugh",
+        "courage"
+      ],
+      "dollySayKeywords": [
+        "boss",
+        "sexist",
+        "work",
+        "office",
+        "revenge"
+      ]
+    },
+    {
+      "id": "just-because-woman",
+      "title": "Just Because I'm a Woman",
+      "year": 1968,
+      "era": "1960s",
+      "category": "lyrics",
+      "tags": [
+        "women"
+      ],
+      "summary": "One of her earliest confrontations with sexual double standards — written decades before #MeToo.",
+      "body": "The song directly challenges the hypocrisy of judging women's behavior while excusing men's. Critics and fans have long cited it as evidence that Dolly documented women's lived experience even while avoiding the feminist label.",
+      "hiddenFact": "Dolly has said she prefers \"woman in business\" to \"feminist\" — not because she opposes equality, but because she dislikes labels that imply man-hating.",
+      "quote": "Just because I'm a woman, don't think I don't know what you're up to.",
+      "featured": true,
+      "chapter": "standing",
+      "relatedIds": [
+        "nine-to-five",
+        "business-autonomy"
+      ],
+      "moodTags": [
+        "courage"
+      ],
+      "dollySayKeywords": [
+        "woman",
+        "women",
+        "sexist",
+        "double standard",
+        "feminist",
+        "equal",
+        "gender"
+      ]
+    },
+    {
+      "id": "dollywood",
+      "title": "Dollywood Opens",
+      "year": 1986,
+      "era": "1980s",
+      "category": "career",
+      "tags": [
+        "Tennessee",
+        "Appalachia"
+      ],
+      "summary": "A theme park in the Great Smoky Mountains celebrating Appalachian culture — and one of Tennessee's largest employers.",
+      "body": "Dollywood became an economic engine for East Tennessee, drawing millions of visitors while preserving mountain crafts, music, and traditions. Dolly remained hands-on with its mission and her employees.",
+      "hiddenFact": "Dollywood funds employee scholarships and has been recognized for its support of the local community during disasters.",
+      "featured": true,
+      "chapter": "building",
+      "relatedIds": [
+        "dollywood-foundation",
+        "gatlinburg-relief",
+        "business-autonomy"
+      ],
+      "moodTags": [
+        "facts"
+      ],
+      "dollySayKeywords": [
+        "business",
+        "dream",
+        "build",
+        "tennessee",
+        "mountain"
+      ]
+    },
+    {
+      "id": "business-autonomy",
+      "title": "Owning Her Masters",
+      "year": 1974,
+      "era": "1970s",
+      "category": "career",
+      "tags": [
+        "women"
+      ],
+      "summary": "Dolly fought for creative and business control in a male-dominated industry — building an empire on her own terms.",
+      "body": "From negotiating her exit from Porter Wagoner to building Dollywood and her publishing catalog, Dolly modeled what it means to own your art. She turned her image — including endless blonde jokes — into a brand she controls completely.",
+      "hiddenFact": "For the Nine to Five musical, she wrote: \"Under this hair is a brain, not that you'd ever care.\"",
+      "quote": "Find out who you are and do it on purpose.",
+      "featured": true,
+      "chapter": "building",
+      "relatedIds": [
+        "dollywood",
+        "nine-to-five",
+        "porter-wagoner"
+      ],
+      "moodTags": [
+        "courage"
+      ],
+      "dollySayKeywords": [
+        "purpose",
+        "yourself",
+        "identity",
+        "business",
+        "control",
+        "authentic",
+        "who am i"
+      ]
+    },
+    {
+      "id": "dollywood-foundation",
+      "title": "The Dollywood Foundation",
+      "year": 1988,
+      "era": "1980s",
+      "category": "philanthropy",
+      "tags": [
+        "literacy",
+        "Tennessee"
+      ],
+      "summary": "Created to inspire and educate children in the Smoky Mountains — the seed of the Imagination Library.",
+      "body": "The foundation began with scholarships for local students and grew into one of the world's most ambitious literacy programs. Dolly's father's inability to read and write was the emotional core.",
+      "featured": true,
+      "chapter": "giving",
+      "relatedIds": [
+        "imagination-library",
+        "appalachian-roots"
+      ],
+      "moodTags": [
+        "facts"
+      ],
+      "dollySayKeywords": [
+        "charity",
+        "give",
+        "help",
+        "children",
+        "education"
+      ]
+    },
+    {
+      "id": "imagination-library",
+      "title": "Imagination Library",
+      "year": 1995,
+      "era": "1990s",
+      "category": "philanthropy",
+      "tags": [
+        "literacy",
+        "children",
+        "Tennessee"
+      ],
+      "summary": "Free books mailed monthly to children from birth to age five — inspired by her father's illiteracy. Over 240 million books gifted worldwide.",
+      "body": "What started in Sevier County, Tennessee, now spans the U.S., Canada, the UK, Ireland, and Australia. By 2024, roughly 1 in 7 American children under five received a book each month from the program.",
+      "hiddenFact": "A 2022 academic study noted that while the book collection showed racial diversity, disability and non-dominant gender identities were largely absent — a tension Dolly's public advocacy for all identities makes worth discussing honestly.",
+      "quote": "You can never get enough books into the hands of enough children.",
+      "source": "https://imaginationlibrary.com/",
+      "featured": true,
+      "chapter": "giving",
+      "relatedIds": [
+        "dollywood-foundation",
+        "appalachian-roots",
+        "imagination-library-milestone"
+      ],
+      "moodTags": [
+        "facts",
+        "courage"
+      ],
+      "dollySayKeywords": [
+        "book",
+        "read",
+        "child",
+        "children",
+        "kid",
+        "literacy",
+        "learn",
+        "school",
+        "baby"
+      ]
+    },
+    {
+      "id": "imagination-library-milestone",
+      "title": "200 Million Books",
+      "year": 2023,
+      "era": "2020s",
+      "category": "philanthropy",
+      "tags": [
+        "literacy",
+        "children"
+      ],
+      "summary": "The Imagination Library gifted its 200 millionth book — celebrating 30 years of fostering a love of reading.",
+      "body": "From one county in East Tennessee to five countries, the program mails over 3 million books per month. It has received honors from the Library of Congress and Good Housekeeping.",
+      "hiddenFact": "Native American communities were added to the program in 2002, expanding its reach to tribal nations.",
+      "featured": false,
+      "chapter": "giving",
+      "relatedIds": [
+        "imagination-library"
+      ],
+      "moodTags": [
+        "facts",
+        "surprise"
+      ],
+      "dollySayKeywords": [
+        "book",
+        "million",
+        "impact",
+        "scale"
+      ]
+    },
+    {
+      "id": "gatlinburg-relief",
+      "title": "Gatlinburg Wildfire Relief",
+      "year": 2016,
+      "era": "2010s",
+      "category": "philanthropy",
+      "tags": [
+        "Tennessee",
+        "disaster relief"
+      ],
+      "summary": "After devastating wildfires near Dollywood, Dolly's My People Fund gave $1,000 a month for six months to families who lost their homes.",
+      "body": "The 2016 Gatlinburg fires killed 14 people and destroyed over 2,400 buildings. Dolly — whose theme park sits in the affected region — responded with direct, sustained financial support for displaced families.",
+      "hiddenFact": "The My People Fund distributed over $9 million to nearly 900 families.",
+      "featured": true,
+      "chapter": "giving",
+      "relatedIds": [
+        "dollywood",
+        "imagination-library"
+      ],
+      "moodTags": [
+        "courage",
+        "facts"
+      ],
+      "dollySayKeywords": [
+        "disaster",
+        "fire",
+        "help",
+        "community",
+        "neighbor",
+        "tragedy"
+      ]
+    },
+    {
+      "id": "covid-vaccine",
+      "title": "$1 Million for COVID Research",
+      "year": 2020,
+      "era": "2020s",
+      "category": "philanthropy",
+      "tags": [
+        "health"
+      ],
+      "summary": "Dolly donated $1 million to Vanderbilt University Medical Center — credited in the preliminary Moderna vaccine report.",
+      "body": "The Dolly Parton COVID-19 Research Fund supported early-stage work including the high-quality test used to evaluate the Moderna vaccine's immune response. In March 2021, she received her own shot from her friend Dr. Naji Abumrad.",
+      "hiddenFact": "She waited until March 2021 to get vaccinated because she didn't want it to look like she was cutting the line — despite having funded the research.",
+      "quote": "Vaccine, vaccine, vaccine, vacciiiiine — I'm begging of you, please don't hesitate.",
+      "source": "https://www.npr.org/sections/coronavirus-live-updates/2021/03/03/973240792/from-jolene-to-vaccine-dolly-parton-gets-covid-19-shot-she-helped-fund",
+      "featured": true,
+      "chapter": "giving",
+      "relatedIds": [
+        "jolene-and-iwill",
+        "covid-second-donation"
+      ],
+      "moodTags": [
+        "facts",
+        "laugh",
+        "surprise"
+      ],
+      "dollySayKeywords": [
+        "sick",
+        "covid",
+        "vaccine",
+        "health",
+        "virus",
+        "pandemic",
+        "doctor",
+        "medicine"
+      ]
+    },
+    {
+      "id": "covid-second-donation",
+      "title": "Pediatric Infectious Disease Research",
+      "year": 2022,
+      "era": "2020s",
+      "category": "philanthropy",
+      "tags": [
+        "health",
+        "children"
+      ],
+      "summary": "A second $1 million gift to Vanderbilt for pediatric infectious disease research.",
+      "body": "Dolly followed her COVID donation with another million for ongoing research into infectious diseases affecting children — continuing a pattern of quiet, sustained giving.",
+      "featured": false,
+      "chapter": "giving",
+      "relatedIds": [
+        "covid-vaccine"
+      ],
+      "moodTags": [
+        "facts"
+      ],
+      "dollySayKeywords": [
+        "children",
+        "hospital",
+        "research",
+        "health"
+      ]
+    },
+    {
+      "id": "blm-support",
+      "title": "Black Lives Matter",
+      "year": 2020,
+      "era": "2020s",
+      "category": "advocacy",
+      "tags": [
+        "Black community"
+      ],
+      "summary": "During the 2020 protests, Dolly voiced clear support: \"Of course Black lives matter.\"",
+      "body": "In a Billboard interview, she said: \"Do we think our little white asses are the only ones that matter? No!\" She added: \"When I see Black lives matter, I think about Black lives mattering.\"",
+      "hiddenFact": "She later removed \"Dixie\" from the name of a dinner attraction at Dollywood, acknowledging its Confederate associations.",
+      "quote": "Of course Black lives matter. Do we think our little white asses are the only ones that matter? No!",
+      "featured": true,
+      "chapter": "standing",
+      "relatedIds": [
+        "whitney-royalties",
+        "lgbtq-allyship"
+      ],
+      "moodTags": [
+        "courage"
+      ],
+      "dollySayKeywords": [
+        "black",
+        "racism",
+        "racist",
+        "blm",
+        "justice",
+        "equality",
+        "matter",
+        "protest"
+      ]
+    },
+    {
+      "id": "whitney-royalties",
+      "title": "Whitney Houston Royalties → Nashville",
+      "year": 2021,
+      "era": "2020s",
+      "category": "philanthropy",
+      "tags": [
+        "Black community"
+      ],
+      "summary": "Dolly invested royalties from Whitney Houston's \"I Will Always Love You\" into a predominantly Black Nashville neighborhood.",
+      "body": "When Houston's cover became a global phenomenon, Dolly directed those earnings toward uplifting Black communities — purchasing and investing in an office complex in a historically Black area of Nashville.",
+      "hiddenFact": "NPR reported the investment as a deliberate act of community support, not just a royalty check.",
+      "featured": true,
+      "chapter": "standing",
+      "relatedIds": [
+        "i-will-always-love-you",
+        "blm-support"
+      ],
+      "moodTags": [
+        "facts",
+        "courage"
+      ],
+      "dollySayKeywords": [
+        "black",
+        "community",
+        "invest",
+        "nashville",
+        "give back"
+      ]
+    },
+    {
+      "id": "lgbtq-allyship",
+      "title": "LGBTQ+ Allyship",
+      "year": 2017,
+      "era": "2010s",
+      "category": "advocacy",
+      "tags": [
+        "LGBTQ+"
+      ],
+      "summary": "A lifetime of speaking up for LGBTQ+ people — from marriage equality to opposing anti-trans bathroom bills.",
+      "body": "On Larry King Now in 2017: \"If you're the fine Christian that you think you are, why are you judging people? That's God's job. We're supposed to love one another, we're supposed to not judge.\" She has hosted LGBTQ+ fans at Dollywood and spoken against discriminatory legislation.",
+      "hiddenFact": "In 2023 she told The Hollywood Reporter: trans people \"cannot help\" being trans \"any more than I can help being Dolly Parton.\"",
+      "quote": "If you're the fine Christian that you think you are, why are you judging people? That's God's job.",
+      "featured": true,
+      "chapter": "standing",
+      "relatedIds": [
+        "trans-support",
+        "coat-of-many-colors",
+        "blm-support"
+      ],
+      "moodTags": [
+        "courage"
+      ],
+      "dollySayKeywords": [
+        "gay",
+        "lgbtq",
+        "trans",
+        "queer",
+        "christian",
+        "judge",
+        "judging",
+        "bathroom",
+        "accept",
+        "love",
+        "respect"
+      ]
+    },
+    {
+      "id": "trans-support",
+      "title": "\"Cannot Help Being Trans\"",
+      "year": 2023,
+      "era": "2020s",
+      "category": "advocacy",
+      "tags": [
+        "LGBTQ+"
+      ],
+      "summary": "Dolly compared being transgender to being herself — with characteristic warmth and directness.",
+      "body": "Speaking to The Hollywood Reporter, she said trans people \"cannot help\" being trans \"any more than I can help being Dolly Parton\" — a line that resonated widely for its simplicity and empathy.",
+      "quote": "They cannot help being trans any more than I can help being Dolly Parton.",
+      "featured": true,
+      "chapter": "standing",
+      "relatedIds": [
+        "lgbtq-allyship"
+      ],
+      "moodTags": [
+        "courage"
+      ],
+      "dollySayKeywords": [
+        "trans",
+        "transgender",
+        "identity",
+        "accept"
+      ]
+    },
+    {
+      "id": "songwriters-hall",
+      "title": "Songwriters Hall of Fame",
+      "year": 2001,
+      "era": "2000s",
+      "category": "career",
+      "tags": [
+        "songwriting"
+      ],
+      "summary": "Inducted into the Songwriters Hall of Fame — recognition for 3,000+ songs and a lifetime of storytelling.",
+      "body": "She had already entered the Nashville Songwriters Hall of Fame in 1986. The national honor cemented her status as one of America's greatest living songwriters.",
+      "hiddenFact": "The Library of Congress selected \"Coat of Many Colors\" for the National Recording Registry.",
+      "featured": false,
+      "chapter": "music",
+      "relatedIds": [
+        "first-song",
+        "coat-of-many-colors"
+      ],
+      "moodTags": [
+        "facts"
+      ],
+      "dollySayKeywords": [
+        "songwriter",
+        "award",
+        "legacy"
+      ]
+    },
+    {
+      "id": "dolly-parton-day",
+      "title": "Dolly Parton Day",
+      "year": 2026,
+      "era": "2020s",
+      "category": "personal",
+      "tags": [
+        "Tennessee"
+      ],
+      "summary": "Tennessee Governor Bill Lee declared January 19 — Dolly's birthday and MLK Day in 2026 — as Dolly Parton Day.",
+      "body": "Dolly turned 80 on January 19, 2026, the same day the nation honors Martin Luther King Jr. The dual commemoration highlighted her decades of support for civil rights and marginalized communities.",
+      "featured": false,
+      "chapter": "standing",
+      "relatedIds": [
+        "blm-support",
+        "appalachian-roots"
+      ],
+      "moodTags": [
+        "facts",
+        "surprise"
+      ],
+      "dollySayKeywords": [
+        "birthday",
+        "celebrate",
+        "day"
+      ]
+    },
+    {
+      "id": "cup-of-ambition",
+      "title": "Pour Myself a Cup of Ambition",
+      "year": 1980,
+      "era": "1980s",
+      "category": "lyrics",
+      "tags": [
+        "women",
+        "workers"
+      ],
+      "summary": "Dolly's favorite line from 9 to 5 — born from a morning coffee ritual while writing the film's theme song.",
+      "body": "She was in LA, watching the set by day and writing at the Hotel Bel-Air by night. She looked at her coffee cup and thought: \"I pour myself a cup of ambition.\" She knew immediately it was good.",
+      "quote": "Pour myself a cup of ambition.",
+      "featured": true,
+      "chapter": "music",
+      "relatedIds": [
+        "nine-to-five"
+      ],
+      "moodTags": [
+        "courage",
+        "laugh"
+      ],
+      "dollySayKeywords": [
+        "ambition",
+        "motivation",
+        "morning",
+        "coffee",
+        "hustle",
+        "lazy",
+        "start the day"
+      ]
+    },
+    {
+      "id": "do-it-on-purpose",
+      "title": "Do It On Purpose",
+      "year": 2011,
+      "era": "2010s",
+      "category": "personal",
+      "tags": [
+        "women"
+      ],
+      "summary": "One of Dolly's most quoted pieces of life advice — authentic and actionable.",
+      "body": "The full quote: \"Find out who you are and do it on purpose.\" It captures her approach to career, image, philanthropy, and life.",
+      "quote": "Find out who you are and do it on purpose.",
+      "featured": true,
+      "chapter": "building",
+      "relatedIds": [
+        "business-autonomy"
+      ],
+      "moodTags": [
+        "courage"
+      ],
+      "dollySayKeywords": [
+        "purpose",
+        "yourself",
+        "identity",
+        "lost",
+        "direction",
+        "who am i",
+        "authentic",
+        "meaning",
+        "life advice"
+      ]
+    },
+    {
+      "id": "storm-of-life",
+      "title": "Storms Make Trees Take Deeper Roots",
+      "year": 2000,
+      "era": "2000s",
+      "category": "personal",
+      "tags": [],
+      "summary": "Dolly on resilience — storms don't break you, they anchor you.",
+      "quote": "Storms make trees take deeper roots.",
+      "featured": false,
+      "chapter": "origins",
+      "relatedIds": [
+        "appalachian-roots",
+        "coat-of-many-colors"
+      ],
+      "moodTags": [
+        "courage"
+      ],
+      "dollySayKeywords": [
+        "hard",
+        "difficult",
+        "struggle",
+        "resilience",
+        "storm",
+        "tough",
+        "survive",
+        "pain",
+        "grief",
+        "sad"
+      ]
+    },
+    {
+      "id": "dreamer-dream",
+      "title": "If You Don't Dream, You Can't Dream",
+      "year": 1994,
+      "era": "1990s",
+      "category": "personal",
+      "tags": [],
+      "summary": "On the necessity of imagination — from a woman who built an empire on dreams.",
+      "quote": "If you don't dream, you can't dream.",
+      "featured": false,
+      "chapter": "building",
+      "relatedIds": [
+        "imagination-library",
+        "dollywood"
+      ],
+      "moodTags": [
+        "courage",
+        "laugh"
+      ],
+      "dollySayKeywords": [
+        "dream",
+        "hope",
+        "future",
+        "imagine",
+        "wish"
+      ]
+    },
+    {
+      "id": "everyone-matters",
+      "title": "Everybody Should Be Treated With Respect",
+      "year": 2019,
+      "era": "2010s",
+      "category": "advocacy",
+      "tags": [
+        "LGBTQ+",
+        "Black community"
+      ],
+      "summary": "Dolly's simple, unwavering philosophy of human dignity.",
+      "quote": "I think everybody should be treated with respect.",
+      "featured": false,
+      "chapter": "standing",
+      "relatedIds": [
+        "lgbtq-allyship",
+        "blm-support"
+      ],
+      "moodTags": [
+        "courage"
+      ],
+      "dollySayKeywords": [
+        "respect",
+        "kind",
+        "kindness",
+        "treat",
+        "people",
+        "hate",
+        "mean"
+      ]
+    }
+  ]
+}

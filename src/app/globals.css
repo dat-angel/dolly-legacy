@@ -1,0 +1,300 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fff8f5;
+  --foreground: #3d1f24;
+  --blush: #ffc8d4;
+  --blush-deep: #f4a6b8;
+  --cream: #fff5eb;
+  --gold: #d4a017;
+  --gold-light: #f0d878;
+  --burgundy: #8b2942;
+  --burgundy-deep: #4a1528;
+  --hot-pink: #e91e8c;
+  --hot-pink-light: #ff85c0;
+  --mountain-mist: #b8d4e8;
+  --patch-green: #b8d4a0;
+  --quilt-stitch: #c9788a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-blush: var(--blush);
+  --color-blush-deep: var(--blush-deep);
+  --color-cream: var(--cream);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-burgundy: var(--burgundy);
+  --color-burgundy-deep: var(--burgundy-deep);
+  --color-hot-pink: var(--hot-pink);
+  --color-hot-pink-light: var(--hot-pink-light);
+  --color-mountain-mist: var(--mountain-mist);
+  --color-patch-green: var(--patch-green);
+  --color-quilt-stitch: var(--quilt-stitch);
+  --font-sans: var(--font-sans-body);
+  --font-serif: var(--font-serif-display);
+  --font-script: var(--font-script-accent);
+  --font-mono: var(--font-typewriter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans-body), system-ui, sans-serif;
+  background-image:
+    radial-gradient(ellipse 120% 80% at 50% -20%, rgba(255, 182, 200, 0.25), transparent),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+.font-script {
+  font-family: var(--font-script-accent), cursive;
+}
+
+/* ── Quilt & patch textures ── */
+
+.quilt-bg {
+  background-color: var(--cream);
+  background-image:
+    linear-gradient(45deg, var(--blush) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--blush) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--blush) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--blush) 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+  opacity: 0.2;
+}
+
+.quilt-collage {
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+}
+
+.quilt-patch {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  border: 2px dashed rgba(61, 31, 36, 0.15);
+  border-radius: 4px;
+  animation: patch-drift 6s ease-in-out infinite;
+}
+
+@keyframes patch-drift {
+  0%, 100% { transform: rotate(var(--r, 0deg)) translateY(0); }
+  50% { transform: rotate(var(--r, 0deg)) translateY(-6px); }
+}
+
+/* ── Rhinestone sparkle ── */
+
+.rhinestone {
+  text-shadow:
+    0 0 12px rgba(212, 160, 23, 0.5),
+    0 0 24px rgba(233, 30, 140, 0.2),
+    0 2px 0 rgba(139, 41, 66, 0.15);
+}
+
+.sparkle-gem {
+  filter: drop-shadow(0 0 4px rgba(212, 160, 23, 0.6));
+}
+
+.sparkle-twinkle {
+  animation: twinkle 2.5s ease-in-out infinite;
+}
+
+.sparkle-field {
+  animation: twinkle 3s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.4; transform: scale(0.85) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.1) rotate(15deg); }
+}
+
+.butterfly-float {
+  animation: butterfly 5s ease-in-out infinite;
+  opacity: 0.75;
+}
+
+@keyframes butterfly {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-12px) rotate(3deg); }
+}
+
+/* ── Stitched borders ── */
+
+.stitch-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem 0;
+}
+
+.stitch-line {
+  flex: 1;
+  max-width: 120px;
+  height: 0;
+  border-top: 2px dashed var(--quilt-stitch);
+}
+
+.patch-card {
+  position: relative;
+  background: linear-gradient(145deg, #fff 0%, var(--cream) 100%);
+  border: 2px dashed var(--blush-deep);
+  border-radius: 4px 16px 4px 16px;
+  box-shadow:
+    4px 4px 0 rgba(139, 41, 66, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  --tilt: 0deg;
+  transform: rotate(var(--tilt));
+}
+
+.patch-card::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle at 30% 30%, #fff 0%, var(--gold) 40%, var(--gold) 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(212, 160, 23, 0.5);
+  opacity: 0.7;
+}
+
+.patch-card:hover {
+  transform: rotate(calc(var(--tilt) - 0.5deg)) translateY(-4px);
+  box-shadow:
+    6px 8px 0 rgba(233, 30, 140, 0.12),
+    0 12px 32px rgba(139, 41, 66, 0.1);
+}
+
+/* ── Section backgrounds ── */
+
+.section-warm {
+  background: linear-gradient(180deg, transparent 0%, rgba(255, 200, 212, 0.15) 50%, transparent 100%);
+}
+
+.section-golden {
+  background: linear-gradient(180deg, transparent 0%, rgba(240, 216, 120, 0.12) 50%, transparent 100%);
+}
+
+.section-mountain {
+  background: linear-gradient(180deg, transparent 0%, rgba(184, 212, 232, 0.15) 50%, transparent 100%);
+}
+
+.wavy-top {
+  margin-top: -1px;
+  line-height: 0;
+}
+
+.wavy-top svg {
+  display: block;
+  width: 100%;
+  height: 48px;
+}
+
+/* ── Typewriter ── */
+
+@keyframes blink-caret {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typewriter-caret {
+  animation: blink-caret 0.8s step-end infinite;
+}
+
+.typewriter-frame {
+  background:
+    repeating-linear-gradient(
+      transparent,
+      transparent 27px,
+      rgba(139, 41, 66, 0.06) 27px,
+      rgba(139, 41, 66, 0.06) 28px
+    ),
+    linear-gradient(135deg, #fff9f0 0%, #fff5eb 100%);
+  border: 3px double var(--gold);
+  box-shadow: inset 0 0 40px rgba(212, 160, 23, 0.08);
+}
+
+/* ── Vanity mirror frame (Ask Dolly) ── */
+
+.vanity-frame {
+  background: linear-gradient(160deg, #fff 0%, #fff0f5 40%, #fff8f0 100%);
+  border: 4px solid transparent;
+  border-image: linear-gradient(135deg, var(--gold), var(--hot-pink), var(--gold-light)) 1;
+  box-shadow:
+    0 0 0 2px var(--cream),
+    0 8px 40px rgba(233, 30, 140, 0.15),
+    inset 0 0 60px rgba(255, 182, 200, 0.2);
+}
+
+/* ── Stats marquee strip ── */
+
+.stats-strip {
+  background:
+    linear-gradient(90deg, var(--burgundy-deep) 0%, var(--burgundy) 50%, var(--burgundy-deep) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-strip::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 40px,
+    rgba(255, 255, 255, 0.03) 40px,
+    rgba(255, 255, 255, 0.03) 41px
+  );
+  pointer-events: none;
+}
+
+.stat-bubble {
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px dashed rgba(240, 216, 120, 0.4);
+  border-radius: 50%;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* ── Header logo ── */
+
+.logo-shimmer {
+  background: linear-gradient(90deg, var(--burgundy-deep), var(--hot-pink), var(--gold), var(--burgundy-deep));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typewriter-caret,
+  .sparkle-twinkle,
+  .sparkle-field,
+  .butterfly-float,
+  .quilt-patch,
+  .logo-shimmer {
+    animation: none;
+  }
+
+  .patch-card:hover {
+    transform: none;
+  }
+}
