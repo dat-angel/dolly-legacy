@@ -3,16 +3,18 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChapterPortrait } from "@/components/ChapterPortrait";
 import { MomentCard } from "@/components/ChapterSection";
+import { JsonLd } from "@/components/JsonLd";
 import { ShareMenuClient } from "@/components/ShareMenuClient";
 import { StitchDivider } from "@/components/decorative";
-import { dollyButtonClass } from "@/components/ui/DollyButton";
 import { getChapterImage } from "@/lib/images";
+import { createPageMetadata, truncateForMeta } from "@/lib/metadata";
 import { getAllMomentsByChapter } from "@/lib/moments";
 import {
   getChapterShareText,
   getChapterShareUrl,
   getMomentShareUrl,
 } from "@/lib/share";
+import { absoluteUrl } from "@/lib/site";
 import { CHAPTERS, type Chapter } from "@/lib/types";
 
 export function generateStaticParams() {
@@ -26,17 +28,14 @@ export async function generateMetadata({
   const chapter = CHAPTERS.find((c) => c.id === id);
   if (!chapter) return { title: "Chapter — Dolly Legacy" };
 
-  const url = getChapterShareUrl(chapter.id);
-  return {
-    title: `${chapter.title} — Dolly Legacy`,
-    description: chapter.subtitle,
-    openGraph: {
-      title: `${chapter.title} — Dolly Legacy`,
-      description: chapter.subtitle,
-      url,
-      type: "article",
-    },
-  };
+  return createPageMetadata({
+    title: chapter.title,
+    description: truncateForMeta(chapter.subtitle),
+    path: `/chapter/${chapter.id}`,
+    keywords: [chapter.title, chapter.id, "Dolly Parton chapter", "Dolly Parton timeline"],
+    ogType: "article",
+    ogImage: `/images/chapters/${chapter.id}.jpg`,
+  });
 }
 
 export default async function ChapterPage({ params }: PageProps<"/chapter/[id]">) {
@@ -50,8 +49,26 @@ export default async function ChapterPage({ params }: PageProps<"/chapter/[id]">
   const shareUrl = getChapterShareUrl(chapterId);
   const shareText = getChapterShareText(chapterId);
 
+  const chapterJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: chapter.title,
+    description: chapter.subtitle,
+    url: shareUrl,
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Dolly Legacy",
+      url: absoluteUrl("/"),
+    },
+    about: {
+      "@type": "Person",
+      name: "Dolly Parton",
+    },
+  };
+
   return (
     <div className="mx-auto max-w-6xl px-6 py-16">
+      <JsonLd data={chapterJsonLd} />
       <Link href="/" className="text-sm font-semibold text-hot-pink hover:text-burgundy">
         ← Back to exhibit
       </Link>

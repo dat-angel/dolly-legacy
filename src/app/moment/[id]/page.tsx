@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { JsonLd } from "@/components/JsonLd";
 import { ShareMenuClient } from "@/components/ShareMenuClient";
 import { StitchDivider } from "@/components/decorative";
+import { createPageMetadata, truncateForMeta } from "@/lib/metadata";
 import { getMomentById, getRelatedMoments, moments } from "@/lib/moments";
 import { getMomentShareText, getMomentShareUrl } from "@/lib/share";
+import { absoluteUrl } from "@/lib/site";
 
 export function generateStaticParams() {
   return moments.map((moment) => ({ id: moment.id }));
@@ -17,24 +20,15 @@ export async function generateMetadata({
   const moment = getMomentById(id);
   if (!moment) return { title: "Moment — Dolly Legacy" };
 
-  const description = moment.quote ?? moment.summary;
-  const url = getMomentShareUrl(moment.id);
+  const description = truncateForMeta(moment.quote ?? moment.summary);
 
-  return {
-    title: `${moment.title} — Dolly Legacy`,
+  return createPageMetadata({
+    title: moment.title,
     description,
-    openGraph: {
-      title: moment.title,
-      description,
-      url,
-      type: "article",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: moment.title,
-      description,
-    },
-  };
+    path: `/moment/${moment.id}`,
+    keywords: [...moment.tags, moment.category, moment.era, "Dolly Parton moment"],
+    ogType: "article",
+  });
 }
 
 export default async function MomentPage({ params }: PageProps<"/moment/[id]">) {
@@ -46,8 +40,33 @@ export default async function MomentPage({ params }: PageProps<"/moment/[id]">) 
   const shareUrl = getMomentShareUrl(moment.id);
   const shareText = getMomentShareText(moment);
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: moment.title,
+    description: moment.summary,
+    url: shareUrl,
+    inLanguage: "en-US",
+    about: {
+      "@type": "Person",
+      name: "Dolly Parton",
+    },
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Dolly Legacy",
+      url: absoluteUrl("/"),
+    },
+    ...(moment.year ? { datePublished: `${moment.year}-01-01` } : {}),
+    ...(moment.quote
+      ? {
+          citation: moment.quote,
+        }
+      : {}),
+  };
+
   return (
     <article className="mx-auto max-w-3xl px-6 py-16">
+      <JsonLd data={articleJsonLd} />
       <Link href="/moments" className="text-sm font-semibold text-hot-pink hover:text-burgundy">
         ← All moments
       </Link>

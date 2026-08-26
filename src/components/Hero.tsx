@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { getOnThisDayMoment } from "@/lib/moments";
-import { buildAbsoluteUrl, getMomentShareText, getMomentShareUrl } from "@/lib/share";
+import { absoluteUrl, getMomentShareText, getMomentShareUrl } from "@/lib/share";
 import {
   Butterfly,
   QuiltPatchCollage,
@@ -88,7 +88,7 @@ export function Hero() {
         <ShareMenu
           title="Dolly Legacy"
           text="A living tribute to Dolly Parton — music, philanthropy, and advocacy."
-          url={buildAbsoluteUrl("/")}
+          url={absoluteUrl("/")}
           className="mt-8 justify-center"
           compact
           label="Share this tribute"

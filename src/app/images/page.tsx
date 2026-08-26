@@ -1,12 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllImageCredits } from "@/lib/images";
+import { createPageMetadata } from "@/lib/metadata";
 import { StitchDivider } from "@/components/decorative";
 
-export const metadata = {
-  title: "Photo Credits · Dolly Legacy",
+export const metadata: Metadata = createPageMetadata({
+  title: "Photo credits",
   description:
-    "Attribution for photographs used on the Dolly Legacy tribute site, sourced from Wikimedia Commons.",
-};
+    "Attribution and licensing for Dolly Parton photographs used on Dolly Legacy, sourced from Wikimedia Commons and Creative Commons contributors.",
+  path: "/images",
+  keywords: ["photo credits", "Wikimedia Commons", "Creative Commons"],
+});
 
 export default function ImagesPage() {
   const credits = getAllImageCredits();

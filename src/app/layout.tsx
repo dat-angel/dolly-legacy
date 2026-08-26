@@ -5,8 +5,10 @@ import {
   Sacramento,
   Special_Elite,
 } from "next/font/google";
+import { JsonLd } from "@/components/JsonLd";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { absoluteUrl, getSiteUrl, SITE } from "@/lib/site";
 import "./globals.css";
 
 const libreBaskerville = Libre_Baskerville({
@@ -38,14 +40,62 @@ const typewriter = Special_Elite({
 });
 
 export const metadata: Metadata = {
-  title: "Dolly Legacy — A Tribute to Dolly Parton",
-  description:
-    "Explore the music, philanthropy, and advocacy of Dolly Parton — from the Imagination Library to her stand with Black and LGBTQ+ communities.",
+  metadataBase: new URL(getSiteUrl()),
+  title: {
+    default: SITE.title,
+    template: `%s | ${SITE.name}`,
+  },
+  description: SITE.description,
+  applicationName: SITE.name,
+  keywords: [...SITE.keywords],
+  authors: [{ name: SITE.creator, url: SITE.repository }],
+  creator: SITE.creator,
+  publisher: SITE.name,
+  category: "entertainment",
+  alternates: {
+    canonical: absoluteUrl("/"),
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
-    title: "Dolly Legacy — A Tribute to Dolly Parton",
-    description:
-      "A living tribute to Dolly's songs, giving, and grace. Ask Dolly a question. Explore every moment.",
+    title: SITE.title,
+    description: SITE.description,
+    url: absoluteUrl("/"),
+    siteName: SITE.name,
+    locale: SITE.locale,
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE.title,
+    description: SITE.shortDescription,
+  },
+  other: {
+    "apple-mobile-web-app-title": SITE.name,
+  },
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE.name,
+  alternateName: SITE.title,
+  url: absoluteUrl("/"),
+  description: SITE.description,
+  inLanguage: "en-US",
+  publisher: {
+    "@type": "Organization",
+    name: SITE.name,
+    url: absoluteUrl("/"),
   },
 };
 
@@ -56,6 +106,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${libreBaskerville.variable} ${sourceSans.variable} ${sacramento.variable} ${typewriter.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col font-sans text-burgundy-deep">
+        <JsonLd data={websiteJsonLd} />
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />

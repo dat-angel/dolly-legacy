@@ -1,3 +1,6 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Suspense } from "react";
 import { CHAPTERS } from "@/lib/types";
 import { getMomentsByChapter } from "@/lib/moments";
 import { Hero } from "@/components/Hero";
@@ -7,8 +10,19 @@ import { StatsStrip } from "@/components/StatsStrip";
 import { WhatWouldDollySay } from "@/components/WhatWouldDollySay";
 import { StitchDivider, Rhinestone, StarBurst } from "@/components/decorative";
 import { dollyButtonClass } from "@/components/ui/DollyButton";
-import Link from "next/link";
-import { Suspense } from "react";
+import { createPageMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Interactive Dolly Parton tribute",
+  description:
+    "Scroll five life chapters, browse 28 shareable moments, filter by era, and ask Dolly a question — an open tribute to her music, philanthropy, and advocacy.",
+  path: "/",
+  keywords: [
+    "interactive Dolly Parton exhibit",
+    "Dolly Parton timeline",
+    "what would Dolly say",
+  ],
+});
 
 const TYPEWRITER_CHAPTER = "music";
 

@@ -1,35 +1,25 @@
 import type { Chapter, Era, Moment } from "./types";
 import { CHAPTERS } from "./types";
+import { absoluteUrl, FALLBACK_SITE_URL, getSiteUrl } from "./site";
 
-const FALLBACK_SITE_URL = "https://dolly-legacy.vercel.app";
-
-export function getSiteUrl(): string {
-  if (typeof window !== "undefined") return window.location.origin;
-  return process.env.NEXT_PUBLIC_SITE_URL ?? FALLBACK_SITE_URL;
-}
-
-export function buildAbsoluteUrl(path: string): string {
-  const base = getSiteUrl().replace(/\/$/, "");
-  const normalized = path.startsWith("/") ? path : `/${path}`;
-  return `${base}${normalized}`;
-}
+export { FALLBACK_SITE_URL, getSiteUrl, absoluteUrl };
 
 export function getMomentShareUrl(momentId: string): string {
-  return buildAbsoluteUrl(`/moment/${momentId}`);
+  return absoluteUrl(`/moment/${momentId}`);
 }
 
 export function getChapterShareUrl(chapterId: Chapter): string {
-  return buildAbsoluteUrl(`/chapter/${chapterId}`);
+  return absoluteUrl(`/chapter/${chapterId}`);
 }
 
 export function getEraShareUrl(era: Era): string {
-  return buildAbsoluteUrl(`/moments?era=${encodeURIComponent(era)}`);
+  return absoluteUrl(`/moments?era=${encodeURIComponent(era)}`);
 }
 
 export function getDollySayShareUrl(momentId: string, query?: string): string {
   const params = new URLSearchParams({ dolly: momentId });
   if (query?.trim()) params.set("q", query.trim());
-  return buildAbsoluteUrl(`/?${params.toString()}#what-would-dolly-say`);
+  return absoluteUrl(`/?${params.toString()}#what-would-dolly-say`);
 }
 
 export function getMomentShareText(moment: Moment): string {
