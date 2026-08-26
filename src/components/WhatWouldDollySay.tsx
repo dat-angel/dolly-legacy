@@ -1,25 +1,11 @@
 "use client";
 
-import { useEffect } from "react";
-import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import { DollyChatThread } from "./dolly-chat/DollyChatThread";
-import { useDollyChat } from "./dolly-chat/DollyChatProvider";
+import { DollyChatUrlSync } from "./dolly-chat/DollyChatUrlSync";
 import { SparkleField, StarBurst } from "./decorative";
 
 export function WhatWouldDollySay() {
-  const searchParams = useSearchParams();
-  const { hydrateFromShare } = useDollyChat();
-
-  useEffect(() => {
-    const momentId = searchParams.get("dolly");
-    if (!momentId) return;
-    hydrateFromShare({
-      momentId,
-      query: searchParams.get("q"),
-      era: searchParams.get("era"),
-    });
-  }, [searchParams, hydrateFromShare]);
-
   return (
     <section
       id="what-would-dolly-say"
@@ -45,6 +31,9 @@ export function WhatWouldDollySay() {
           actually said then.
         </p>
 
+        <Suspense fallback={null}>
+          <DollyChatUrlSync />
+        </Suspense>
         <DollyChatThread className="mt-6" />
       </div>
     </section>
