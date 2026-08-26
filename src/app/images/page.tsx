@@ -24,7 +24,7 @@ export default function ImagesPage() {
       </h1>
       <StitchDivider className="max-w-md" />
       <p className="mt-4 max-w-2xl leading-relaxed text-burgundy/80">
-        This fan tribute uses photographs from{" "}
+        This fan scrapbook uses photographs from{" "}
         <a
           href="https://commons.wikimedia.org/wiki/Category:Dolly_Parton"
           target="_blank"

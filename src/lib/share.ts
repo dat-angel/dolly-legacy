@@ -40,12 +40,12 @@ export function getMomentShareText(moment: Moment): string {
 
 export function getChapterShareText(chapterId: Chapter): string {
   const chapter = CHAPTERS.find((c) => c.id === chapterId);
-  if (!chapter) return "Dolly Legacy — a tribute to Dolly Parton";
+  if (!chapter) return "Dolly Legacy — a celebration of Dolly Parton";
   return `${chapter.title} — ${chapter.subtitle}`;
 }
 
 export function getEraShareText(era: Era): string {
-  return `Explore Dolly Parton in the ${era} — moments, quotes, and stories from the Dolly Legacy tribute.`;
+  return `Dolly in the ${era} — moments, quotes, and stories from the open Dolly Legacy scrapbook.`;
 }
 
 export function getInstagramCaption(text: string, url: string): string {

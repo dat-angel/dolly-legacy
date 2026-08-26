@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for helping grow the Dolly Legacy open database and tribute site.
+Thank you for helping grow the Dolly Legacy open database and celebration site.
 
 ## What you can contribute
 
@@ -34,7 +34,7 @@ By contributing, you agree that:
 
 ## Content guidelines
 
-- Be factual and respectful — this is a fan tribute, not parody
+- Be factual and respectful — this is a fan celebration, not parody
 - Attribute quotes to public sources (NPR, AP, interviews, etc.)
 - Use short lyric excerpts only; link to official recordings when possible
 - Cover Dolly's support for underrepresented communities accurately

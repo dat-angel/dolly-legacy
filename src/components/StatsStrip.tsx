@@ -4,10 +4,10 @@ import { useEffect, useRef, useState } from "react";
 import { getImpactStats } from "@/lib/moments";
 
 const stats = [
-  { key: "books" as const, label: "Books gifted" },
+  { key: "books" as const, label: "Books into kids' hands" },
   { key: "songs" as const, label: "Songs written" },
-  { key: "countries" as const, label: "Countries served" },
-  { key: "years" as const, label: "Years" },
+  { key: "countries" as const, label: "Countries with free books" },
+  { key: "years" as const, label: "Years — and counting" },
 ] as const;
 
 export function StatsStrip() {
@@ -32,7 +32,7 @@ export function StatsStrip() {
   }, []);
 
   return (
-    <section ref={ref} className="stats-strip py-8 text-cream sm:py-10">
+    <section ref={ref} className="stats-strip py-8 text-burgundy-deep sm:py-10">
       <div className="relative mx-auto grid max-w-5xl grid-cols-2 gap-x-4 gap-y-6 px-4 sm:px-6 md:grid-cols-4">
         {stats.map(({ key, label }, i) => (
           <div
@@ -43,10 +43,8 @@ export function StatsStrip() {
               transitionDelay: `${i * 80}ms`,
             }}
           >
-            <p className="font-serif text-2xl font-bold text-gold-light md:text-3xl">
-              {data[key]}
-            </p>
-            <p className="mt-1 text-xs text-cream/70 sm:text-sm">{label}</p>
+            <p className="font-serif text-2xl font-bold md:text-3xl">{data[key]}</p>
+            <p className="mt-1 text-xs text-burgundy-deep/80 sm:text-sm">{label}</p>
           </div>
         ))}
       </div>

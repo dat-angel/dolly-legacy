@@ -125,7 +125,7 @@ export function LifeTimeline() {
   return (
     <section
       id="life"
-      className="relative scroll-mt-20 bg-burgundy-deep text-cream"
+      className="relative scroll-mt-20 bg-cream text-burgundy-deep"
       aria-label="Interactive timeline of Dolly Parton's life"
     >
       <div className="relative mx-auto grid min-h-[100svh] max-w-6xl lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
@@ -155,7 +155,7 @@ export function LifeTimeline() {
               </motion.div>
             )}
           </AnimatePresence>
-          <div className="absolute inset-0 bg-gradient-to-t from-burgundy-deep via-burgundy-deep/25 to-burgundy-deep/20 lg:bg-gradient-to-r lg:from-transparent lg:via-burgundy-deep/20 lg:to-burgundy-deep" />
+          <div className="absolute inset-0 bg-gradient-to-t from-cream via-cream/20 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-cream/15 lg:to-cream" />
 
           <div className="absolute left-3 top-3 z-10 flex gap-2 sm:left-5 sm:top-5">
             <button
@@ -165,7 +165,7 @@ export function LifeTimeline() {
                 goTo(index - 1, true);
               }}
               disabled={index === 0}
-              className="inline-flex min-h-11 min-w-11 items-center justify-center border border-cream/30 bg-burgundy-deep/55 text-lg text-cream backdrop-blur-sm disabled:opacity-30"
+              className="inline-flex min-h-11 min-w-11 items-center justify-center border border-gold bg-cream/90 text-lg text-burgundy-deep backdrop-blur-sm disabled:opacity-30"
               aria-label="Previous moment"
             >
               ‹
@@ -177,20 +177,20 @@ export function LifeTimeline() {
                 goTo(index + 1, true);
               }}
               disabled={index === lastIndex}
-              className="inline-flex min-h-11 min-w-11 items-center justify-center border border-cream/30 bg-burgundy-deep/55 text-lg text-cream backdrop-blur-sm disabled:opacity-30"
+              className="inline-flex min-h-11 min-w-11 items-center justify-center border border-gold bg-cream/90 text-lg text-burgundy-deep backdrop-blur-sm disabled:opacity-30"
               aria-label="Next moment"
             >
               ›
             </button>
           </div>
 
-          <p className="absolute bottom-4 left-4 z-10 font-mono text-xs font-bold uppercase tracking-[0.2em] text-gold-light sm:bottom-6 sm:left-6">
+          <p className="absolute bottom-4 left-4 z-10 bg-gold px-2 py-1 font-mono text-xs font-bold uppercase tracking-[0.2em] text-burgundy-deep sm:bottom-6 sm:left-6">
             {index + 1} / {TIMELINE_STOPS.length}
           </p>
         </div>
 
         <div className="relative z-10 flex flex-col justify-end px-4 pb-[max(6rem,env(safe-area-inset-bottom))] pt-5 sm:px-6 lg:justify-center lg:py-16 lg:pb-16">
-          <p className="font-mono text-xs uppercase tracking-[0.16em] text-gold-light">
+          <p className="font-mono text-xs uppercase tracking-[0.16em] text-walnut">
             {stage.nickname} · {moment.year ?? moment.era}
           </p>
           <h2 className="mt-2 font-serif text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl" aria-live="polite">
@@ -202,19 +202,19 @@ export function LifeTimeline() {
                 <Typewriter
                   key={moment.id}
                   text={`“${moment.quote}”`}
-                  className="text-lg leading-snug text-cream/95 sm:text-xl"
+                  className="text-lg leading-snug text-burgundy-deep sm:text-xl"
                   speed={28}
                   startOnView={false}
                   playSound={!reduceMotion}
                 />
               ) : (
-                <p className="font-script text-lg leading-snug text-cream/95 sm:text-xl">
+                <p className="font-script text-lg leading-snug text-burgundy-deep sm:text-xl">
                   &ldquo;{moment.quote}&rdquo;
                 </p>
               )}
             </blockquote>
           ) : (
-            <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-cream/80 sm:text-base">
+            <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-burgundy/75 sm:text-base">
               {moment.summary}
             </p>
           )}
@@ -241,7 +241,7 @@ export function LifeTimeline() {
                       "min-h-10 shrink-0 rounded-sm px-3 font-mono text-xs font-bold uppercase tracking-wide",
                       active
                         ? "bg-gold text-burgundy-deep"
-                        : "bg-white/10 text-cream/80 hover:bg-white/20",
+                        : "border border-burgundy/15 bg-white/70 text-burgundy hover:border-gold hover:bg-gold/15",
                     )}
                   >
                     {era.replace("s", "")}
@@ -264,7 +264,7 @@ export function LifeTimeline() {
               aria-valuetext={`${moment.year ?? moment.era}, ${moment.title}`}
               className="life-slider mt-1 w-full"
             />
-            <div className="mt-1 flex justify-between font-mono text-[10px] uppercase tracking-wider text-cream/55">
+            <div className="mt-1 flex justify-between font-mono text-[10px] uppercase tracking-wider text-burgundy/50">
               <span>1946</span>
               <span>now</span>
             </div>
@@ -276,7 +276,7 @@ export function LifeTimeline() {
                 type="button"
                 onClick={() => setPlaying((value) => !value)}
                 aria-pressed={playing}
-                className="inline-flex min-h-11 items-center rounded-sm border border-cream/30 px-4 text-sm font-semibold text-cream hover:bg-white/10"
+                className={dollyButtonClass("secondary", "min-h-11 px-4")}
               >
                 {playing ? "Pause" : "Play"}
               </button>
@@ -291,10 +291,7 @@ export function LifeTimeline() {
             <button
               type="button"
               onClick={openDock}
-              className={dollyButtonClass(
-                "secondary",
-                "min-h-11 border-cream/40 bg-white/10 px-5 text-cream hover:bg-white/20",
-              )}
+              className={dollyButtonClass("secondary", "min-h-11 px-5")}
             >
               Ask Dolly
             </button>
@@ -306,14 +303,13 @@ export function LifeTimeline() {
               storySrc={getMomentStoryUrl(moment.id)}
               compact
               label="Share"
-              className="[&_button]:border-cream/40 [&_button]:text-cream"
             />
           </div>
 
           {chapter && moment.chapter && (
             <Link
               href={`/chapter/${moment.chapter}`}
-              className="mt-4 text-sm font-semibold text-gold-light hover:text-gold"
+              className="mt-4 text-sm font-semibold text-walnut hover:text-burgundy-deep"
             >
               {chapter.title} →
             </Link>

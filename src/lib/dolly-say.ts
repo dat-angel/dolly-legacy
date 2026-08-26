@@ -197,7 +197,7 @@ export const LIFE_STAGES: Record<Era, LifeStage> = {
 export const ANY_TIME_STAGE = {
   nickname: "Any time",
   years: "1946–now",
-  greeting: "Tap something on your mind. She answers in her own words.",
+  greeting: "What's going on? She's probably already said it better.",
   prompts: [
     { label: "Work stress", text: "My boss doesn't respect me and I'm exhausted" },
     { label: "Need courage", text: "I'm scared and need courage today" },

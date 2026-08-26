@@ -2,15 +2,15 @@ export const FALLBACK_SITE_URL = "https://dolly-legacy.vercel.app";
 
 export const SITE = {
   name: "Dolly Legacy",
-  title: "Dolly Legacy — A Tribute to Dolly Parton",
-  tagline: "Music, philanthropy, and grace across eight decades",
+  title: "Dolly Legacy — A celebration of Dolly Parton",
+  tagline: "Songs, books, backbone, and an open database you can remix",
   description:
-    "Explore Dolly Parton's life in an interactive tribute — 28 curated moments, chapter-by-chapter exhibits, the Imagination Library, and her advocacy for literacy, Black communities, LGBTQ+ people, and working women.",
+    "A living scrapbook of Dolly Parton — 28 moments, quotes, song and film stories, and the people she stood with. Open CC BY 4.0 data for anyone to use.",
   shortDescription:
-    "Interactive Dolly Parton tribute with quotes, history, and shareable moments from the Imagination Library to today.",
+    "Play Dolly's life, ask what she'd say, and remix the open quotes-and-credits database.",
   keywords: [
     "Dolly Parton",
-    "Dolly Parton tribute",
+    "Dolly Parton celebration",
     "Imagination Library",
     "Dollywood",
     "Dolly Parton quotes",
@@ -28,7 +28,7 @@ export const SITE = {
   creator: "Dolly Legacy contributors",
   repository: "https://github.com/dat-angel/dolly-legacy",
   locale: "en_US",
-  themeColor: "#5c4332",
+  themeColor: "#e2b422",
   backgroundColor: "#f7f1e1",
 } as const;
 

@@ -1,8 +1,8 @@
 {
   "meta": {
     "name": "dolly-legacy-moments",
-    "version": "1.0.0",
-    "description": "Open curated database of Dolly Parton moments, quotes, philanthropy, and advocacy — for tribute sites, research, and education.",
+    "version": "1.0.1",
+    "description": "Open curated database of Dolly Parton moments, quotes, songs, films, philanthropy, and advocacy — for celebrations, research, and remixing.",
     "license": "CC-BY-4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
     "attribution": "Dolly Legacy contributors",

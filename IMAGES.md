@@ -6,7 +6,7 @@ This document maps life phases on the site to photographs, explains licensing, a
 
 | Layer | Count | Used for |
 |-------|-------|----------|
-| **Chapters** | 5 | Homepage scroll exhibit |
+| **Chapters** | 5 | Homepage story chapters |
 | **Eras** | 8 decades | Archive filters + era gallery |
 | **Moments** | 28 | Individual stories, each with a photograph |
 

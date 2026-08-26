@@ -14,7 +14,9 @@ export default async function Image({
   const { id } = await params;
   const moment = getMomentById(id);
   const title = moment?.title ?? "Dolly Legacy moment";
-  const quote = moment?.quote ? truncateOg(`“${moment.quote}”`, 120) : truncateOg(moment?.summary ?? "", 120);
+  const quote = moment?.quote
+    ? truncateOg(`“${moment.quote}”`, 120)
+    : truncateOg(moment?.summary ?? "", 120);
   const year = moment?.year ? String(moment.year) : moment?.era ?? "";
 
   return new ImageResponse(
@@ -26,14 +28,22 @@ export default async function Image({
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: `linear-gradient(145deg, ${OG_COLORS.forest}, ${OG_COLORS.burgundyDeep} 55%, ${OG_COLORS.burgundy})`,
-          color: OG_COLORS.cream,
+          background: OG_COLORS.cream,
+          color: OG_COLORS.burgundyDeep,
           padding: "64px",
           fontFamily: "Georgia, serif",
+          border: `24px solid ${OG_COLORS.gold}`,
         }}
       >
         <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-          <div style={{ fontSize: 24, color: OG_COLORS.gold, letterSpacing: "0.14em", textTransform: "uppercase" }}>
+          <div
+            style={{
+              fontSize: 24,
+              color: OG_COLORS.forest,
+              letterSpacing: "0.14em",
+              textTransform: "uppercase",
+            }}
+          >
             {OG_BRAND.eyebrow}
           </div>
           <div style={{ fontSize: 58, fontWeight: 700, lineHeight: 1.05, maxWidth: 980 }}>
@@ -45,7 +55,7 @@ export default async function Image({
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", fontSize: 24 }}>
           <span>{year}</span>
-          <span style={{ color: OG_COLORS.blush }}>Share this moment · Dolly Legacy</span>
+          <span style={{ color: OG_COLORS.burgundy }}>Share this moment · Dolly Legacy</span>
         </div>
       </div>
     ),

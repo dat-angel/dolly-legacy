@@ -17,13 +17,13 @@ export default function AppleIcon() {
           alignItems: "center",
           justifyContent: "center",
           gap: 8,
-          background: `linear-gradient(160deg, ${OG_COLORS.forest}, ${OG_COLORS.burgundyDeep})`,
-          color: OG_COLORS.cream,
+          background: OG_COLORS.gold,
+          color: OG_COLORS.burgundyDeep,
           fontFamily: "Georgia, serif",
         }}
       >
         <div style={{ fontSize: 92, fontWeight: 700, lineHeight: 1 }}>D</div>
-        <div style={{ fontSize: 22, letterSpacing: "0.08em", color: OG_COLORS.gold }}>
+        <div style={{ fontSize: 22, letterSpacing: "0.08em", color: OG_COLORS.burgundyDeep }}>
           {SITE.name}
         </div>
       </div>

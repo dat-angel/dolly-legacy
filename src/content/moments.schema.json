@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/dat-angel/dolly-legacy/moments.schema.json",
   "title": "Dolly Legacy Moments Database",
-  "description": "Schema for the open CC BY 4.0 moments database documenting Dolly Parton's legacy.",
+  "description": "Schema for the open CC BY 4.0 moments database celebrating Dolly Parton's songs, stories, and advocacy.",
   "type": "object",
   "required": ["meta", "moments"],
   "properties": {

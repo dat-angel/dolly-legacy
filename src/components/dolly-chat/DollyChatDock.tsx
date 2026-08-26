@@ -100,7 +100,7 @@ export function DollyChatDock() {
         type="button"
         onClick={toggleDock}
         className={cn(
-          "pointer-events-auto relative ml-auto inline-flex items-center gap-2 border border-gold/70 bg-walnut p-1.5 pr-4 text-left text-cream",
+          "pointer-events-auto relative ml-auto inline-flex items-center gap-2 border border-burgundy-deep/20 bg-gold p-1.5 pr-4 text-left text-burgundy-deep",
           hideFab && "invisible pointer-events-none",
           dockOpen && "max-sm:hidden",
         )}
@@ -108,7 +108,7 @@ export function DollyChatDock() {
         aria-expanded={dockOpen}
         tabIndex={hideFab ? -1 : 0}
       >
-        <span className="relative h-12 w-12 overflow-hidden border border-cream/20">
+        <span className="relative h-12 w-12 overflow-hidden border border-burgundy-deep/20">
           {portrait && (
             <Image
               src={portrait.src}
@@ -120,7 +120,7 @@ export function DollyChatDock() {
           )}
         </span>
         <span>
-          <span className="block text-sm font-semibold text-cream">
+          <span className="block text-sm font-semibold">
             {dockOpen ? "Hide" : "Ask Dolly"}
           </span>
         </span>

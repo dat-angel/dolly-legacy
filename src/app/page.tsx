@@ -4,20 +4,23 @@ import { Suspense } from "react";
 import { Hero } from "@/components/Hero";
 import { HomeUrlSync } from "@/components/HomeUrlSync";
 import { LifeTimeline } from "@/components/LifeTimeline";
+import { OpenDataHarbor } from "@/components/OpenDataHarbor";
+import { SheStoodWith } from "@/components/SheStoodWith";
 import { StatsStrip } from "@/components/StatsStrip";
 import { WhatWouldDollySay } from "@/components/WhatWouldDollySay";
 import { dollyButtonClass } from "@/components/ui/DollyButton";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Interactive Dolly Parton tribute",
+  title: "A living scrapbook of Dolly Parton",
   description:
-    "Slide through Dolly Parton's life from Locust Ridge to now, then ask what she'd say — an open tribute to her music, philanthropy, and advocacy.",
+    "Play Dolly Parton's life, ask what she'd say, and remix the open CC BY database of quotes, songs, films, and the people she stood with.",
   path: "/",
   keywords: [
-    "interactive Dolly Parton exhibit",
+    "Dolly Parton celebration",
     "Dolly Parton timeline",
     "what would Dolly say",
+    "Dolly Parton open data",
   ],
 });
 
@@ -31,25 +34,28 @@ export default function HomePage() {
       <StatsStrip />
       <LifeTimeline />
 
-      <section className="section-warm px-4 py-12 sm:px-6 md:py-24">
+      <section className="px-4 py-12 sm:px-6 md:py-24">
         <div className="mx-auto max-w-4xl">
           <WhatWouldDollySay />
         </div>
       </section>
 
-      <section className="border-t border-burgundy/10 bg-cream px-4 py-16 text-center sm:px-6 md:py-20">
+      <SheStoodWith />
+      <OpenDataHarbor />
+
+      <section className="px-4 py-16 text-center sm:px-6 md:py-20">
         <h2 className="font-serif text-3xl font-bold text-burgundy-deep md:text-4xl">
           All 28 moments
         </h2>
-        <p className="mx-auto mt-4 max-w-lg text-burgundy/70">
-          Filter by era, category, and theme. Press{" "}
-          <kbd className="border border-burgundy/20 px-2 py-0.5 font-mono text-xs text-burgundy">
+        <p className="mx-auto mt-4 max-w-lg text-burgundy/75">
+          Filter by era, category, and who she stood with. Press{" "}
+          <kbd className="border border-burgundy/20 px-2 py-0.5 font-mono text-xs">
             ?
           </kbd>{" "}
           for a surprise.
         </p>
         <Link href="/moments" className={dollyButtonClass("primary", "mt-8 w-full sm:w-auto")}>
-          View all moments
+          Browse the scrapbook
         </Link>
       </section>
     </>

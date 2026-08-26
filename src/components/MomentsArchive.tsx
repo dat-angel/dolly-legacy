@@ -122,7 +122,7 @@ export function MomentsArchive() {
       <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
           <h1 className="font-serif text-4xl font-bold text-burgundy-deep md:text-5xl">
-            All Moments
+            All 28 moments
           </h1>
           <p className="mt-2 text-burgundy/70">
             {filtered.length} moment{filtered.length !== 1 ? "s" : ""}

@@ -1,6 +1,6 @@
 # Dolly Legacy Moments Database
 
-Open curated data documenting Dolly Parton's music, philanthropy, advocacy, and life milestones.
+Open curated data celebrating Dolly Parton's music, philanthropy, advocacy, and life milestones.
 
 ## License
 
@@ -27,7 +27,7 @@ https://github.com/dat-angel/dolly-legacy
 
 | File | Description |
 |------|-------------|
-| `moments.json` | Canonical database (28 moments, v1.0.0) |
+| `moments.json` | Canonical database (28 moments, v1.0.1) |
 | `moments.schema.json` | JSON Schema for validation and tooling |
 | `LICENSE-CC-BY-4.0.txt` | Full legal text |
 
