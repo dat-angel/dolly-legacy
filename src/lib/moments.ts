@@ -59,26 +59,33 @@ export function filterMoments(options: {
   const { category = "all", era = "all", tag, search } = options;
   const q = search?.toLowerCase().trim();
 
-  return moments.filter((m) => {
-    if (category !== "all" && m.category !== category) return false;
-    if (era !== "all" && m.era !== era) return false;
-    if (tag && !m.tags.includes(tag)) return false;
-    if (q) {
-      const haystack = [
-        m.title,
-        m.summary,
-        m.body,
-        m.quote,
-        m.hiddenFact,
-        ...m.tags,
-      ]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase();
-      if (!haystack.includes(q)) return false;
-    }
-    return true;
-  });
+  return moments
+    .filter((m) => {
+      if (category !== "all" && m.category !== category) return false;
+      if (era !== "all" && m.era !== era) return false;
+      if (tag && !m.tags.includes(tag)) return false;
+      if (q) {
+        const haystack = [
+          m.title,
+          m.summary,
+          m.body,
+          m.quote,
+          m.hiddenFact,
+          ...m.tags,
+        ]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase();
+        if (!haystack.includes(q)) return false;
+      }
+      return true;
+    })
+    .sort((a, b) => {
+      const yearA = a.year ?? Number.MAX_SAFE_INTEGER;
+      const yearB = b.year ?? Number.MAX_SAFE_INTEGER;
+      if (yearA !== yearB) return yearA - yearB;
+      return a.title.localeCompare(b.title);
+    });
 }
 
 export function getRandomMoment(mood?: Mood): Moment {
