@@ -2,12 +2,14 @@
 
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import { getMomentImage } from "@/lib/images";
 import { getRelatedMoments } from "@/lib/moments";
 import {
   getMomentShareText,
   getMomentShareUrl,
 } from "@/lib/share";
 import type { Moment } from "@/lib/types";
+import { MomentPortrait } from "./MomentPortrait";
 import { ShareMenu } from "./ShareMenu";
 
 interface MomentDrawerProps {
@@ -20,6 +22,7 @@ export function MomentDrawer({ moment, onClose, onSelect }: MomentDrawerProps) {
   const related = getRelatedMoments(moment);
   const shareUrl = getMomentShareUrl(moment.id);
   const shareText = getMomentShareText(moment);
+  const image = getMomentImage(moment.id);
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
@@ -96,6 +99,15 @@ export function MomentDrawer({ moment, onClose, onSelect }: MomentDrawerProps) {
         >
           {moment.title}
         </h2>
+
+        {image && (
+          <MomentPortrait
+            image={image}
+            showCaption
+            className="mt-6 aspect-[16/10] w-full"
+            sizes="(max-width: 768px) 100vw, 672px"
+          />
+        )}
 
         {moment.quote && (
           <blockquote className="mt-6 font-serif text-2xl italic leading-snug text-burgundy rhinestone">

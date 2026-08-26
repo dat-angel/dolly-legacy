@@ -1,0 +1,172 @@
+{
+  "moments": {
+    "appalachian-roots": {
+      "alt": "Parton Cemetery in Greenbrier, in the Great Smoky Mountains of East Tennessee",
+      "caption": "Family ground in the Smokies — the mountain roots she never left behind",
+      "year": 2008,
+      "creditKey": "moments/appalachian-roots"
+    },
+    "first-song": {
+      "alt": "1965 Monument Records advertisement for Dolly Parton's single Happy, Happy Birthday Baby",
+      "caption": "Monument's new star — writing and recording before Nashville fully knew her name",
+      "year": 1965,
+      "creditKey": "moments/first-song"
+    },
+    "coat-of-many-colors": {
+      "alt": "Dolly Parton's Coat of Many Colors on display at the Country Music Hall of Fame",
+      "caption": "The coat her mother sewed from rags — now in the Country Music Hall of Fame",
+      "year": 2018,
+      "creditKey": "moments/coat-of-many-colors"
+    },
+    "jolene-and-iwill": {
+      "alt": "Original U.S. vinyl A-side label for Dolly Parton's single Jolene",
+      "caption": "Jolene — recorded the same day as I Will Always Love You",
+      "year": 1973,
+      "creditKey": "moments/jolene-and-iwill"
+    },
+    "i-will-always-love-you": {
+      "alt": "Original U.S. vinyl A-side label for I Will Always Love You by Dolly Parton",
+      "caption": "The song she wrote as a farewell — and that the world never let go",
+      "year": 1974,
+      "creditKey": "moments/i-will-always-love-you"
+    },
+    "nine-to-five-film": {
+      "alt": "Dolly Parton, Lily Tomlin, and Jane Fonda together at the Kennedy Center",
+      "caption": "The Nine to Five trio — Parton, Tomlin, and Fonda, still a matched set",
+      "year": 2000,
+      "creditKey": "moments/nine-to-five-film"
+    },
+    "just-because-woman": {
+      "alt": "Porter Wagoner and Dolly Parton in 1971",
+      "caption": "1968's Just Because I'm a Woman — refusing to apologize for living a full life",
+      "year": 1971,
+      "creditKey": "moments/just-because-woman"
+    },
+    "dollywood": {
+      "alt": "Dolly Parton performing at Dollywood in 2014",
+      "caption": "Home ground: Dollywood, the park she built in the mountains that raised her",
+      "year": 2014,
+      "creditKey": "moments/dollywood"
+    },
+    "dollywood-foundation": {
+      "alt": "Dolly Parton accepting the Woodrow Wilson Award",
+      "caption": "The Dollywood Foundation — using fame as a tool for the hometown that needed it",
+      "year": 2007,
+      "creditKey": "moments/dollywood-foundation"
+    },
+    "imagination-library-milestone": {
+      "alt": "Dolly Parton speaking at the National Press Club in Washington, D.C., 2000",
+      "caption": "A lifetime of putting books in children's hands — past 200 million and counting",
+      "year": 2000,
+      "creditKey": "moments/imagination-library-milestone"
+    },
+    "gatlinburg-relief": {
+      "alt": "Dolly Parton in a Dollywood Fire Department jacket and helmet, speaking into a microphone",
+      "caption": "My People Fund — showing up for Sevier County when the mountains burned",
+      "year": 2014,
+      "creditKey": "moments/gatlinburg-relief"
+    },
+    "covid-vaccine": {
+      "alt": "Dolly Parton in a white rhinestone dress holding a smartphone, 2022",
+      "caption": "2020 — a million dollars toward a vaccine, given without waiting to be asked",
+      "year": 2022,
+      "creditKey": "moments/covid-vaccine"
+    },
+    "blm-support": {
+      "alt": "Dolly Parton in 2023 from the Peace Like a River music video",
+      "caption": "Of course Black lives matter — spoken plainly, from someone who meant it",
+      "year": 2023,
+      "creditKey": "moments/blm-support"
+    },
+    "whitney-royalties": {
+      "alt": "Dolly Parton performing on stage at the Grand Ole Opry in Nashville, 2005",
+      "caption": "The song Whitney made global — royalties Dolly redirected toward a new generation",
+      "year": 2005,
+      "creditKey": "moments/whitney-royalties"
+    },
+    "lgbtq-allyship": {
+      "alt": "Dolly Parton performing on the Blue Smoke World Tour in Knoxville, 2014",
+      "caption": "Love is love — said from the stage, and lived off it",
+      "year": 2014,
+      "creditKey": "moments/lgbtq-allyship"
+    },
+    "trans-support": {
+      "alt": "Dolly Parton performing at Lanxess Arena in Cologne, 2014",
+      "caption": "You cannot help being trans — the same grace she offers anyone finding themselves",
+      "year": 2014,
+      "creditKey": "moments/trans-support"
+    },
+    "songwriters-hall": {
+      "alt": "Dolly Parton at the Kennedy Center Honors reception, 2006",
+      "caption": "Honored as a songwriter first — the words before the wigs",
+      "year": 2006,
+      "creditKey": "moments/songwriters-hall"
+    },
+    "dolly-parton-day": {
+      "alt": "Dolly Parton singing on stage during a Grand Ole Opry live broadcast in Nashville",
+      "caption": "Tennessee's own — a state holiday for the woman who never forgot the holler",
+      "year": 2005,
+      "creditKey": "moments/dolly-parton-day"
+    },
+    "cup-of-ambition": {
+      "alt": "Dolly Parton at a recording session around 1989, wearing large square red earrings",
+      "caption": "Pour yourself a cup of ambition — then get to work",
+      "year": 1989,
+      "creditKey": "moments/cup-of-ambition"
+    },
+    "do-it-on-purpose": {
+      "alt": "Wall quote at the Grammy Museum: Find out who you are and do it on purpose — Dolly Parton",
+      "caption": "Find out who you are and do it on purpose — in her own words, on the museum wall",
+      "year": 2022,
+      "creditKey": "moments/do-it-on-purpose"
+    },
+    "storm-of-life": {
+      "alt": "Dolly Parton at Great Smoky Mountains National Park",
+      "caption": "Storms make trees take deeper roots — she would know, raised in these mountains",
+      "year": 2009,
+      "creditKey": "moments/storm-of-life"
+    },
+    "dreamer-dream": {
+      "alt": "Dolly Parton at the National Press Club in Washington, D.C., March 2000",
+      "caption": "If you don't dream, you can't have a dream come true",
+      "year": 2000,
+      "creditKey": "moments/dreamer-dream"
+    },
+    "everyone-matters": {
+      "alt": "Dolly Parton with the Coat of Many Colors film crew at the Movieguide Awards",
+      "caption": "Everybody should be treated with respect — a rule she applied to casts, crews, and crowds",
+      "year": 2016,
+      "creditKey": "moments/everyone-matters"
+    },
+    "porter-wagoner": {
+      "alt": "Porter Wagoner and Dolly Parton in 1969",
+      "caption": "The Porter Wagoner Show — the weekly stage that introduced her to America",
+      "year": 1969,
+      "creditKey": "chapters/origins"
+    },
+    "nine-to-five": {
+      "alt": "Carol Burnett and Dolly Parton in a 1980 publicity photograph",
+      "caption": "Working 9 to 5 — the anthem that walked out of a typewriter and into offices everywhere",
+      "year": 1980,
+      "creditKey": "eras/1980s"
+    },
+    "business-autonomy": {
+      "alt": "Dolly Parton publicity portrait, 1977",
+      "caption": "Owning the masters — creative control as a business decision, not a slogan",
+      "year": 1977,
+      "creditKey": "chapters/music"
+    },
+    "imagination-library": {
+      "alt": "Dolly Parton at the National Press Club, Washington D.C.",
+      "caption": "The Imagination Library begins — a book a month, in her father's honor",
+      "year": 1995,
+      "creditKey": "eras/1990s"
+    },
+    "covid-second-donation": {
+      "alt": "Dolly Parton at the Peabody Awards, 2022",
+      "caption": "A second gift for pediatric infectious disease research — because once wasn't the point",
+      "year": 2022,
+      "creditKey": "chapters/standing"
+    }
+  }
+}

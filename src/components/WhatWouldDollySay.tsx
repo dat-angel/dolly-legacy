@@ -8,7 +8,9 @@ import {
   DOLLY_SAY_PROMPTS,
   whatWouldDollySay,
 } from "@/lib/dolly-say";
+import { getMomentImage } from "@/lib/images";
 import { getMomentById } from "@/lib/moments";
+import { MomentPortrait } from "./MomentPortrait";
 import {
   getDollySayShareUrl,
   getMomentShareText,
@@ -27,6 +29,7 @@ export function WhatWouldDollySay() {
   } | null>(null);
 
   const placeholder = DOLLY_SAY_PLACEHOLDERS[0];
+  const resultImage = result ? getMomentImage(result.moment.id) : null;
 
   useEffect(() => {
     const momentId = searchParams.get("dolly");
@@ -138,8 +141,17 @@ export function WhatWouldDollySay() {
               animate={{ opacity: 1, y: 0, rotate: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ type: "spring", damping: 20, stiffness: 200 }}
-              className="patch-card mt-10 p-8"
+              className="patch-card mt-10 overflow-hidden p-0"
             >
+              {resultImage && (
+                <MomentPortrait
+                  image={resultImage}
+                  framed={false}
+                  className="aspect-[16/7]"
+                  sizes="(max-width: 768px) 100vw, 768px"
+                />
+              )}
+              <div className="p-8">
               {result.moment.quote ? (
                 <blockquote className="text-center font-serif text-2xl leading-snug text-burgundy-deep md:text-3xl rhinestone">
                   &ldquo;{result.moment.quote}&rdquo;
@@ -175,6 +187,7 @@ export function WhatWouldDollySay() {
                 compact
                 label="Share Dolly's answer"
               />
+              </div>
             </motion.div>
           )}
         </AnimatePresence>

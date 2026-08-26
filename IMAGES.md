@@ -8,7 +8,7 @@ This document maps life phases on the site to photographs, explains licensing, a
 |-------|-------|----------|
 | **Chapters** | 5 | Homepage scroll exhibit |
 | **Eras** | 8 decades | Archive filters + era gallery |
-| **Moments** | 28 | Individual stories (no photos yet) |
+| **Moments** | 28 | Individual stories, each with a photograph |
 
 ## Current chapter images (live)
 
@@ -38,8 +38,10 @@ This document maps life phases on the site to photographs, explains licensing, a
 ```
 public/images/chapters/   → 5 chapter hero portraits
 public/images/eras/       → 8 decade thumbnails
+public/images/moments/    → unique photos for 23 moments (5 reuse chapter/era files)
 src/content/phase-images.json   → captions + alt text
-src/content/image-credits.json  → Commons attribution (auto-generated)
+src/content/moment-images.json  → per-moment captions + credit keys
+src/content/image-credits.json  → Commons attribution
 src/lib/images.ts               → getters for UI
 src/app/images/page.tsx         → public credits page
 ```
@@ -67,32 +69,36 @@ src/app/images/page.tsx         → public credits page
 - Concert photos **you** took (you own copyright)
 - Submit via CONTRIBUTING.md with explicit license grant
 
-## Per-moment images (next phase)
+## Per-moment images
 
-28 moments could each get an optional `image` field in `moments.json`. Suggested high-value targets:
+Every moment has a photograph on cards, drawers, and share pages. Unique Commons files live in `public/images/moments/`. Five moments reuse the best chapter/era portrait when that image is the strongest licensed match:
 
-| Moment ID | Suggested visual |
-|-----------|------------------|
-| `coat-of-many-colors` | Museum coat (already used in ch. IV) |
-| `porter-wagoner` | 1969 duo photo |
-| `nine-to-five` | 1980 Burnett promo or film still (check PD) |
-| `imagination-library` | Official IL logo/book stack (permission) |
-| `covid-vaccine` | 2020 press photo (Commons or AP with license) |
-| `blm-support` | 2020 social-era portrait |
+| Moment ID | Visual |
+|-----------|--------|
+| `porter-wagoner` | 1969 duo photo (Chapter I) |
+| `nine-to-five` | 1980 Burnett promo (1980s era) |
+| `business-autonomy` | RCA portrait, 1977 (Chapter II) |
+| `imagination-library` | National Press Club (1990s era) |
+| `covid-second-donation` | Peabody Awards, 2022 (Chapter V) |
 
-Schema change needed: add optional `image` + `imageCredit` to `moments.schema.json`.
+High-value unique files include the Coat of Many Colors at the Hall of Fame, original *Jolene* and *I Will Always Love You* vinyl labels, the *Nine to Five* trio, Dollywood, and the Grammy Museum “do it on purpose” wall.
+
+Refresh unique files with:
+
+```bash
+python3 scripts/fetch-moment-images.py
+```
 
 ## Gaps to fill next
 
 1. **Hero homepage** — single iconic portrait (currently text-only)
-2. **Moment drawer thumbnails** — 28 images is a larger curation project
 
 ## Refreshing credits
 
 After adding images to `public/images/`, regenerate attribution:
 
 ```bash
-python3 scripts/fetch-commons-images.py   # (future helper)
+python3 scripts/fetch-moment-images.py
 ```
 
 Credits are displayed at `/images` on the live site.

@@ -102,5 +102,189 @@
     "author": "Peabody Awards",
     "description": "Dolly Parton from Meet the 82nd Annual Peabody Awards Presenters, uploaded to Vimeo by Peabody Awards under CC-BY-SA-3.0 Unported license on May 31, 2022.",
     "localPath": "/images/eras/2020s.jpg"
+  },
+  "moments/appalachian-roots": {
+    "commonsTitle": "Parton-cemetery-greenbrier2.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Parton-cemetery-greenbrier2.jpg",
+    "license": "CC BY 2.5",
+    "author": "Brian Stansberry",
+    "description": "Parton Cemetery in Greenbrier, located in the Great Smoky Mountains of East Tennessee.  This cemetery can be found via spur trail leading off the Old Settlers Trail, about a mile past the trailhead at Ramsey Prong Road.  Benjamin Christenberry \"Chris\" Parton, whose tombstone is the pale one on the upper right, is the great-great-grandfather of country music singer Dolly Parton.",
+    "localPath": "/images/moments/appalachian-roots.jpg"
+  },
+  "moments/first-song": {
+    "commonsTitle": "Happy, Happy Birthday Baby - ad 1965.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Happy,_Happy_Birthday_Baby_-_ad_1965.jpg",
+    "license": "Public domain",
+    "author": "Monument",
+    "description": "Advertisement for Dolly Parton's single, \"Happy, Happy Birthday Baby\". 4 September 1965.",
+    "localPath": "/images/moments/first-song.jpg"
+  },
+  "moments/coat-of-many-colors": {
+    "commonsTitle": "Coat of Many Colors coat.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Coat_of_Many_Colors_coat.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "Corkythehornetfan",
+    "description": "Dolly Parton's Coat of Many Colors coat displayed in the Country Music Hall of Fame and Museum in Nashville, Tennessee.",
+    "localPath": "/images/moments/coat-of-many-colors.jpg"
+  },
+  "moments/jolene-and-iwill": {
+    "commonsTitle": "Jolene by Dolly Parton US single side-A.png",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Jolene_by_Dolly_Parton_US_single_side-A.png",
+    "license": "Public domain",
+    "author": "RCA Records",
+    "description": "\"Jolene\" by Dolly Parton. One of side-A labels of the original US single release (cat #APB0-0145)",
+    "localPath": "/images/moments/jolene-and-iwill.jpg"
+  },
+  "moments/i-will-always-love-you": {
+    "commonsTitle": "I will always love you by Dolly Parton 1974 US single.png",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:I_will_always_love_you_by_Dolly_Parton_1974_US_single.png",
+    "license": "Public domain",
+    "author": "RCA Records",
+    "description": "A-side label of \"I Will Always Love You\" by Dolly Parton; 1974 US vinyl release",
+    "localPath": "/images/moments/i-will-always-love-you.jpg"
+  },
+  "moments/nine-to-five-film": {
+    "commonsTitle": "Dolly Parton Lily Tomlin Jane Fonda (48591893841).jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Dolly_Parton_Lily_Tomlin_Jane_Fonda_(48591893841).jpg",
+    "license": "CC BY-SA 2.0",
+    "author": "John Mathew Smith & www.celebrity-photos.com from Laurel  Maryland, USA",
+    "description": "Dolly Parton, Lily Tomlin & Jane Fonda at Wash D.C.  Kennedy center  2000",
+    "localPath": "/images/moments/nine-to-five-film.jpg"
+  },
+  "moments/just-because-woman": {
+    "commonsTitle": "Porter Wagoner and Dolly Parton, 1971.png",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Porter_Wagoner_and_Dolly_Parton,_1971.png",
+    "license": "Public domain",
+    "author": "RCA Victor",
+    "description": "Porter Wagoner and Dolly Parton, 1971",
+    "localPath": "/images/moments/just-because-woman.jpg"
+  },
+  "moments/dollywood": {
+    "commonsTitle": "Dolly Parton 2014 Dollywood.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Dolly_Parton_2014_Dollywood.jpg",
+    "license": "CC BY-SA 3.0",
+    "author": "Kris Harris King",
+    "description": "Dolly Parton en en:w:Dollywood, 2014.",
+    "localPath": "/images/moments/dollywood.jpg"
+  },
+  "moments/dollywood-foundation": {
+    "commonsTitle": "E-dolly.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:E-dolly.jpg",
+    "license": "Public domain",
+    "author": "Union20 at English Wikipedia",
+    "description": "Dolly Parton accepts Woodrow Wilson Award",
+    "localPath": "/images/moments/dollywood-foundation.jpg"
+  },
+  "moments/imagination-library-milestone": {
+    "commonsTitle": "Dolly Parton in 2000.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Dolly_Parton_in_2000.jpg",
+    "license": "CC BY-SA 2.0",
+    "author": "Kingkongphoto & www.celebrity-photos.com from Laurel  Maryland, USA",
+    "description": "From National press club March 23, 2000 Wash. D.C.  Wash. D.C.",
+    "localPath": "/images/moments/imagination-library-milestone.jpg"
+  },
+  "moments/gatlinburg-relief": {
+    "commonsTitle": "Dolly Parton 2014 2.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Dolly_Parton_2014_2.jpg",
+    "license": "CC BY-SA 3.0",
+    "author": "Kris Harris King",
+    "description": "Dolly Parton, vestida con ropa de bombero, en Dollywood, presentando nuevas atracciones. Tiene un micrófono en sus manos.",
+    "localPath": "/images/moments/gatlinburg-relief.jpg"
+  },
+  "moments/covid-vaccine": {
+    "commonsTitle": "Dolly Parton for T-Mobile 2022.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Dolly_Parton_for_T-Mobile_2022.jpg",
+    "license": "CC BY 3.0",
+    "author": "chameleon post",
+    "description": "Dolly Parton in a pot for T-Mobile in 2022",
+    "localPath": "/images/moments/covid-vaccine.jpg"
+  },
+  "moments/blm-support": {
+    "commonsTitle": "Dolly Parton 2023.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Dolly_Parton_2023.jpg",
+    "license": "CC BY 3.0",
+    "author": "KIND MUSIC GROUP",
+    "description": "Dolly Parton in the music video Peace like a River",
+    "localPath": "/images/moments/blm-support.jpg"
+  },
+  "moments/whitney-royalties": {
+    "commonsTitle": "Dolly Parton in Nashville april 2005.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Dolly_Parton_in_Nashville_april_2005.jpg",
+    "license": "Public domain",
+    "author": "DoD photo by Tech. Sgt. Cherie A. Thurlby, U.S. Air Force. (Released)",
+    "description": "Secretary of Defense Donald H. Rumsfeld joins country music legend Dolly Parton on stage at the Grand Ole Opry during a live broadcast in Nashville, Tenn., on April 23, 2005.",
+    "localPath": "/images/moments/whitney-royalties.jpg"
+  },
+  "moments/lgbtq-allyship": {
+    "commonsTitle": "Dolly Parton at 'Blue Smoke World Tour' in Knoxville.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Dolly_Parton_at_%27Blue_Smoke_World_Tour%27_in_Knoxville.jpg",
+    "license": "CC BY 2.0",
+    "author": "Kristopher Harris",
+    "description": "Dolly Parton at 'Blue Smoke World Tour' in Knoxville on May 28, 2014",
+    "localPath": "/images/moments/lgbtq-allyship.jpg"
+  },
+  "moments/trans-support": {
+    "commonsTitle": "Dolly Parton @ Lanxess-Arena (Köln).jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Dolly_Parton_@_Lanxess-Arena_(K%C3%B6ln).jpg",
+    "license": "CC BY-SA 3.0",
+    "author": "Josef Just",
+    "description": "Dolly Parton in Köln in der Lanxess-Arena am 5. Juli 2014",
+    "localPath": "/images/moments/trans-support.jpg"
+  },
+  "moments/songwriters-hall": {
+    "commonsTitle": "2006 Kennedy Center Honors · Dolly Parton.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:2006_Kennedy_Center_Honors_%C2%B7_Dolly_Parton.jpg",
+    "license": "Public domain",
+    "author": "Eric Draper",
+    "description": "WASHINGTON, DC - DECEMBER 3:  In this handout provided by The White House, President George W. Bush (C) and Mrs. Laura Bush (3rd-R) stand with the Kennedy Center honorees (L-R) singer and songwriter Smokey Robinson, musical theater composer Andrew Lloyd Webber, country singer Dolly Parton, film director Steven Spielberg, and conductor Zubin Mehta in the Blue Room of the White House during a recept",
+    "localPath": "/images/moments/songwriters-hall.jpg"
+  },
+  "moments/dolly-parton-day": {
+    "commonsTitle": "Dolly parton grand ole opry.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Dolly_parton_grand_ole_opry.jpg",
+    "license": "Public domain",
+    "author": "Foto de Tech. Sgt. Cherie A. Thurlby, USAF",
+    "description": "Country star Dolly Parton sings on stage during a Grand Ole Opry live broadcast in Nashville, Tenn., April 23 as U.S. soldiers watch the show via a video feed in Iraq.",
+    "localPath": "/images/moments/dolly-parton-day.jpg"
+  },
+  "moments/cup-of-ambition": {
+    "commonsTitle": "Dolly Parton with square red earrings.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Dolly_Parton_with_square_red_earrings.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "Eagledj",
+    "description": "Dolly Parton at a recording session about 1989, wearing large square red earrings",
+    "localPath": "/images/moments/cup-of-ambition.jpg"
+  },
+  "moments/do-it-on-purpose": {
+    "commonsTitle": "Quote by Dolly Parton (Grammy Museum) July 2022.JPG",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Quote_by_Dolly_Parton_(Grammy_Museum)_July_2022.JPG",
+    "license": "CC0",
+    "author": "Benoît Prieur",
+    "description": "Quote by Dolly Parton (Grammy Museum) July 2022",
+    "localPath": "/images/moments/do-it-on-purpose.jpg"
+  },
+  "moments/storm-of-life": {
+    "commonsTitle": "Dolly Parton Great Smoky Mountains Park.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Dolly_Parton_Great_Smoky_Mountains_Park.jpg",
+    "license": "Public domain",
+    "author": "United States Congress",
+    "description": "Dolly Parton at the Great Smoky Mountains National Park",
+    "localPath": "/images/moments/storm-of-life.jpg"
+  },
+  "moments/dreamer-dream": {
+    "commonsTitle": "Dolly Parton 2000.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Dolly_Parton_2000.jpg",
+    "license": "CC BY-SA 2.0",
+    "author": "Kingkongphoto & www.celebrity-photos.com from Laurel  Maryland, USA",
+    "description": "From National press club March  23, 2000 Wash. D.C.",
+    "localPath": "/images/moments/dreamer-dream.jpg"
+  },
+  "moments/everyone-matters": {
+    "commonsTitle": "24S HR DollyParton&Crew 10.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:24S_HR_DollyParton%26Crew_10.jpg",
+    "license": "CC BY-SA 2.0",
+    "author": "Movieguide®",
+    "description": "Alyvia Alyn Lind, Stephen Herek and Dolly Parton at the Universal Hilton Hotel 24th Annual Movieguide® Awards",
+    "localPath": "/images/moments/everyone-matters.jpg"
   }
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import { getAllImageCredits } from "@/lib/images";
+import { getAllImageCredits, getUniqueMomentImageCredits } from "@/lib/images";
 import { createPageMetadata } from "@/lib/metadata";
 import { StitchDivider } from "@/components/decorative";
 
@@ -13,7 +14,8 @@ export const metadata: Metadata = createPageMetadata({
 });
 
 export default function ImagesPage() {
-  const credits = getAllImageCredits();
+  const phaseCredits = getAllImageCredits();
+  const momentCredits = getUniqueMomentImageCredits();
 
   return (
     <div className="mx-auto max-w-4xl px-6 py-16">
@@ -36,46 +38,21 @@ export default function ImagesPage() {
         with Dolly Parton, Dollywood, or their official press teams.
       </p>
 
-      <ul className="mt-10 space-y-8">
-        {credits.map(({ key, label, credit }) => (
-          <li
-            key={key}
-            className="rounded-sm border-2 border-dashed border-blush-deep/40 bg-white/70 p-6"
-          >
-            <h2 className="font-serif text-xl font-bold text-burgundy-deep">
-              {label}
-            </h2>
-            <p className="mt-2 text-sm text-burgundy/75">{credit.description}</p>
-            <dl className="mt-4 grid gap-2 text-sm sm:grid-cols-2">
-              <div>
-                <dt className="font-semibold text-burgundy">File</dt>
-                <dd>
-                  <a
-                    href={credit.commonsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-hot-pink hover:text-burgundy"
-                  >
-                    {credit.commonsTitle}
-                  </a>
-                </dd>
-              </div>
-              <div>
-                <dt className="font-semibold text-burgundy">Author</dt>
-                <dd className="text-burgundy/80">{credit.author}</dd>
-              </div>
-              <div>
-                <dt className="font-semibold text-burgundy">License</dt>
-                <dd className="text-burgundy/80">{credit.license}</dd>
-              </div>
-            </dl>
-          </li>
-        ))}
-      </ul>
+      <h2 className="mt-12 font-serif text-2xl font-bold text-burgundy-deep">
+        Chapters &amp; decades
+      </h2>
+      <CreditList credits={phaseCredits} />
+
+      <h2 className="mt-14 font-serif text-2xl font-bold text-burgundy-deep">
+        Moments
+      </h2>
+      <p className="mt-2 max-w-2xl text-sm text-burgundy/70">
+        Each of the 28 stories has its own photograph. A few reuse a chapter or
+        era portrait when that image is the best licensed match.
+      </p>
+      <CreditList credits={momentCredits} showThumb />
 
       <p className="mt-12 text-sm text-burgundy/60">
-        Per-moment thumbnails are tracked in{" "}
-        <code className="rounded bg-blush/30 px-1">IMAGES.md</code> in the repository.
         Want to contribute a properly licensed photo? See{" "}
         <a
           href="https://github.com/dat-angel/dolly-legacy/blob/main/CONTRIBUTING.md"
@@ -95,5 +72,67 @@ export default function ImagesPage() {
         ← Back to moments
       </Link>
     </div>
+  );
+}
+
+function CreditList({
+  credits,
+  showThumb = false,
+}: {
+  credits: ReturnType<typeof getAllImageCredits>;
+  showThumb?: boolean;
+}) {
+  return (
+    <ul className="mt-6 space-y-8">
+      {credits.map(({ key, label, credit }) => (
+        <li
+          key={key}
+          className="rounded-sm border-2 border-dashed border-blush-deep/40 bg-white/70 p-6"
+        >
+          <div className={showThumb ? "flex gap-5" : undefined}>
+            {showThumb && (
+              <div className="relative hidden h-24 w-20 shrink-0 overflow-hidden rounded-sm sm:block">
+                <Image
+                  src={credit.localPath}
+                  alt=""
+                  fill
+                  sizes="80px"
+                  className="object-cover"
+                />
+              </div>
+            )}
+            <div className="min-w-0 flex-1">
+              <h3 className="font-serif text-xl font-bold text-burgundy-deep">
+                {label}
+              </h3>
+              <p className="mt-2 text-sm text-burgundy/75">{credit.description}</p>
+              <dl className="mt-4 grid gap-2 text-sm sm:grid-cols-2">
+                <div>
+                  <dt className="font-semibold text-burgundy">File</dt>
+                  <dd>
+                    <a
+                      href={credit.commonsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-hot-pink hover:text-burgundy"
+                    >
+                      {credit.commonsTitle}
+                    </a>
+                  </dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-burgundy">Author</dt>
+                  <dd className="text-burgundy/80">{credit.author}</dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-burgundy">License</dt>
+                  <dd className="text-burgundy/80">{credit.license}</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </li>
+      ))}
+    </ul>
   );
 }

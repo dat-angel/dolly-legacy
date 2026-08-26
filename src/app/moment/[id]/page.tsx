@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
+import { MomentPortrait } from "@/components/MomentPortrait";
 import { ShareMenuClient } from "@/components/ShareMenuClient";
 import { StitchDivider } from "@/components/decorative";
+import { getMomentImage } from "@/lib/images";
 import { createPageMetadata, getMomentMetaDescription, getMomentOgAlt } from "@/lib/metadata";
 import { getMomentById, getRelatedMoments, moments } from "@/lib/moments";
 import { getMomentShareText, getMomentShareUrl } from "@/lib/share";
@@ -43,6 +45,7 @@ export default async function MomentPage({ params }: PageProps<"/moment/[id]">) 
   const related = getRelatedMoments(moment);
   const shareUrl = getMomentShareUrl(moment.id);
   const shareText = getMomentShareText(moment);
+  const image = getMomentImage(moment.id);
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -50,7 +53,7 @@ export default async function MomentPage({ params }: PageProps<"/moment/[id]">) 
     headline: moment.title,
     description: moment.summary,
     url: shareUrl,
-    image: absoluteUrl(`/moment/${moment.id}/opengraph-image`),
+    image: absoluteUrl(image?.src ?? `/moment/${moment.id}/opengraph-image`),
     inLanguage: "en-US",
     about: {
       "@type": "Person",
@@ -90,6 +93,16 @@ export default async function MomentPage({ params }: PageProps<"/moment/[id]">) 
       <h1 className="mt-4 font-serif text-4xl font-bold text-burgundy-deep md:text-5xl">
         {moment.title}
       </h1>
+
+      {image && (
+        <MomentPortrait
+          image={image}
+          showCaption
+          priority
+          className="mt-8 aspect-[3/2] w-full"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
+      )}
 
       {moment.quote && (
         <blockquote className="mt-8 font-serif text-2xl italic leading-snug text-burgundy rhinestone md:text-3xl">

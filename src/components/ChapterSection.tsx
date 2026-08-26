@@ -3,9 +3,10 @@
 import Link from "next/link";
 import type { Moment } from "@/lib/types";
 import type { Chapter } from "@/lib/types";
-import { getChapterImage } from "@/lib/images";
+import { getChapterImage, getMomentImage } from "@/lib/images";
 import { getMomentShareText } from "@/lib/share";
 import { ChapterPortrait } from "./ChapterPortrait";
+import { MomentPortrait } from "./MomentPortrait";
 import { ShareMenu } from "./ShareMenu";
 import { Typewriter } from "./Typewriter";
 import { Rhinestone, StitchDivider } from "./decorative";
@@ -39,11 +40,12 @@ export function MomentCard({
 }: MomentCardProps) {
   const tilts = ["-1deg", "0.5deg", "-0.5deg", "1deg", "0deg"];
   const tilt = tilts[index % tilts.length];
+  const image = getMomentImage(moment.id);
 
   return (
     <article
       className={cn(
-        "patch-card group p-6",
+        "patch-card group overflow-hidden p-0",
         onOpen && "cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-hot-pink",
       )}
       style={{ ["--tilt" as string]: tilt }}
@@ -61,6 +63,15 @@ export function MomentCard({
       role={onOpen ? "button" : undefined}
       tabIndex={onOpen ? 0 : undefined}
     >
+      {image && (
+        <MomentPortrait
+          image={image}
+          framed={false}
+          className="aspect-[4/3]"
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 360px"
+        />
+      )}
+      <div className="p-6">
       <div className="mb-3 flex flex-wrap items-center gap-2">
         {moment.year && (
           <span className="rounded-sm border border-burgundy/20 bg-blush/40 px-2 py-0.5 font-mono text-xs font-bold text-burgundy">
@@ -120,6 +131,7 @@ export function MomentCard({
           Read more
           <span aria-hidden>→</span>
         </Link>
+      </div>
       </div>
     </article>
   );
