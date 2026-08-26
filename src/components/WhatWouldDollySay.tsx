@@ -1,17 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   DOLLY_SAY_PLACEHOLDERS,
   DOLLY_SAY_PROMPTS,
   whatWouldDollySay,
 } from "@/lib/dolly-say";
+import { getMomentById } from "@/lib/moments";
+import {
+  getDollySayShareUrl,
+  getMomentShareText,
+} from "@/lib/share";
 import type { Moment } from "@/lib/types";
 import { Rhinestone, SparkleField, StarBurst } from "./decorative";
+import { ShareMenu } from "./ShareMenu";
 import { dollyButtonClass } from "./ui/DollyButton";
 
 export function WhatWouldDollySay() {
+  const searchParams = useSearchParams();
   const [input, setInput] = useState("");
   const [result, setResult] = useState<{
     moment: Moment;
@@ -20,18 +28,43 @@ export function WhatWouldDollySay() {
 
   const placeholder = DOLLY_SAY_PLACEHOLDERS[0];
 
+  useEffect(() => {
+    const momentId = searchParams.get("dolly");
+    const query = searchParams.get("q");
+    if (!momentId) return;
+
+    const moment = getMomentById(momentId);
+    if (moment) {
+      if (query) setInput(query);
+      setResult({ moment, keyword: query ?? undefined });
+    }
+  }, [searchParams]);
+
+  function applyResult(moment: Moment, matchedKeyword?: string, queryText?: string) {
+    setResult({ moment, keyword: matchedKeyword });
+    const params = new URLSearchParams({ dolly: moment.id });
+    if (queryText?.trim()) params.set("q", queryText.trim());
+    window.history.replaceState(null, "", `/?${params.toString()}#what-would-dolly-say`);
+  }
+
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     const text = input.trim();
     if (!text) return;
     const { moment, matchedKeyword } = whatWouldDollySay(text);
-    setResult({ moment, keyword: matchedKeyword });
+    applyResult(moment, matchedKeyword, text);
   }
 
   function handlePrompt(text: string) {
     setInput(text);
     const { moment, matchedKeyword } = whatWouldDollySay(text);
-    setResult({ moment, keyword: matchedKeyword });
+    applyResult(moment, matchedKeyword, text);
+  }
+
+  function shufflePrompt() {
+    const prompt =
+      DOLLY_SAY_PROMPTS[Math.floor(Math.random() * DOLLY_SAY_PROMPTS.length)];
+    handlePrompt(prompt.text);
   }
 
   return (
@@ -86,6 +119,13 @@ export function WhatWouldDollySay() {
               {p.label}
             </button>
           ))}
+          <button
+            type="button"
+            onClick={shufflePrompt}
+            className="rounded-full border-2 border-dashed border-gold/50 bg-gold/10 px-4 py-2 text-sm font-semibold text-burgundy transition hover:bg-gold/20"
+          >
+            Surprise me
+          </button>
         </div>
 
         <AnimatePresence mode="wait">
@@ -125,6 +165,14 @@ export function WhatWouldDollySay() {
                   {result.moment.hiddenFact}
                 </p>
               )}
+              <ShareMenu
+                title="What would Dolly say?"
+                text={getMomentShareText(result.moment)}
+                url={getDollySayShareUrl(result.moment.id, input)}
+                className="mt-6 justify-center"
+                compact
+                label="Share Dolly's answer"
+              />
             </motion.div>
           )}
         </AnimatePresence>

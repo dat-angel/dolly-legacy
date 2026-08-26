@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { getOnThisDayMoment } from "@/lib/moments";
+import { buildAbsoluteUrl, getMomentShareText, getMomentShareUrl } from "@/lib/share";
 import {
   Butterfly,
   QuiltPatchCollage,
@@ -7,6 +10,7 @@ import {
   SparkleField,
   StitchDivider,
 } from "./decorative";
+import { ShareMenu } from "./ShareMenu";
 import { dollyButtonClass } from "./ui/DollyButton";
 
 export function Hero() {
@@ -30,14 +34,17 @@ export function Hero() {
 
       <div className="relative mx-auto max-w-4xl text-center">
         {onThisDay && (
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border-2 border-dashed border-gold/50 bg-gold/10 px-5 py-2 text-sm text-burgundy">
+          <Link
+            href={`/moment/${onThisDay.id}`}
+            className="mb-6 inline-flex items-center gap-2 rounded-full border-2 border-dashed border-gold/50 bg-gold/10 px-5 py-2 text-sm text-burgundy transition hover:border-hot-pink hover:bg-hot-pink/10"
+          >
             <Rhinestone size={14} className="text-gold" />
             <span>
               On this day:{" "}
               <span className="font-semibold">{onThisDay.title}</span>
               {onThisDay.year ? ` (${onThisDay.year})` : ""}
             </span>
-          </div>
+          </Link>
         )}
 
         <p className="font-script text-3xl text-hot-pink md:text-4xl">
@@ -77,6 +84,26 @@ export function Hero() {
             What would Dolly say?
           </Link>
         </div>
+
+        <ShareMenu
+          title="Dolly Legacy"
+          text="A living tribute to Dolly Parton — music, philanthropy, and advocacy."
+          url={buildAbsoluteUrl("/")}
+          className="mt-8 justify-center"
+          compact
+          label="Share this tribute"
+        />
+
+        {onThisDay && (
+          <ShareMenu
+            title={onThisDay.title}
+            text={getMomentShareText(onThisDay)}
+            url={getMomentShareUrl(onThisDay.id)}
+            className="mt-4 justify-center"
+            compact
+            label={`Share ${onThisDay.title}`}
+          />
+        )}
       </div>
 
       <div className="wavy-top mt-12 text-blush/30">

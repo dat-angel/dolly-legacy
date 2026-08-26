@@ -3,7 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getEraImage } from "@/lib/images";
+import { getEraShareText, getEraShareUrl } from "@/lib/share";
 import { ERAS, type Era } from "@/lib/types";
+import { ShareMenu } from "./ShareMenu";
 import { cn } from "@/lib/utils";
 
 interface EraGalleryProps {
@@ -25,6 +27,17 @@ export function EraGallery({ activeEra = "all", onSelectEra }: EraGalleryProps) 
           All photo credits →
         </Link>
       </div>
+
+      {activeEra !== "all" && (
+        <ShareMenu
+          title={`Dolly in the ${activeEra}`}
+          text={getEraShareText(activeEra)}
+          url={getEraShareUrl(activeEra)}
+          className="mb-4"
+          compact
+          label={`Share ${activeEra}`}
+        />
+      )}
 
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-8">
         {ERAS.map((era) => {

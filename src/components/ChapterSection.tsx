@@ -1,8 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import type { Moment } from "@/lib/types";
 import type { Chapter } from "@/lib/types";
 import { getChapterImage } from "@/lib/images";
+import { getMomentShareText } from "@/lib/share";
 import { ChapterPortrait } from "./ChapterPortrait";
+import { ShareMenu } from "./ShareMenu";
 import { Typewriter } from "./Typewriter";
 import { Rhinestone, StitchDivider } from "./decorative";
 import { cn } from "@/lib/utils";
@@ -22,20 +26,40 @@ interface MomentCardProps {
   moment: Moment;
   showHidden?: boolean;
   index?: number;
+  shareUrl?: string;
+  onOpen?: () => void;
 }
 
 export function MomentCard({
   moment,
   showHidden = false,
   index = 0,
+  shareUrl,
+  onOpen,
 }: MomentCardProps) {
   const tilts = ["-1deg", "0.5deg", "-0.5deg", "1deg", "0deg"];
   const tilt = tilts[index % tilts.length];
 
   return (
     <article
-      className="patch-card group p-6"
+      className={cn(
+        "patch-card group p-6",
+        onOpen && "cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-hot-pink",
+      )}
       style={{ ["--tilt" as string]: tilt }}
+      onClick={onOpen}
+      onKeyDown={
+        onOpen
+          ? (e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                onOpen();
+              }
+            }
+          : undefined
+      }
+      role={onOpen ? "button" : undefined}
+      tabIndex={onOpen ? 0 : undefined}
     >
       <div className="mb-3 flex flex-wrap items-center gap-2">
         {moment.year && (
@@ -82,14 +106,36 @@ export function MomentCard({
           ))}
         </div>
       )}
-      <Link
-        href={`/moments?highlight=${moment.id}`}
-        className="mt-4 inline-flex items-center gap-1 font-semibold text-hot-pink transition hover:text-burgundy"
-      >
-        Read more
-        <span aria-hidden>→</span>
-      </Link>
+      <div className="mt-4 flex flex-wrap items-center gap-3">
+        {shareUrl ? (
+          <div onClick={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}>
+            <ShareLinkButton url={shareUrl} text={getMomentShareText(moment)} title={moment.title} />
+          </div>
+        ) : null}
+        <Link
+          href={`/moment/${moment.id}`}
+          className="inline-flex items-center gap-1 font-semibold text-hot-pink transition hover:text-burgundy"
+          onClick={(e) => e.stopPropagation()}
+        >
+          Read more
+          <span aria-hidden>→</span>
+        </Link>
+      </div>
     </article>
+  );
+}
+
+function ShareLinkButton({
+  url,
+  text,
+  title,
+}: {
+  url: string;
+  text: string;
+  title: string;
+}) {
+  return (
+    <ShareMenu title={title} text={text} url={url} compact label={`Share ${title}`} />
   );
 }
 

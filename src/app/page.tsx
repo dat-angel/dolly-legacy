@@ -1,29 +1,34 @@
 import { CHAPTERS } from "@/lib/types";
 import { getMomentsByChapter } from "@/lib/moments";
 import { Hero } from "@/components/Hero";
+import { HomeUrlSync } from "@/components/HomeUrlSync";
+import { InteractiveChapterSection } from "@/components/InteractiveChapterSection";
 import { StatsStrip } from "@/components/StatsStrip";
-import { ChapterSection } from "@/components/ChapterSection";
 import { WhatWouldDollySay } from "@/components/WhatWouldDollySay";
 import { StitchDivider, Rhinestone, StarBurst } from "@/components/decorative";
 import { dollyButtonClass } from "@/components/ui/DollyButton";
 import Link from "next/link";
+import { Suspense } from "react";
 
 const TYPEWRITER_CHAPTER = "music";
 
 export default function HomePage() {
   return (
     <>
+      <Suspense fallback={null}>
+        <HomeUrlSync />
+      </Suspense>
       <Hero />
       <StatsStrip />
 
       {CHAPTERS.map((chapter) => (
-        <ChapterSection
+        <InteractiveChapterSection
           key={chapter.id}
           id={chapter.id}
           chapterId={chapter.id}
           title={chapter.title}
           subtitle={chapter.subtitle}
-          moments={getMomentsByChapter(chapter.id)}
+          featuredMoments={getMomentsByChapter(chapter.id)}
           typewriterQuote={
             chapter.id === TYPEWRITER_CHAPTER
               ? "Tumble outta bed and stumble to the kitchen. Pour myself a cup of ambition, and yawn and stretch and try to come to life."
@@ -34,7 +39,9 @@ export default function HomePage() {
 
       <section className="section-warm px-6 py-16 md:py-24">
         <div className="mx-auto max-w-4xl">
-          <WhatWouldDollySay />
+          <Suspense fallback={null}>
+            <WhatWouldDollySay />
+          </Suspense>
         </div>
       </section>
 

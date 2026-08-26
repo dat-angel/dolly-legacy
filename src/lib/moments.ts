@@ -35,6 +35,10 @@ export function getMomentsByChapter(chapter: Chapter): Moment[] {
   return moments.filter((m) => m.chapter === chapter && m.featured);
 }
 
+export function getAllMomentsByChapter(chapter: Chapter): Moment[] {
+  return moments.filter((m) => m.chapter === chapter);
+}
+
 export function getRelatedMoments(moment: Moment): Moment[] {
   if (!moment.relatedIds?.length) return [];
   return moment.relatedIds
