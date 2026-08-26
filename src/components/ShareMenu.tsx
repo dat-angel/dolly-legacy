@@ -16,6 +16,7 @@ interface ShareMenuProps {
   text: string;
   url: string;
   imageSrc?: string;
+  storySrc?: string;
   className?: string;
   label?: string;
   compact?: boolean;
@@ -26,6 +27,7 @@ export function ShareMenu({
   text,
   url,
   imageSrc,
+  storySrc,
   className,
   label = "Share",
   compact = false,
@@ -59,7 +61,7 @@ export function ShareMenu({
   }
 
   async function handleNativeShare() {
-    const result = await shareContent({ title, text, url, imageSrc });
+    const result = await shareContent({ title, text, url, imageSrc, storySrc });
     if (result === "shared") {
       setOpen(false);
       flash("Shared!");

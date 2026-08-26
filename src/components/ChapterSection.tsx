@@ -67,12 +67,12 @@ export function MomentCard({
         <MomentPortrait
           image={image}
           framed={false}
-          className="aspect-[4/3]"
+          className="aspect-[4/5] sm:aspect-[4/3]"
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 360px"
         />
       )}
-      <div className="p-6">
-      <div className="mb-3 flex flex-wrap items-center gap-2">
+      <div className="p-4 sm:p-5">
+      <div className="mb-2 flex flex-wrap items-center gap-2">
         {moment.year && (
           <span className="rounded-sm border border-burgundy/20 bg-blush/40 px-2 py-0.5 font-mono text-xs font-bold text-burgundy">
             {moment.year}
@@ -85,20 +85,21 @@ export function MomentCard({
       <h3 className="font-serif text-xl font-bold text-burgundy-deep group-hover:text-hot-pink">
         {moment.title}
       </h3>
-      {moment.quote && (
-        <p className="mt-3 font-serif text-base italic leading-snug text-burgundy/90">
+      {moment.quote ? (
+        <p className="mt-2 font-serif text-[0.95rem] italic leading-snug text-burgundy/90">
           &ldquo;
-          {moment.quote.length > 120
-            ? `${moment.quote.slice(0, 120)}…`
+          {moment.quote.length > 90
+            ? `${moment.quote.slice(0, 90)}…`
             : moment.quote}
           &rdquo;
         </p>
+      ) : (
+        <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-burgundy/75">
+          {moment.summary}
+        </p>
       )}
-      <p className="mt-3 text-sm leading-relaxed text-burgundy/75">
-        {moment.summary}
-      </p>
       {showHidden && moment.hiddenFact && (
-        <p className="mt-4 border-t-2 border-dashed border-blush/50 pt-4 text-sm italic text-burgundy/65">
+        <p className="mt-3 border-t-2 border-dashed border-blush/50 pt-3 text-sm italic text-burgundy/65">
           <span className="font-script text-lg not-italic text-gold">
             between the rhinestones:{" "}
           </span>
@@ -106,8 +107,8 @@ export function MomentCard({
         </p>
       )}
       {moment.tags.length > 0 && (
-        <div className="mt-4 flex flex-wrap gap-1.5">
-          {moment.tags.map((tag) => (
+        <div className="mt-3 flex flex-wrap gap-1.5">
+          {moment.tags.slice(0, 2).map((tag) => (
             <span
               key={tag}
               className="rounded-full border border-blush-deep/30 bg-white/60 px-2.5 py-0.5 text-xs text-burgundy/70"
@@ -125,6 +126,7 @@ export function MomentCard({
               text={getMomentShareText(moment)}
               title={moment.title}
               imageSrc={image?.src}
+              storySrc={`/moment/${moment.id}/story-image`}
             />
           </div>
         ) : null}
@@ -147,11 +149,13 @@ function ShareLinkButton({
   text,
   title,
   imageSrc,
+  storySrc,
 }: {
   url: string;
   text: string;
   title: string;
   imageSrc?: string;
+  storySrc?: string;
 }) {
   return (
     <ShareMenu
@@ -159,6 +163,7 @@ function ShareLinkButton({
       text={text}
       url={url}
       imageSrc={imageSrc}
+      storySrc={storySrc}
       compact
       label="Share"
     />

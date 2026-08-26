@@ -2,14 +2,14 @@
 
 A fan tribute website celebrating Dolly Parton — her music, philanthropy, and lifelong advocacy for Black communities, LGBTQ+ people, and working women.
 
-**Live demo:** Deploy to [Vercel](https://vercel.com/new) or run locally below.
+**Live:** [dolly-legacy.vercel.app](https://dolly-legacy.vercel.app)
 
 ## Features
 
 - **Scroll exhibit** — Five chapters from Appalachian roots to standing with everyone
 - **Moments archive** — 28+ filterable moments with quotes, tags, and era filters
 - **Typewriter mode** — The 9 to 5 quote types out with click-clack sounds (scroll to the Music chapter)
-- **What would Dolly say?** — Ask a question, get a curated quote matched by keywords
+- **What would Dolly say?** — Chat with her across decades. Pick a time in her life and get a curated quote from that era.
 - **Surprise me** — Press `?` on the archive page for a random moment
 - **Jolene easter egg** — Type `jolene` in search
 

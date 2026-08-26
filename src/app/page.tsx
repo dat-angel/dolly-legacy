@@ -15,7 +15,7 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata: Metadata = createPageMetadata({
   title: "Interactive Dolly Parton tribute",
   description:
-    "Scroll five life chapters, browse 28 shareable moments, filter by era, and ask Dolly a question — an open tribute to her music, philanthropy, and advocacy.",
+    "Scroll five life chapters, browse 28 shareable moments, then ask Dolly what she'd say at a certain time in her life — an open tribute to her music, philanthropy, and advocacy.",
   path: "/",
   keywords: [
     "interactive Dolly Parton exhibit",

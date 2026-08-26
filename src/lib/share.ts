@@ -16,9 +16,14 @@ export function getEraShareUrl(era: Era): string {
   return absoluteUrl(`/moments?era=${encodeURIComponent(era)}`);
 }
 
-export function getDollySayShareUrl(momentId: string, query?: string): string {
+export function getDollySayShareUrl(
+  momentId: string,
+  query?: string,
+  era?: string,
+): string {
   const params = new URLSearchParams({ dolly: momentId });
   if (query?.trim()) params.set("q", query.trim());
+  if (era && era !== "any") params.set("era", era);
   return absoluteUrl(`/?${params.toString()}#what-would-dolly-say`);
 }
 
@@ -114,10 +119,11 @@ export async function shareContent(options: {
   text: string;
   url: string;
   imageSrc?: string;
+  storySrc?: string;
 }): Promise<"shared" | "copied" | "failed"> {
   if (typeof navigator !== "undefined" && navigator.share) {
     try {
-      const file = await getShareImageFile(options.imageSrc);
+      const file = await getShareImageFile(options.storySrc || options.imageSrc);
       const payload: ShareData = {
         title: options.title,
         text: `${options.text}\n${options.url}`,
@@ -136,4 +142,8 @@ export async function shareContent(options: {
 
   const copied = await copyToClipboard(`${options.text}\n${options.url}`);
   return copied ? "copied" : "failed";
+}
+
+export function getMomentStoryUrl(momentId: string): string {
+  return `/moment/${momentId}/story-image`;
 }

@@ -1,4 +1,5 @@
 export const OG_SIZE = { width: 1200, height: 630 } as const;
+export const STORY_SIZE = { width: 1080, height: 1920 } as const;
 
 export const OG_COLORS = {
   burgundy: "#5c1830",
@@ -10,8 +11,8 @@ export const OG_COLORS = {
 } as const;
 
 export const OG_BRAND = {
-  eyebrow: "Dolly Legacy · Fan Tribute",
-  footer: "dolly-legacy · music · generosity · kindness",
+  eyebrow: "DOLLY LEGACY",
+  footer: "dolly-legacy.vercel.app",
 } as const;
 
 export function truncateOg(text: string, max = 140): string {

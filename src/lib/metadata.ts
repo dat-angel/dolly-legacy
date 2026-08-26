@@ -28,6 +28,15 @@ export function createPageMetadata({
     typeof ogImage === "string"
       ? { url: ogImage, alt: title }
       : ogImage;
+  const landscapeUrl = image
+    ? image.url.startsWith("http")
+      ? image.url
+      : absoluteUrl(image.url)
+    : absoluteUrl("/opengraph-image");
+  const storyUrl = absoluteUrl(
+    path.startsWith("/moment/") ? `${path}/story-image` : "/story-image",
+  );
+  const landscapeAlt = image?.alt ?? title;
 
   return {
     title,
@@ -60,33 +69,27 @@ export function createPageMetadata({
       siteName: SITE.name,
       locale: SITE.locale,
       type: ogType,
-      ...(image
-        ? {
-            images: [
-              {
-                url: image.url.startsWith("http")
-                  ? image.url
-                  : absoluteUrl(image.url),
-                width: 1200,
-                height: 630,
-                alt: image.alt,
-              },
-            ],
-          }
-        : {}),
+      images: [
+        {
+          url: landscapeUrl,
+          width: 1200,
+          height: 630,
+          alt: landscapeAlt,
+        },
+        {
+          url: storyUrl,
+          width: 1080,
+          height: 1920,
+          alt: `${landscapeAlt} — story`,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
       creator: "@dat_angel",
-      ...(image
-        ? {
-            images: [
-              image.url.startsWith("http") ? image.url : absoluteUrl(image.url),
-            ],
-          }
-        : {}),
+      images: [landscapeUrl],
     },
   };
 }

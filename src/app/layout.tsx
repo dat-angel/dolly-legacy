@@ -6,6 +6,7 @@ import {
   Sacramento,
   Special_Elite,
 } from "next/font/google";
+import { DollyChatRoot } from "@/components/dolly-chat/DollyChatRoot";
 import { JsonLd } from "@/components/JsonLd";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -122,10 +123,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${libreBaskerville.variable} ${sourceSans.variable} ${sacramento.variable} ${typewriter.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col overflow-x-clip font-sans text-burgundy-deep">
-        <JsonLd data={websiteJsonLd} />
-        <SiteHeader />
-        <main className="flex-1">{children}</main>
-        <SiteFooter />
+        <a href="#main-content" className="skip-link">
+          Skip to content
+        </a>
+        <DollyChatRoot>
+          <JsonLd data={websiteJsonLd} />
+          <SiteHeader />
+          <main id="main-content" className="flex-1 pb-24">
+            {children}
+          </main>
+          <SiteFooter />
+        </DollyChatRoot>
         <Analytics />
       </body>
     </html>

@@ -36,11 +36,11 @@ export function SiteFooter() {
           </a>
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-6 text-sm font-semibold">
-          <Link
-            href="/moments"
-            className="text-burgundy hover:text-hot-pink"
-          >
+          <Link href="/moments" className="text-burgundy hover:text-hot-pink">
             Explore moments
+          </Link>
+          <Link href="/#what-would-dolly-say" className="text-burgundy hover:text-hot-pink">
+            Ask Dolly
           </Link>
           <Link href="/images" className="text-burgundy hover:text-hot-pink">
             Photo credits

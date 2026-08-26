@@ -346,3 +346,31 @@ a,
     transform: none;
   }
 }
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100%;
+  z-index: 80;
+  border-radius: 999px;
+  background: var(--burgundy-deep);
+  color: var(--cream);
+  padding: 0.65rem 1.1rem;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.dolly-chat-user {
+  background: linear-gradient(135deg, var(--hot-pink), var(--burgundy));
+  color: var(--cream);
+  border-radius: 18px 18px 4px 18px;
+}
+
+.dolly-chat-dolly {
+  background: rgba(255, 255, 255, 0.92);
+  border: 2px dashed var(--blush-deep);
+  border-radius: 18px 18px 18px 4px;
+}
