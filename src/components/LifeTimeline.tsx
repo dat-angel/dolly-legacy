@@ -21,7 +21,6 @@ import {
 import { CHAPTERS, type Chapter, type Moment } from "@/lib/types";
 import { useDollyChat } from "./dolly-chat/DollyChatProvider";
 import { MomentDrawer } from "./MomentDrawer";
-import { Rhinestone } from "./decorative";
 import { ShareMenu } from "./ShareMenu";
 import { Typewriter } from "./Typewriter";
 import { dollyButtonClass } from "./ui/DollyButton";
@@ -166,7 +165,7 @@ export function LifeTimeline() {
                 goTo(index - 1, true);
               }}
               disabled={index === 0}
-              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-cream/30 bg-burgundy-deep/50 text-lg text-cream backdrop-blur-sm disabled:opacity-30"
+              className="inline-flex min-h-11 min-w-11 items-center justify-center border border-cream/30 bg-burgundy-deep/55 text-lg text-cream backdrop-blur-sm disabled:opacity-30"
               aria-label="Previous moment"
             >
               ‹
@@ -178,7 +177,7 @@ export function LifeTimeline() {
                 goTo(index + 1, true);
               }}
               disabled={index === lastIndex}
-              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-cream/30 bg-burgundy-deep/50 text-lg text-cream backdrop-blur-sm disabled:opacity-30"
+              className="inline-flex min-h-11 min-w-11 items-center justify-center border border-cream/30 bg-burgundy-deep/55 text-lg text-cream backdrop-blur-sm disabled:opacity-30"
               aria-label="Next moment"
             >
               ›
@@ -190,11 +189,8 @@ export function LifeTimeline() {
           </p>
         </div>
 
-        <div className="relative z-10 flex flex-col justify-end px-4 pb-[max(1.25rem,env(safe-area-inset-bottom))] pt-5 sm:px-6 lg:justify-center lg:py-16">
-          <p className="font-script text-2xl text-gold-light sm:text-3xl">
-            slide her life
-          </p>
-          <p className="font-mono text-sm font-bold uppercase tracking-widest text-gold-light">
+        <div className="relative z-10 flex flex-col justify-end px-4 pb-[max(6rem,env(safe-area-inset-bottom))] pt-5 sm:px-6 lg:justify-center lg:py-16 lg:pb-16">
+          <p className="font-mono text-xs uppercase tracking-[0.16em] text-gold-light">
             {stage.nickname} · {moment.year ?? moment.era}
           </p>
           <h2 className="mt-2 font-serif text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl" aria-live="polite">
@@ -203,19 +199,14 @@ export function LifeTimeline() {
           {moment.quote ? (
             <blockquote className="mt-3">
               {studioTypewriter ? (
-                <>
-                  <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.22em] text-gold/80">
-                    click-clack
-                  </p>
-                  <Typewriter
-                    key={moment.id}
-                    text={`“${moment.quote}”`}
-                    className="font-script text-lg leading-snug text-cream/95 sm:text-xl"
-                    speed={28}
-                    startOnView={false}
-                    playSound={!reduceMotion}
-                  />
-                </>
+                <Typewriter
+                  key={moment.id}
+                  text={`“${moment.quote}”`}
+                  className="text-lg leading-snug text-cream/95 sm:text-xl"
+                  speed={28}
+                  startOnView={false}
+                  playSound={!reduceMotion}
+                />
               ) : (
                 <p className="font-script text-lg leading-snug text-cream/95 sm:text-xl">
                   &ldquo;{moment.quote}&rdquo;
@@ -293,9 +284,8 @@ export function LifeTimeline() {
             <button
               type="button"
               onClick={() => setSelected(moment)}
-              className={dollyButtonClass("primary", "min-h-11 px-5")}
+              className={dollyButtonClass("primary", "min-h-11 px-4")}
             >
-              <Rhinestone size={14} className="text-gold-light" />
               Read this
             </button>
             <button

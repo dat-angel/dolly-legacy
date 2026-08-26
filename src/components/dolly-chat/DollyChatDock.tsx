@@ -75,11 +75,10 @@ export function DollyChatDock() {
           role="dialog"
           aria-modal="true"
           aria-labelledby={titleId}
-          className="vanity-frame pointer-events-auto relative z-10 flex max-h-[min(82vh,40rem)] w-full flex-col overflow-hidden rounded-t-2xl p-4 shadow-2xl sm:max-h-[min(78vh,42rem)] sm:w-[24.5rem] sm:rounded-sm sm:p-5"
+          className="vanity-frame pointer-events-auto relative z-10 flex max-h-[min(82vh,40rem)] w-full flex-col overflow-hidden rounded-t-sm p-4 shadow-2xl sm:max-h-[min(78vh,42rem)] sm:w-[24.5rem] sm:p-5"
         >
           <div className="mb-3 flex items-start justify-between gap-3">
             <div className="min-w-0">
-              <p className="font-mono text-xs uppercase tracking-[0.18em] text-gold">Ask Dolly</p>
               <h2 id={titleId} className="font-serif text-xl font-bold text-burgundy-deep">
                 What would Dolly say?
               </h2>
@@ -121,10 +120,9 @@ export function DollyChatDock() {
           )}
         </span>
         <span>
-          <span className="block font-mono text-xs uppercase tracking-widest text-gold-light">
+          <span className="block text-sm font-semibold text-cream">
             {dockOpen ? "Hide" : "Ask Dolly"}
           </span>
-          <span className="block text-[11px] text-cream/70">her words</span>
         </span>
       </button>
     </div>

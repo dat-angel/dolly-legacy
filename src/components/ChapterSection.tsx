@@ -9,7 +9,7 @@ import { ChapterPortrait } from "./ChapterPortrait";
 import { MomentPortrait } from "./MomentPortrait";
 import { ShareMenu } from "./ShareMenu";
 import { Typewriter } from "./Typewriter";
-import { Rhinestone, StitchDivider } from "./decorative";
+import { StitchDivider } from "./decorative";
 import { cn } from "@/lib/utils";
 
 const CHAPTER_ACCENTS: Record<
@@ -78,7 +78,7 @@ export function MomentCard({
             {moment.year}
           </span>
         )}
-        <span className="font-script text-lg text-gold capitalize">
+        <span className="text-xs font-semibold uppercase tracking-wide text-gold">
           {moment.category}
         </span>
       </div>
@@ -99,10 +99,8 @@ export function MomentCard({
         </p>
       )}
       {showHidden && moment.hiddenFact && (
-        <p className="mt-3 border-t border-gold/30 pt-3 text-sm italic text-burgundy/65">
-          <span className="font-script text-lg not-italic text-gold">
-            liner notes:{" "}
-          </span>
+        <p className="mt-3 border-t border-gold/25 pt-3 text-sm text-burgundy/70">
+          <span className="font-semibold text-burgundy">Did you know: </span>
           {moment.hiddenFact}
         </p>
       )}
@@ -198,7 +196,7 @@ export function ChapterSection({
       <div className="mx-auto max-w-6xl">
         <div className="relative mb-12 grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
           <div className="max-w-2xl">
-            <p className="font-script text-2xl text-gold md:text-3xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold">
               {accent.label}
             </p>
             <h2 className="font-serif text-3xl font-bold text-burgundy-deep md:text-5xl">
@@ -223,10 +221,9 @@ export function ChapterSection({
 
         {typewriterQuote && (
           <div className="typewriter-frame mb-12 rounded-sm p-6 md:p-10">
-            <div className="mb-4 flex items-center gap-2">
-              <Rhinestone size={16} className="text-gold" />
-              <p className="font-script text-2xl text-burgundy">
-                click-clack — written on a typewriter
+            <div className="mb-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold">
+                9 to 5 · Hotel Bel-Air, 1980
               </p>
             </div>
             <Typewriter
@@ -234,9 +231,9 @@ export function ChapterSection({
               className="text-burgundy-deep"
               speed={38}
             />
-            <p className="mt-4 font-script text-xl text-burgundy/55">
-              Dolly clicked her acrylic nails on a typewriter at the Hotel
-              Bel-Air to get the rhythm just right.
+            <p className="mt-4 text-sm leading-relaxed text-burgundy/65">
+              She wrote it on a typewriter, clicking her nails on the keys to
+              get the rhythm right.
             </p>
           </div>
         )}

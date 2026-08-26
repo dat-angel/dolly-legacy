@@ -37,15 +37,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden border-t border-gold/20 bg-burgundy-deep px-4 py-16 text-center text-cream sm:px-6 md:py-20">
-        <p className="font-script text-2xl text-gold sm:text-3xl">the archive</p>
-        <h2 className="mt-2 font-serif text-3xl font-bold md:text-4xl">
-          Every moment, on paper.
+      <section className="border-t border-gold/20 bg-burgundy-deep px-4 py-16 text-center text-cream sm:px-6 md:py-20">
+        <h2 className="font-serif text-3xl font-bold md:text-4xl">
+          All 28 moments
         </h2>
-        <div className="mx-auto my-6 h-px max-w-xs bg-gold/30" />
-        <p className="mx-auto max-w-lg text-cream/75">
-          Browse the full archive — filter by era, category, and theme. Press{" "}
-          <kbd className="rounded-sm border border-gold/40 px-2 py-0.5 font-mono text-xs text-gold">
+        <p className="mx-auto mt-4 max-w-lg text-cream/75">
+          Filter by era, category, and theme. Press{" "}
+          <kbd className="border border-gold/40 px-2 py-0.5 font-mono text-xs text-gold">
             ?
           </kbd>{" "}
           for a surprise.

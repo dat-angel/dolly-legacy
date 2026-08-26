@@ -116,7 +116,7 @@ export default async function MomentPage({ params }: PageProps<"/moment/[id]">) 
 
       {moment.hiddenFact && (
         <div className="mt-8 rounded-xl border border-gold/30 bg-gold/5 p-5">
-          <p className="font-mono text-xs font-medium uppercase tracking-[0.16em] text-gold">Liner notes</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold">Did you know</p>
           <p className="mt-2 italic text-burgundy/75">{moment.hiddenFact}</p>
         </div>
       )}

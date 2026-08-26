@@ -19,7 +19,7 @@ import { MomentCard } from "./ChapterSection";
 import { MomentDrawer } from "./MomentDrawer";
 import { ShareMenu } from "./ShareMenu";
 import { Typewriter } from "./Typewriter";
-import { Rhinestone, StitchDivider } from "./decorative";
+import { StitchDivider } from "./decorative";
 import { dollyButtonClass } from "./ui/DollyButton";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -97,7 +97,7 @@ export function InteractiveChapterSection({
       <div className="mx-auto max-w-6xl">
         <div className="relative mb-8 grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
           <div className="max-w-2xl">
-            <p className="font-script text-2xl text-gold md:text-3xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold">
               {accent.label}
             </p>
             <h2 className="font-serif text-3xl font-bold text-burgundy-deep md:text-5xl">
@@ -124,12 +124,9 @@ export function InteractiveChapterSection({
         {typewriterQuote && (
           <div className="typewriter-frame mb-12 rounded-sm p-6 md:p-10">
             <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-              <div className="flex items-center gap-2">
-                <Rhinestone size={16} className="text-gold" />
-                <p className="font-script text-2xl text-burgundy">
-                  click-clack — written on a typewriter
-                </p>
-              </div>
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold">
+                9 to 5 · Hotel Bel-Air, 1980
+              </p>
               <ShareMenu
                 title="9 to 5 — Dolly Parton"
                 text={`"${typewriterQuote.slice(0, 120)}…"`}
@@ -143,9 +140,9 @@ export function InteractiveChapterSection({
               className="text-burgundy-deep"
               speed={38}
             />
-            <p className="mt-4 font-script text-xl text-burgundy/55">
-              Dolly clicked her acrylic nails on a typewriter at the Hotel
-              Bel-Air to get the rhythm just right.
+            <p className="mt-4 text-sm leading-relaxed text-burgundy/65">
+              She wrote it on a typewriter, clicking her nails on the keys to
+              get the rhythm right.
             </p>
           </div>
         )}
@@ -170,7 +167,7 @@ export function InteractiveChapterSection({
                 : "border-gold/40 text-burgundy hover:border-gold",
             )}
           >
-            {revealedFacts ? "Hide liner notes" : "Show liner notes"}
+            {revealedFacts ? "Hide extra facts" : "Show extra facts"}
           </button>
           <Link
             href={`/chapter/${chapterId}`}

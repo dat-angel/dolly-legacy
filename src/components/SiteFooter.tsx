@@ -10,7 +10,7 @@ export function SiteFooter() {
         <p className="font-script mt-3 text-xl text-gold sm:text-2xl">
           find out who you are and do it on purpose
         </p>
-        <div className="mx-auto my-6 h-px max-w-sm bg-gold/30" />
+        <div className="mx-auto my-6 h-px max-w-sm bg-gold/25" />
         <p className="text-sm text-cream/60">
           Not affiliated with Dolly Parton, Dollywood, or the Imagination
           Library. Quotes attributed to public sources.
@@ -26,7 +26,7 @@ export function SiteFooter() {
             CC BY 4.0
           </a>
         </p>
-        <div className="mt-6 flex flex-wrap justify-center gap-6 font-mono text-xs font-semibold uppercase tracking-[0.14em]">
+        <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm font-medium">
           <Link href="/moments" className="text-cream/80 hover:text-gold">
             Explore moments
           </Link>

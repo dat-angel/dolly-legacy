@@ -85,7 +85,7 @@ export function ShareMenu({
     : "inline-flex min-h-11 items-center justify-center rounded-sm border border-gold/50 bg-white/80 px-5 text-sm font-semibold text-burgundy transition hover:border-gold hover:bg-gold/10 hover:text-burgundy-deep active:bg-gold/15";
 
   const badgeClass =
-    "flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-burgundy-deep text-xs font-bold text-gold";
+    "flex h-9 w-9 shrink-0 items-center justify-center border border-gold/30 bg-cream text-xs font-bold text-burgundy-deep";
   const rowClass =
     "flex min-h-12 w-full items-center gap-3 rounded-sm border border-gold/30 bg-white/90 px-3 text-left text-base font-semibold text-burgundy-deep transition active:bg-gold/10";
 
@@ -129,7 +129,7 @@ export function ShareMenu({
             <div className="mt-5 grid gap-2">
               {canNativeShare && (
                 <button type="button" onClick={handleNativeShare} className={rowClass}>
-                  <span className={badgeClass}>✦</span>
+                  <span className={badgeClass}>↗</span>
                   Instagram, Messages &amp; more
                 </button>
               )}

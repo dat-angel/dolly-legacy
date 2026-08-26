@@ -23,7 +23,7 @@ export default function MomentsPage() {
       <div className="relative mx-auto max-w-6xl">
         <Suspense
           fallback={
-            <p className="font-script text-2xl text-gold">
+            <p className="text-burgundy/70">
               Loading moments…
             </p>
           }

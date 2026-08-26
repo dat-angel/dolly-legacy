@@ -19,7 +19,6 @@ export default function ImagesPage() {
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-16">
-      <p className="font-script text-3xl text-gold">photo credits</p>
       <h1 className="font-serif text-4xl font-bold text-burgundy-deep md:text-5xl">
         Images &amp; licensing
       </h1>

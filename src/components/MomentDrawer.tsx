@@ -120,7 +120,7 @@ export function MomentDrawer({ moment, onClose, onSelect }: MomentDrawerProps) {
 
         {moment.hiddenFact && (
           <div className="mt-6 rounded-xl border border-gold/30 bg-gold/5 p-4">
-            <p className="font-mono text-xs font-medium uppercase tracking-[0.16em] text-gold">Liner notes</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold">Did you know</p>
             <p className="mt-2 text-sm italic text-burgundy/70">{moment.hiddenFact}</p>
           </div>
         )}

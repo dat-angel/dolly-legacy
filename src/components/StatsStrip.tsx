@@ -4,11 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import { getImpactStats } from "@/lib/moments";
 
 const stats = [
-  { key: "books" as const, label: "Books gifted", icon: "📚" },
-  { key: "songs" as const, label: "Songs written", icon: "♪" },
-  { key: "countries" as const, label: "Countries served", icon: "🌎" },
-  { key: "years" as const, label: "Years of grace", icon: "✦" },
-];
+  { key: "books" as const, label: "Books gifted" },
+  { key: "songs" as const, label: "Songs written" },
+  { key: "countries" as const, label: "Countries served" },
+  { key: "years" as const, label: "Years" },
+] as const;
 
 export function StatsStrip() {
   const data = getImpactStats();
@@ -32,31 +32,24 @@ export function StatsStrip() {
   }, []);
 
   return (
-    <section ref={ref} className="stats-strip py-10 text-cream sm:py-12">
-      <div className="relative mx-auto grid max-w-5xl grid-cols-2 gap-4 px-4 sm:gap-6 sm:px-6 md:grid-cols-4 md:gap-8">
-        {stats.map(({ key, label, icon }, i) => (
+    <section ref={ref} className="stats-strip py-8 text-cream sm:py-10">
+      <div className="relative mx-auto grid max-w-5xl grid-cols-2 gap-x-4 gap-y-6 px-4 sm:px-6 md:grid-cols-4">
+        {stats.map(({ key, label }, i) => (
           <div
             key={key}
-            className="stat-bubble mx-auto w-full max-w-[140px] transition-all duration-700"
+            className="text-center transition-opacity duration-700"
             style={{
               opacity: visible ? 1 : 0,
-              transform: visible ? "scale(1)" : "scale(0.8)",
-              transitionDelay: `${i * 120}ms`,
+              transitionDelay: `${i * 80}ms`,
             }}
           >
-            <span className="text-2xl" aria-hidden>
-              {icon}
-            </span>
             <p className="font-serif text-2xl font-bold text-gold-light md:text-3xl">
               {data[key]}
             </p>
-            <p className="mt-0.5 text-center text-xs font-medium text-cream/80">
-              {label}
-            </p>
+            <p className="mt-1 text-xs text-cream/70 sm:text-sm">{label}</p>
           </div>
         ))}
       </div>
-      <div className="mx-auto mt-6 h-px max-w-xs bg-gold/30" />
     </section>
   );
 }

@@ -36,7 +36,7 @@ export function MomentsArchive() {
   const [search, setSearch] = useState("");
   const [selected, setSelected] = useState<Moment | null>(null);
   const [dismissedHighlight, setDismissedHighlight] = useState(false);
-  const [showRhinestones, setShowRhinestones] = useState(false);
+  const [showFacts, setShowFacts] = useState(false);
 
   const highlightedMoment =
     !dismissedHighlight && highlightId
@@ -121,7 +121,6 @@ export function MomentsArchive() {
     <div>
       <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
-          <p className="font-script text-3xl text-gold">the archive</p>
           <h1 className="font-serif text-4xl font-bold text-burgundy-deep md:text-5xl">
             All Moments
           </h1>
@@ -241,15 +240,15 @@ export function MomentsArchive() {
         ))}
         <button
           type="button"
-          onClick={() => setShowRhinestones(!showRhinestones)}
+          onClick={() => setShowFacts(!showFacts)}
           className={cn(
             "ml-auto min-h-11 rounded-sm px-3 py-2 text-xs transition",
-            showRhinestones
+            showFacts
               ? "bg-gold/30 text-burgundy-deep"
               : "border border-gold/40 text-gold",
           )}
         >
-          {showRhinestones ? "Liner notes on" : "Show liner notes"}
+          {showFacts ? "Extra facts on" : "Show extra facts"}
         </button>
       </div>
 
@@ -258,7 +257,7 @@ export function MomentsArchive() {
           <MomentCard
             key={m.id}
             moment={m}
-            showHidden={showRhinestones}
+            showHidden={showFacts}
             index={i}
             onOpen={() => {
               setDismissedHighlight(true);

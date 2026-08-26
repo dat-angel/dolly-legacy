@@ -2,9 +2,9 @@ import { cn } from "@/lib/utils";
 
 const variants = {
   primary:
-    "bg-gold text-burgundy-deep shadow-[0_4px_0_#0c0b09] hover:bg-gold-light hover:shadow-[0_2px_0_#0c0b09] hover:translate-y-0.5 active:translate-y-1 active:shadow-none",
+    "bg-gold text-burgundy-deep hover:bg-gold-light",
   secondary:
-    "border border-gold/60 bg-transparent text-burgundy hover:border-gold hover:bg-gold/10",
+    "border border-gold/50 bg-transparent text-burgundy hover:border-gold hover:bg-gold/10",
   ghost: "text-burgundy hover:text-gold underline-offset-4 hover:underline",
 };
 
@@ -13,7 +13,7 @@ export function dollyButtonClass(
   className?: string,
 ) {
   return cn(
-    "inline-flex min-h-11 items-center justify-center gap-2 rounded-sm px-6 py-3.5 font-semibold transition-all duration-200 sm:px-8",
+    "inline-flex min-h-11 items-center justify-center gap-2 rounded-sm px-4 py-3 font-semibold transition-colors sm:px-6",
     variants[variant],
     className,
   );

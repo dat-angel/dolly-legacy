@@ -79,7 +79,6 @@ export default async function ChapterPage({ params }: PageProps<"/chapter/[id]">
 
       <div className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
         <div>
-          <p className="font-script text-3xl text-gold">Chapter</p>
           <h1 className="font-serif text-4xl font-bold text-burgundy-deep md:text-5xl">
             {chapter.title}
           </h1>

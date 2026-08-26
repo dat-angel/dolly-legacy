@@ -18,7 +18,6 @@ export function EraGallery({ activeEra = "all", onSelectEra }: EraGalleryProps) 
     <div className="mb-10">
       <div className="mb-4 flex items-end justify-between gap-3">
         <div>
-          <p className="font-script text-2xl text-gold">through the decades</p>
           <h2 className="font-serif text-2xl font-bold text-burgundy-deep">
             Dolly through the years
           </h2>
@@ -70,7 +69,7 @@ export function EraGallery({ activeEra = "all", onSelectEra }: EraGalleryProps) 
                 </>
               ) : (
                 <div className="absolute inset-0 flex items-center justify-center p-2 text-center">
-                  <span className="font-script text-lg text-burgundy/50">coming soon</span>
+                  <span className="text-sm text-cream/70">No photo yet</span>
                 </div>
               )}
               <span className="absolute inset-x-0 bottom-0 p-2 font-mono text-xs font-bold text-cream">
