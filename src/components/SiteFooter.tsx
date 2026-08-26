@@ -30,6 +30,9 @@ export function SiteFooter() {
           <Link href="/moments" className="text-burgundy hover:text-burgundy-deep">
             Moments
           </Link>
+          <Link href="/letters" className="text-burgundy hover:text-burgundy-deep">
+            Letters
+          </Link>
           <Link href="/data" className="text-burgundy hover:text-burgundy-deep">
             Open data
           </Link>

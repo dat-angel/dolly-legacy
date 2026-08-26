@@ -19,6 +19,11 @@ const FILES = [
     detail: "Nine to Five and the workplace anthem behind it",
   },
   {
+    href: "/letters",
+    title: "Letters",
+    detail: "Who she wrote to — typed notes, faxes, song-letters",
+  },
+  {
     href: "/images",
     title: "Photo credits",
     detail: "Wikimedia Commons licenses for every portrait",
@@ -44,7 +49,7 @@ export function OpenDataHarbor() {
           {momentsMeta.license} harbor. Use it in class, an app, or a playlist
           essay. The files are the party favors.
         </p>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {FILES.map((file) => (
             <Link
               key={file.href}

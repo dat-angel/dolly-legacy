@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "name": "dolly-legacy-letters",
+    "version": "1.0.0",
+    "description": "Open curated notes on letters, faxes, and song-letters Dolly Parton sent to other performers — short public excerpts only.",
+    "license": "CC-BY-4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "Dolly Legacy contributors",
+    "repository": "https://github.com/dat-angel/dolly-legacy",
+    "schema": "letters.schema.json",
+    "thirdPartyNotice": "Letter excerpts may remain under separate copyrights. Factual summaries, curation, and metadata are licensed under CC BY 4.0. We do not republish full letters."
+  },
+  "letters": [
+    {
+      "id": "kenny-rogers-2016",
+      "to": "Kenny Rogers",
+      "toRole": "duet partner and friend",
+      "year": 2016,
+      "form": "typed letter",
+      "featured": true,
+      "summary": "A typed thank-you after he helped her Imagination Library at Dollywood — signed, as ever, with I will always love you.",
+      "excerpt": "I'll always send you a message by pony express… you know how high tech I am!",
+      "source": "https://www.billboard.com/music/country/kenny-rogers-juliens-auction-1235123209/",
+      "sourceLabel": "Billboard, reporting Julien's Auctions",
+      "relatedMomentId": "imagination-library"
+    },
+    {
+      "id": "miley-cyrus-heart",
+      "to": "Miley Cyrus",
+      "toRole": "goddaughter",
+      "year": 2020,
+      "form": "fax",
+      "summary": "She still faxes. Miley has to collect them through a lawyer's office. The note was for Mother's Day.",
+      "excerpt": "How much do I love you? As much as my heart can hold and as far as my arms can reach.",
+      "source": "https://americansongwriter.com/miley-cyrus-reveals-sweet-fax-she-received-dolly-parton/",
+      "sourceLabel": "W Magazine, via American Songwriter"
+    },
+    {
+      "id": "miley-cyrus-aunt-dolly",
+      "to": "Miley Cyrus",
+      "toRole": "goddaughter, once her TV niece",
+      "year": 2021,
+      "form": "fax",
+      "summary": "A fax after flowers for the Hannah Montana anniversary — proud to be Aunt Dolly on screen or off.",
+      "excerpt": "Just know I'm always proud to be your Aunt Dolly.",
+      "source": "https://thebig98.iheart.com/content/2026-03-27-dolly-parton-faxed-a-heartfelt-note-to-miley-cyrus-heres-what-she-wrote/",
+      "sourceLabel": "The Big 98 / iHeart, citing the Hannah Montana anniversary special"
+    },
+    {
+      "id": "porter-wagoner-song-letter",
+      "to": "Porter Wagoner",
+      "toRole": "boss, partner, the weekly stage",
+      "year": 1973,
+      "form": "song-letter",
+      "summary": "Sometimes the letter is a song. She sat him down and sang the goodbye instead of arguing it.",
+      "excerpt": "I Will Always Love You — written as a farewell he could hear.",
+      "source": "https://www.grammy.com/news/songs-dolly-parton-wrote-whitney-houston-kenny-rogers/",
+      "sourceLabel": "Recording Academy / GRAMMY.com",
+      "relatedMomentId": "i-will-always-love-you"
+    },
+    {
+      "id": "whitney-houston-third-verse",
+      "to": "Whitney Houston",
+      "toRole": "the voice that carried her song around the world",
+      "year": 1992,
+      "form": "note",
+      "summary": "When The Bodyguard asked for the song, she sent it with one instruction: don't skip the last verse the way Linda Ronstadt had.",
+      "excerpt": "Be sure and make certain that that last verse can be sung.",
+      "source": "https://americansongwriter.com/dolly-parton-had-one-request-for-whitney-houston-covering-i-will-always-love-you-partially-thanks-to-linda-ronstadt/",
+      "sourceLabel": "American Songwriter, citing BBC Radio 2",
+      "relatedMomentId": "whitney-royalties"
+    }
+  ]
+}

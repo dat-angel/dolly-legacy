@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/dat-angel/dolly-legacy/letters.schema.json",
+  "title": "Dolly Legacy Letters Database",
+  "description": "Schema for public excerpts of letters, faxes, and song-letters Dolly Parton sent.",
+  "type": "object",
+  "required": ["meta", "letters"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["name", "version", "license", "attribution"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+        "description": { "type": "string" },
+        "license": { "const": "CC-BY-4.0" },
+        "licenseUrl": { "type": "string", "format": "uri" },
+        "attribution": { "type": "string" },
+        "repository": { "type": "string", "format": "uri" },
+        "schema": { "type": "string" },
+        "thirdPartyNotice": { "type": "string" }
+      }
+    },
+    "letters": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/letter" }
+    }
+  },
+  "$defs": {
+    "letter": {
+      "type": "object",
+      "required": ["id", "to", "toRole", "year", "form", "summary", "excerpt", "source", "sourceLabel"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "to": { "type": "string", "minLength": 1 },
+        "toRole": { "type": "string", "minLength": 1 },
+        "year": { "type": "integer", "minimum": 1900, "maximum": 2100 },
+        "form": {
+          "type": "string",
+          "enum": ["typed letter", "fax", "song-letter", "note"]
+        },
+        "featured": { "type": "boolean" },
+        "summary": { "type": "string", "minLength": 1 },
+        "excerpt": { "type": "string", "minLength": 1 },
+        "source": { "type": "string", "format": "uri" },
+        "sourceLabel": { "type": "string", "minLength": 1 },
+        "relatedMomentId": { "type": "string" }
+      }
+    }
+  }
+}

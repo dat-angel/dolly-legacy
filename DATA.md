@@ -8,6 +8,7 @@ The **[moments database](src/content/moments.json)** is published as open data u
 |-----------|---------|------|
 | Website & code | MIT | [LICENSE](LICENSE) |
 | Moments database | CC BY 4.0 | [src/content/LICENSE-CC-BY-4.0.txt](src/content/LICENSE-CC-BY-4.0.txt) |
+| Letters index | CC BY 4.0 | [src/content/letters.json](src/content/letters.json) |
 | JSON Schema | MIT (part of repo) | [src/content/moments.schema.json](src/content/moments.schema.json) |
 
 ## Why dual licensing?

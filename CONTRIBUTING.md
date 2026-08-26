@@ -5,6 +5,7 @@ Thank you for helping grow the Dolly Legacy open database and celebration site.
 ## What you can contribute
 
 - **New moments** — milestones, quotes, philanthropy, advocacy stories
+- **Letters** — public, sourced notes on who she wrote to (`src/content/letters.json`)
 - **Corrections** — factual fixes with sources
 - **Tags & relationships** — better `relatedIds`, `moodTags`, `dollySayKeywords`
 - **Code** — UI, accessibility, performance

@@ -39,6 +39,11 @@ const FILES = [
     href: "https://github.com/dat-angel/dolly-legacy/blob/main/src/content/moment-images.json",
     use: "Which picture goes with which story",
   },
+  {
+    name: "letters.json",
+    href: "https://github.com/dat-angel/dolly-legacy/blob/main/src/content/letters.json",
+    use: "Who she wrote to — typed letters, faxes, song-letters, short excerpts",
+  },
 ] as const;
 
 export default function DataPage() {
