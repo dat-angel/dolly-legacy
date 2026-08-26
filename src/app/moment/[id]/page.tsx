@@ -73,7 +73,7 @@ export default async function MomentPage({ params }: PageProps<"/moment/[id]">) 
   };
 
   return (
-    <article className="mx-auto max-w-3xl px-6 py-16">
+    <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
       <JsonLd data={articleJsonLd} />
       <Link href="/moments" className="text-sm font-semibold text-hot-pink hover:text-burgundy">
         ← All moments
@@ -125,6 +125,7 @@ export default async function MomentPage({ params }: PageProps<"/moment/[id]">) 
         title={moment.title}
         text={shareText}
         url={shareUrl}
+        imageSrc={image?.src}
         className="mt-10"
       />
 

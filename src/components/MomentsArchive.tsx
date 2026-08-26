@@ -126,11 +126,15 @@ export function MomentsArchive() {
             All Moments
           </h1>
           <p className="mt-2 text-burgundy/70">
-            {filtered.length} moment{filtered.length !== 1 ? "s" : ""} · Press{" "}
-            <kbd className="rounded border-2 border-dashed border-blush px-2 py-0.5 font-mono text-xs">
-              ?
-            </kbd>{" "}
-            to surprise yourself
+            {filtered.length} moment{filtered.length !== 1 ? "s" : ""}
+            <span className="hidden sm:inline">
+              {" "}
+              · Press{" "}
+              <kbd className="rounded border-2 border-dashed border-blush px-2 py-0.5 font-mono text-xs">
+                ?
+              </kbd>{" "}
+              to surprise yourself
+            </span>
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
@@ -139,7 +143,7 @@ export function MomentsArchive() {
               key={m.id}
               type="button"
               onClick={() => surprise(m.id)}
-              className="rounded-full border-2 border-dashed border-blush-deep/40 bg-white/80 px-4 py-2 text-sm font-semibold text-burgundy transition hover:border-hot-pink hover:bg-hot-pink/10 hover:text-hot-pink"
+              className="min-h-11 rounded-full border-2 border-dashed border-blush-deep/40 bg-white/80 px-4 py-2 text-sm font-semibold text-burgundy transition hover:border-hot-pink hover:bg-hot-pink/10 hover:text-hot-pink"
             >
               {m.label}
             </button>
@@ -155,7 +159,7 @@ export function MomentsArchive() {
           value={search}
           onChange={(e) => handleSearchChange(e.target.value)}
           placeholder="Search moments, quotes, tags… try typing “jolene”"
-          className="w-full rounded-full border-2 border-dashed border-hot-pink/30 bg-white/90 px-6 py-3.5 text-burgundy-deep placeholder:text-burgundy/40 outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
+          className="min-h-12 w-full rounded-full border-2 border-dashed border-hot-pink/30 bg-white/90 px-4 py-3.5 text-base text-burgundy-deep placeholder:text-burgundy/40 outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25 sm:px-6"
         />
       </div>
 
@@ -164,7 +168,7 @@ export function MomentsArchive() {
           type="button"
           onClick={() => setCategory("all")}
           className={cn(
-            "rounded-full px-4 py-1.5 text-sm transition",
+            "min-h-11 rounded-full px-4 py-2 text-sm transition",
             category === "all"
               ? "bg-gradient-to-r from-hot-pink to-burgundy text-cream"
               : "border-2 border-dashed border-blush/60 text-burgundy hover:border-hot-pink hover:text-hot-pink",
@@ -178,7 +182,7 @@ export function MomentsArchive() {
             type="button"
             onClick={() => setCategory(c.id)}
             className={cn(
-              "rounded-full px-4 py-1.5 text-sm capitalize transition",
+              "min-h-11 rounded-full px-4 py-2 text-sm capitalize transition",
               category === c.id
                 ? "bg-gradient-to-r from-hot-pink to-burgundy text-cream"
                 : "border-2 border-dashed border-blush/60 text-burgundy hover:border-hot-pink",
@@ -194,7 +198,7 @@ export function MomentsArchive() {
           type="button"
           onClick={() => setEra("all")}
           className={cn(
-            "rounded-full px-3 py-1 text-xs transition",
+            "min-h-11 rounded-full px-3 py-2 text-xs transition",
             era === "all"
               ? "bg-gold/20 text-burgundy-deep"
               : "text-burgundy/60 hover:text-burgundy",
@@ -208,7 +212,7 @@ export function MomentsArchive() {
             type="button"
             onClick={() => setEra(e)}
             className={cn(
-              "rounded-full px-3 py-1 text-xs transition",
+              "min-h-11 rounded-full px-3 py-2 text-xs transition",
               era === e
                 ? "bg-gold/20 text-burgundy-deep"
                 : "text-burgundy/60 hover:text-burgundy",
@@ -226,7 +230,7 @@ export function MomentsArchive() {
             type="button"
             onClick={() => setTag(tag === t ? null : t)}
             className={cn(
-              "rounded-full px-3 py-1 text-xs transition",
+              "min-h-11 rounded-full px-3 py-2 text-xs transition",
               tag === t
                 ? "bg-blush text-burgundy-deep"
                 : "border border-blush/40 text-burgundy/60 hover:text-burgundy",
@@ -239,7 +243,7 @@ export function MomentsArchive() {
           type="button"
           onClick={() => setShowRhinestones(!showRhinestones)}
           className={cn(
-            "ml-auto rounded-full px-3 py-1 text-xs transition",
+            "ml-auto min-h-11 rounded-full px-3 py-2 text-xs transition",
             showRhinestones
               ? "bg-gold/30 text-burgundy-deep"
               : "border border-gold/40 text-gold",

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import {
   Libre_Baskerville,
@@ -80,9 +80,24 @@ export const metadata: Metadata = {
     title: SITE.title,
     description: SITE.shortDescription,
   },
+  appleWebApp: {
+    capable: true,
+    title: SITE.name,
+    statusBarStyle: "default",
+  },
+  formatDetection: {
+    telephone: false,
+  },
   other: {
     "apple-mobile-web-app-title": SITE.name,
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: SITE.themeColor,
 };
 
 const websiteJsonLd = {
@@ -106,7 +121,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${libreBaskerville.variable} ${sourceSans.variable} ${sacramento.variable} ${typewriter.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col font-sans text-burgundy-deep">
+      <body className="flex min-h-full flex-col overflow-x-clip font-sans text-burgundy-deep">
         <JsonLd data={websiteJsonLd} />
         <SiteHeader />
         <main className="flex-1">{children}</main>

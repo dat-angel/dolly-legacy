@@ -71,7 +71,7 @@ export default async function ChapterPage({ params }: PageProps<"/chapter/[id]">
   };
 
   return (
-    <div className="mx-auto max-w-6xl px-6 py-16">
+    <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
       <JsonLd data={chapterJsonLd} />
       <Link href="/" className="text-sm font-semibold text-hot-pink hover:text-burgundy">
         ← Back to exhibit
@@ -88,6 +88,7 @@ export default async function ChapterPage({ params }: PageProps<"/chapter/[id]">
             title={chapter.title}
             text={shareText}
             url={shareUrl}
+            imageSrc={portrait.src}
             className="mt-6"
           />
           <StitchDivider className="my-10 max-w-md" />

@@ -13,7 +13,7 @@ export function dollyButtonClass(
   className?: string,
 ) {
   return cn(
-    "inline-flex items-center justify-center gap-2 rounded-full px-8 py-3.5 font-semibold transition-all duration-200",
+    "inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-6 py-3.5 font-semibold transition-all duration-200 sm:px-8",
     variants[variant],
     className,
   );

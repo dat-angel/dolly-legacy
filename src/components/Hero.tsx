@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { getOnThisDayMoment } from "@/lib/moments";
+import { getMomentImage } from "@/lib/images";
 import { absoluteUrl, getMomentShareText, getMomentShareUrl } from "@/lib/share";
 import {
   Butterfly,
@@ -17,18 +18,18 @@ export function Hero() {
   const onThisDay = getOnThisDayMoment();
 
   return (
-    <section className="relative overflow-hidden px-6 pb-20 pt-16 md:pb-28 md:pt-24">
+    <section className="relative overflow-hidden px-4 pb-16 pt-10 sm:px-6 md:pb-28 md:pt-24">
       <div className="quilt-bg pointer-events-none absolute inset-0" />
-      <QuiltPatchCollage className="opacity-25" />
+      <QuiltPatchCollage className="hidden opacity-25 sm:block" />
       <SparkleField />
 
       <Butterfly
         size={56}
-        className="absolute left-[8%] top-[20%] text-hot-pink/60"
+        className="absolute left-[8%] top-[20%] hidden text-hot-pink/60 md:block"
       />
       <Butterfly
         size={40}
-        className="absolute right-[10%] top-[30%] text-gold/70"
+        className="absolute right-[10%] top-[30%] hidden text-gold/70 md:block"
         style={{ animationDelay: "1.5s" }}
       />
 
@@ -36,10 +37,10 @@ export function Hero() {
         {onThisDay && (
           <Link
             href={`/moment/${onThisDay.id}`}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border-2 border-dashed border-gold/50 bg-gold/10 px-5 py-2 text-sm text-burgundy transition hover:border-hot-pink hover:bg-hot-pink/10"
+            className="mb-5 inline-flex max-w-full items-center gap-2 rounded-full border-2 border-dashed border-gold/50 bg-gold/10 px-4 py-2.5 text-left text-sm text-burgundy transition hover:border-hot-pink hover:bg-hot-pink/10 sm:mb-6 sm:px-5"
           >
-            <Rhinestone size={14} className="text-gold" />
-            <span>
+            <Rhinestone size={14} className="shrink-0 text-gold" />
+            <span className="min-w-0">
               On this day:{" "}
               <span className="font-semibold">{onThisDay.title}</span>
               {onThisDay.year ? ` (${onThisDay.year})` : ""}
@@ -47,39 +48,39 @@ export function Hero() {
           </Link>
         )}
 
-        <p className="font-script text-3xl text-hot-pink md:text-4xl">
+        <p className="font-script text-2xl text-hot-pink sm:text-3xl md:text-4xl">
           sparkle &amp; grace
         </p>
-        <p className="mb-3 mt-1 text-xs font-bold uppercase tracking-[0.25em] text-gold">
+        <p className="mb-3 mt-1 text-[0.65rem] font-bold uppercase tracking-[0.22em] text-gold sm:text-xs sm:tracking-[0.25em]">
           Music · Generosity · Kindness
         </p>
 
-        <h1 className="font-serif text-5xl font-bold leading-[1.05] text-burgundy-deep md:text-7xl lg:text-8xl rhinestone">
+        <h1 className="font-serif text-[2.35rem] font-bold leading-[1.08] text-burgundy-deep sm:text-5xl md:text-7xl lg:text-8xl rhinestone">
           The Imagination
           <br />
           <span className="text-hot-pink">Library</span>
           <br />
-          <span className="text-3xl font-normal italic text-burgundy md:text-5xl">
+          <span className="text-2xl font-normal italic text-burgundy sm:text-3xl md:text-5xl">
             of a Legend
           </span>
         </h1>
 
         <StitchDivider className="mx-auto max-w-md" />
 
-        <p className="mx-auto max-w-2xl text-lg leading-relaxed text-burgundy/85 md:text-xl">
+        <p className="mx-auto max-w-2xl text-base leading-relaxed text-burgundy/85 sm:text-lg md:text-xl">
           A living tribute to Dolly Parton — her songs, her giving, and her
           lifelong stand with Black communities, LGBTQ+ people, and working women
           everywhere.
         </p>
 
-        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Link href="/moments" className={dollyButtonClass("primary")}>
+        <div className="mt-8 flex w-full flex-col items-stretch justify-center gap-3 sm:mt-10 sm:flex-row sm:items-center">
+          <Link href="/moments" className={dollyButtonClass("primary", "w-full sm:w-auto")}>
             <Rhinestone size={16} className="text-gold-light" />
             Explore all moments
           </Link>
           <Link
             href="#what-would-dolly-say"
-            className={dollyButtonClass("secondary")}
+            className={dollyButtonClass("secondary", "w-full sm:w-auto")}
           >
             What would Dolly say?
           </Link>
@@ -89,7 +90,7 @@ export function Hero() {
           title="Dolly Legacy"
           text="A living tribute to Dolly Parton — music, philanthropy, and advocacy."
           url={absoluteUrl("/")}
-          className="mt-8 justify-center"
+          className="mt-6 flex justify-center"
           compact
           label="Share this tribute"
         />
@@ -99,7 +100,8 @@ export function Hero() {
             title={onThisDay.title}
             text={getMomentShareText(onThisDay)}
             url={getMomentShareUrl(onThisDay.id)}
-            className="mt-4 justify-center"
+            imageSrc={getMomentImage(onThisDay.id)?.src}
+            className="mt-3 flex justify-center"
             compact
             label={`Share ${onThisDay.title}`}
           />

@@ -120,7 +120,12 @@ export function MomentCard({
       <div className="mt-4 flex flex-wrap items-center gap-3">
         {shareUrl ? (
           <div onClick={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}>
-            <ShareLinkButton url={shareUrl} text={getMomentShareText(moment)} title={moment.title} />
+            <ShareLinkButton
+              url={shareUrl}
+              text={getMomentShareText(moment)}
+              title={moment.title}
+              imageSrc={image?.src}
+            />
           </div>
         ) : null}
         <Link
@@ -141,13 +146,22 @@ function ShareLinkButton({
   url,
   text,
   title,
+  imageSrc,
 }: {
   url: string;
   text: string;
   title: string;
+  imageSrc?: string;
 }) {
   return (
-    <ShareMenu title={title} text={text} url={url} compact label={`Share ${title}`} />
+    <ShareMenu
+      title={title}
+      text={text}
+      url={url}
+      imageSrc={imageSrc}
+      compact
+      label="Share"
+    />
   );
 }
 

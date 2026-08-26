@@ -54,7 +54,7 @@ export function MomentDrawer({ moment, onClose, onSelect }: MomentDrawerProps) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-50 flex items-end justify-center bg-burgundy-deep/40 p-4 backdrop-blur-sm sm:items-center"
+      className="fixed inset-0 z-50 flex items-end justify-center bg-burgundy-deep/40 p-0 backdrop-blur-sm sm:items-center sm:p-4"
       onClick={onClose}
     >
       <motion.div
@@ -62,7 +62,7 @@ export function MomentDrawer({ moment, onClose, onSelect }: MomentDrawerProps) {
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: 20, opacity: 0 }}
         transition={{ type: "spring", damping: 25, stiffness: 300 }}
-        className="relative max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-sm border-4 border-double border-gold/50 bg-cream p-8 shadow-2xl"
+        className="relative max-h-[92vh] w-full max-w-2xl overflow-y-auto rounded-t-3xl border-4 border-double border-gold/50 bg-cream p-5 pb-[max(1.5rem,env(safe-area-inset-bottom))] shadow-2xl sm:max-h-[85vh] sm:rounded-sm sm:p-8"
         onClick={(e) => e.stopPropagation()}
         role="dialog"
         aria-modal="true"
@@ -71,7 +71,7 @@ export function MomentDrawer({ moment, onClose, onSelect }: MomentDrawerProps) {
         <button
           type="button"
           onClick={onClose}
-          className="absolute right-6 top-6 text-burgundy/50 hover:text-burgundy"
+          className="absolute right-4 top-4 flex min-h-11 min-w-11 items-center justify-center text-burgundy/50 hover:text-burgundy sm:right-6 sm:top-6"
           aria-label="Close"
         >
           ✕
@@ -95,7 +95,7 @@ export function MomentDrawer({ moment, onClose, onSelect }: MomentDrawerProps) {
 
         <h2
           id="moment-drawer-title"
-          className="font-serif text-3xl font-bold text-burgundy-deep"
+          className="pr-10 font-serif text-2xl font-bold text-burgundy-deep sm:text-3xl"
         >
           {moment.title}
         </h2>
@@ -104,13 +104,13 @@ export function MomentDrawer({ moment, onClose, onSelect }: MomentDrawerProps) {
           <MomentPortrait
             image={image}
             showCaption
-            className="mt-6 aspect-[16/10] w-full"
+            className="mt-6 aspect-[4/3] w-full sm:aspect-[16/10]"
             sizes="(max-width: 768px) 100vw, 672px"
           />
         )}
 
         {moment.quote && (
-          <blockquote className="mt-6 font-serif text-2xl italic leading-snug text-burgundy rhinestone">
+          <blockquote className="mt-6 font-serif text-xl italic leading-snug text-burgundy rhinestone sm:text-2xl">
             &ldquo;{moment.quote}&rdquo;
           </blockquote>
         )}
@@ -141,6 +141,7 @@ export function MomentDrawer({ moment, onClose, onSelect }: MomentDrawerProps) {
           title={moment.title}
           text={shareText}
           url={shareUrl}
+          imageSrc={image?.src}
           className="mt-8"
           label={`Share ${moment.title}`}
         />
@@ -156,7 +157,7 @@ export function MomentDrawer({ moment, onClose, onSelect }: MomentDrawerProps) {
                   key={r.id}
                   type="button"
                   onClick={() => onSelect(r)}
-                  className="rounded-full border border-blush/50 bg-white/60 px-4 py-2 text-sm text-burgundy transition hover:border-gold"
+                  className="min-h-11 rounded-full border border-blush/50 bg-white/60 px-4 py-2 text-sm text-burgundy transition hover:border-gold"
                 >
                   {r.title}
                 </button>

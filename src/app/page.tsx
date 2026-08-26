@@ -51,7 +51,7 @@ export default function HomePage() {
         />
       ))}
 
-      <section className="section-warm px-6 py-16 md:py-24">
+      <section className="section-warm px-4 py-12 sm:px-6 md:py-24">
         <div className="mx-auto max-w-4xl">
           <Suspense fallback={null}>
             <WhatWouldDollySay />
@@ -59,7 +59,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden border-t-2 border-dashed border-blush-deep/40 bg-gradient-to-b from-cream to-blush/20 px-6 py-20 text-center">
+      <section className="relative overflow-hidden border-t-2 border-dashed border-blush-deep/40 bg-gradient-to-b from-cream to-blush/20 px-4 py-16 text-center sm:px-6 md:py-20">
         <StarBurst
           size={32}
           className="absolute left-[15%] top-[20%] text-gold/40"
@@ -81,7 +81,7 @@ export default function HomePage() {
           </kbd>{" "}
           for a surprise.
         </p>
-        <Link href="/moments" className={dollyButtonClass("primary", "mt-8")}>
+        <Link href="/moments" className={dollyButtonClass("primary", "mt-8 w-full sm:w-auto")}>
           View all moments
         </Link>
       </section>

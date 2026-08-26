@@ -16,14 +16,14 @@ interface EraGalleryProps {
 export function EraGallery({ activeEra = "all", onSelectEra }: EraGalleryProps) {
   return (
     <div className="mb-10">
-      <div className="mb-4 flex items-end justify-between gap-4">
+      <div className="mb-4 flex items-end justify-between gap-3">
         <div>
           <p className="font-script text-2xl text-hot-pink">through the decades</p>
           <h2 className="font-serif text-2xl font-bold text-burgundy-deep">
             Dolly through the years
           </h2>
         </div>
-        <Link href="/images" className="text-sm font-semibold text-hot-pink hover:text-burgundy">
+        <Link href="/images" className="shrink-0 text-xs font-semibold text-hot-pink hover:text-burgundy sm:text-sm">
           All photo credits →
         </Link>
       </div>
@@ -33,6 +33,7 @@ export function EraGallery({ activeEra = "all", onSelectEra }: EraGalleryProps) 
           title={`Dolly in the ${activeEra}`}
           text={getEraShareText(activeEra)}
           url={getEraShareUrl(activeEra)}
+          imageSrc={getEraImage(activeEra)?.src}
           className="mb-4"
           compact
           label={`Share ${activeEra}`}
@@ -50,7 +51,7 @@ export function EraGallery({ activeEra = "all", onSelectEra }: EraGalleryProps) 
               type="button"
               onClick={() => onSelectEra?.(isActive ? "all" : era)}
               className={cn(
-                "photo-frame relative aspect-[3/4] overflow-hidden text-left transition",
+                "photo-frame relative min-h-11 aspect-[3/4] overflow-hidden text-left transition",
                 isActive && "ring-2 ring-hot-pink ring-offset-2 ring-offset-cream",
                 !image && "bg-gradient-to-br from-blush/40 to-gold/20",
               )}
@@ -62,7 +63,7 @@ export function EraGallery({ activeEra = "all", onSelectEra }: EraGalleryProps) 
                     src={image.src}
                     alt={image.alt}
                     fill
-                    sizes="120px"
+                    sizes="(max-width: 640px) 45vw, 120px"
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-burgundy-deep/80 to-transparent" />

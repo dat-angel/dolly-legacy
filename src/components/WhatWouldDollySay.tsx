@@ -75,20 +75,20 @@ export function WhatWouldDollySay() {
   return (
     <section
       id="what-would-dolly-say"
-      className="vanity-frame relative overflow-hidden rounded-sm p-8 md:p-14"
+      className="vanity-frame relative overflow-hidden rounded-sm p-5 sm:p-8 md:p-14"
     >
       <SparkleField />
 
       <div className="relative">
         <div className="flex items-center justify-center gap-3">
-          <StarBurst size={24} className="text-gold" />
-          <p className="font-script text-4xl text-hot-pink md:text-5xl">
+          <StarBurst size={20} className="hidden text-gold sm:block" />
+          <p className="font-script text-3xl text-hot-pink sm:text-4xl md:text-5xl">
             ask the rhinestones
           </p>
-          <StarBurst size={24} className="text-gold" />
+          <StarBurst size={20} className="hidden text-gold sm:block" />
         </div>
 
-        <h2 className="mt-2 text-center font-serif text-3xl font-bold text-burgundy-deep md:text-4xl">
+        <h2 className="mt-2 text-center font-serif text-2xl font-bold text-burgundy-deep sm:text-3xl md:text-4xl">
           What would Dolly say?
         </h2>
         <p className="mx-auto mt-4 max-w-lg text-center text-burgundy/80">
@@ -103,10 +103,10 @@ export function WhatWouldDollySay() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder={placeholder}
-              className="flex-1 rounded-full border-2 border-dashed border-hot-pink/40 bg-white/90 px-6 py-3.5 text-burgundy-deep placeholder:text-burgundy/40 outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
+              className="min-h-12 flex-1 rounded-full border-2 border-dashed border-hot-pink/40 bg-white/90 px-5 py-3.5 text-base text-burgundy-deep placeholder:text-burgundy/40 outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25 sm:px-6"
               aria-label="What's on your mind?"
             />
-            <button type="submit" className={dollyButtonClass("primary", "shrink-0")}>
+            <button type="submit" className={dollyButtonClass("primary", "min-h-12 w-full shrink-0 sm:w-auto")}>
               <Rhinestone size={16} className="text-gold-light" />
               Ask Dolly
             </button>
@@ -119,7 +119,7 @@ export function WhatWouldDollySay() {
               key={p.label}
               type="button"
               onClick={() => handlePrompt(p.text)}
-              className="rounded-full border-2 border-blush-deep/40 bg-white/70 px-4 py-2 font-medium text-sm text-burgundy transition hover:border-hot-pink hover:bg-hot-pink/10 hover:text-hot-pink"
+              className="min-h-11 rounded-full border-2 border-blush-deep/40 bg-white/70 px-4 py-2 text-sm font-medium text-burgundy transition hover:border-hot-pink hover:bg-hot-pink/10 hover:text-hot-pink"
             >
               {p.label}
             </button>
@@ -127,7 +127,7 @@ export function WhatWouldDollySay() {
           <button
             type="button"
             onClick={shufflePrompt}
-            className="rounded-full border-2 border-dashed border-gold/50 bg-gold/10 px-4 py-2 text-sm font-semibold text-burgundy transition hover:bg-gold/20"
+            className="min-h-11 rounded-full border-2 border-dashed border-gold/50 bg-gold/10 px-4 py-2 text-sm font-semibold text-burgundy transition hover:bg-gold/20"
           >
             Surprise me
           </button>
@@ -183,7 +183,8 @@ export function WhatWouldDollySay() {
                 title="What would Dolly say?"
                 text={getMomentShareText(result.moment)}
                 url={getDollySayShareUrl(result.moment.id, input)}
-                className="mt-6 justify-center"
+                imageSrc={resultImage?.src}
+                className="mt-6 flex justify-center"
                 compact
                 label="Share Dolly's answer"
               />

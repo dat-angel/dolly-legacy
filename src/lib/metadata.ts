@@ -80,6 +80,13 @@ export function createPageMetadata({
       title,
       description,
       creator: "@dat_angel",
+      ...(image
+        ? {
+            images: [
+              image.url.startsWith("http") ? image.url : absoluteUrl(image.url),
+            ],
+          }
+        : {}),
     },
   };
 }

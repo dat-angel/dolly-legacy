@@ -3,12 +3,12 @@ import { Rhinestone, StitchDivider, Butterfly } from "./decorative";
 
 export function SiteFooter() {
   return (
-    <footer className="relative border-t-2 border-dashed border-blush-deep/40 bg-gradient-to-t from-blush/20 to-cream py-14">
+    <footer className="relative border-t-2 border-dashed border-blush-deep/40 bg-gradient-to-t from-blush/20 to-cream py-12 pb-[max(3rem,env(safe-area-inset-bottom))] sm:py-14">
       <Butterfly
         size={36}
         className="absolute bottom-8 left-[10%] text-hot-pink/30"
       />
-      <div className="mx-auto max-w-6xl px-6 text-center">
+      <div className="mx-auto max-w-6xl px-4 text-center sm:px-6">
         <div className="flex items-center justify-center gap-2">
           <Rhinestone size={18} className="text-gold" />
           <p className="font-serif text-2xl font-bold text-burgundy-deep">

@@ -33,8 +33,8 @@ export function StatsStrip() {
   }, []);
 
   return (
-    <section ref={ref} className="stats-strip py-12 text-cream">
-      <div className="relative mx-auto grid max-w-5xl grid-cols-2 gap-6 px-6 md:grid-cols-4 md:gap-8">
+    <section ref={ref} className="stats-strip py-10 text-cream sm:py-12">
+      <div className="relative mx-auto grid max-w-5xl grid-cols-2 gap-4 px-4 sm:gap-6 sm:px-6 md:grid-cols-4 md:gap-8">
         {stats.map(({ key, label, icon }, i) => (
           <div
             key={key}

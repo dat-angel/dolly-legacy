@@ -20,7 +20,7 @@ export const metadata: Metadata = createPageMetadata({
 
 export default function MomentsPage() {
   return (
-    <div className="relative overflow-hidden px-6 py-12 md:py-16">
+    <div className="relative overflow-hidden px-4 py-10 sm:px-6 md:py-16">
       <SparkleField />
       <div className="relative mx-auto max-w-6xl">
         <Suspense

@@ -92,7 +92,7 @@ export function InteractiveChapterSection({
   return (
     <section
       id={id}
-      className={cn("scroll-mt-20 px-6 py-16 md:py-24", accent.bg)}
+      className={cn("scroll-mt-24 px-4 py-12 md:scroll-mt-20 md:px-6 md:py-24", accent.bg)}
     >
       <div className="mx-auto max-w-6xl">
         <div className="relative mb-8 grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
@@ -108,9 +108,10 @@ export function InteractiveChapterSection({
               title={chapterMeta?.title ?? title}
               text={shareText}
               url={shareUrl}
+              imageSrc={portrait.src}
               className="mt-5"
               compact
-              label={`Share ${title}`}
+              label="Share chapter"
             />
           </div>
           <ChapterPortrait
@@ -134,7 +135,7 @@ export function InteractiveChapterSection({
                 text={`"${typewriterQuote.slice(0, 120)}…"`}
                 url={`${shareUrl}#typewriter`}
                 compact
-                label="Share typewriter quote"
+                label="Share quote"
               />
             </div>
             <Typewriter
@@ -153,7 +154,7 @@ export function InteractiveChapterSection({
           <button
             type="button"
             onClick={() => setExpanded((v) => !v)}
-            className={dollyButtonClass("secondary", "text-sm")}
+            className={dollyButtonClass("secondary", "min-h-11 w-full text-sm sm:w-auto")}
           >
             {expanded
               ? "Show featured only"
@@ -163,7 +164,7 @@ export function InteractiveChapterSection({
             type="button"
             onClick={() => setRevealedFacts((v) => !v)}
             className={cn(
-              "rounded-full border-2 border-dashed px-4 py-2 text-sm font-semibold transition",
+              "min-h-11 rounded-full border-2 border-dashed px-4 py-2 text-sm font-semibold transition",
               revealedFacts
                 ? "border-gold bg-gold/20 text-burgundy-deep"
                 : "border-blush-deep/40 text-burgundy hover:border-hot-pink",
