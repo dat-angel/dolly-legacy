@@ -11,12 +11,18 @@ import { WhatWouldDollySay } from "@/components/WhatWouldDollySay";
 import { dollyButtonClass } from "@/components/ui/DollyButton";
 import { createPageMetadata } from "@/lib/metadata";
 import { getMomentCount } from "@/lib/moments";
+import { PREVIEW_IMAGES } from "@/lib/preview-images";
 import { getSiteDescription } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "A scrapbook of Dolly Parton",
   description: getSiteDescription(),
   path: "/",
+  includeStoryImage: false,
+  ogImage: {
+    url: "/opengraph-image",
+    alt: PREVIEW_IMAGES.allyship.alt,
+  },
   keywords: [
     "Dolly Parton celebration",
     "Dolly Parton timeline",

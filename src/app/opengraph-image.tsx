@@ -1,25 +1,26 @@
 import { ImageResponse } from "next/og";
 import { OG_SIZE } from "@/lib/og-brand";
 import { loadPreviewPhotoSrc } from "@/lib/load-preview-photo";
-import { OgPhotoCard } from "@/lib/og-photo-card";
+import { OgPhotoHero } from "@/lib/og-photo-card";
 import { getMomentCount } from "@/lib/moments";
 import { PREVIEW_IMAGES } from "@/lib/preview-images";
 import { getSiteDescription, SITE } from "@/lib/site";
 
-export const alt = SITE.title;
+export const alt = PREVIEW_IMAGES.allyship.alt;
 export const size = OG_SIZE;
 export const contentType = "image/png";
 
 export default async function OpenGraphImage() {
-  const photoSrc = await loadPreviewPhotoSrc("literacy");
+  const photoSrc = await loadPreviewPhotoSrc("allyship");
 
   return new ImageResponse(
     (
-      <OgPhotoCard
+      <OgPhotoHero
         title="Dolly Legacy"
         subtitle={getSiteDescription()}
         footer={`${getMomentCount()} moments · Open CC BY 4.0 data`}
         photoSrc={photoSrc}
+        photoPosition="center 15%"
       />
     ),
     { ...OG_SIZE },

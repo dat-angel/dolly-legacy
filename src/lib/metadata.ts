@@ -10,6 +10,7 @@ interface PageMetadataOptions {
   keywords?: string[];
   ogType?: OgType;
   ogImage?: string | { url: string; alt: string };
+  includeStoryImage?: boolean;
   noIndex?: boolean;
 }
 
@@ -20,6 +21,7 @@ export function createPageMetadata({
   keywords = [],
   ogType = "website",
   ogImage,
+  includeStoryImage = true,
   noIndex = false,
 }: PageMetadataOptions): Metadata {
   const url = absoluteUrl(path);
@@ -37,6 +39,24 @@ export function createPageMetadata({
     path.startsWith("/moment/") ? `${path}/story-image` : "/story-image",
   );
   const landscapeAlt = image?.alt ?? title;
+
+  const ogImages = [
+    {
+      url: landscapeUrl,
+      width: 1200,
+      height: 630,
+      alt: landscapeAlt,
+    },
+  ];
+
+  if (includeStoryImage) {
+    ogImages.push({
+      url: storyUrl,
+      width: 1080,
+      height: 1920,
+      alt: `${landscapeAlt} — story`,
+    });
+  }
 
   return {
     title,
@@ -69,20 +89,7 @@ export function createPageMetadata({
       siteName: SITE.name,
       locale: SITE.locale,
       type: ogType,
-      images: [
-        {
-          url: landscapeUrl,
-          width: 1200,
-          height: 630,
-          alt: landscapeAlt,
-        },
-        {
-          url: storyUrl,
-          width: 1080,
-          height: 1920,
-          alt: `${landscapeAlt} — story`,
-        },
-      ],
+      images: ogImages,
     },
     twitter: {
       card: "summary_large_image",
