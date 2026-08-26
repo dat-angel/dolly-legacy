@@ -172,6 +172,26 @@ body {
     0 12px 32px rgba(139, 41, 66, 0.1);
 }
 
+.photo-frame {
+  position: relative;
+  border: 3px solid var(--cream);
+  border-radius: 6px 18px 6px 18px;
+  box-shadow:
+    0 0 0 2px var(--burgundy-deep),
+    8px 8px 0 rgba(139, 41, 66, 0.15);
+  background: var(--burgundy-deep);
+}
+
+.photo-frame::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 2px dashed rgba(255, 248, 240, 0.35);
+  border-radius: 2px 12px 2px 12px;
+  pointer-events: none;
+  z-index: 1;
+}
+
 /* ── Section backgrounds ── */
 
 .section-warm {

@@ -35,12 +35,15 @@ export function SiteFooter() {
             CC BY 4.0
           </a>
         </p>
-        <div className="mt-6 flex justify-center gap-6 text-sm font-semibold">
+        <div className="mt-6 flex flex-wrap justify-center gap-6 text-sm font-semibold">
           <Link
             href="/moments"
             className="text-burgundy hover:text-hot-pink"
           >
             Explore moments
+          </Link>
+          <Link href="/images" className="text-burgundy hover:text-hot-pink">
+            Photo credits
           </Link>
           <a
             href="https://imaginationlibrary.com/"

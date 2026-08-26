@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { filterMoments, getMomentById, getRandomMoment, getRelatedMoments } from "@/lib/moments";
 import { CATEGORIES, ERAS, type Category, type Era, type Moment, type Mood } from "@/lib/types";
 import { MomentCard } from "./ChapterSection";
+import { EraGallery } from "./EraGallery";
 import { cn } from "@/lib/utils";
 
 const TAGS = [
@@ -116,6 +117,8 @@ export function MomentsArchive() {
           ))}
         </div>
       </div>
+
+      <EraGallery activeEra={era} onSelectEra={setEra} />
 
       <div className="mb-6">
         <input

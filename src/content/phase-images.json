@@ -1,0 +1,76 @@
+{
+  "chapters": {
+    "origins": {
+      "alt": "Porter Wagoner and Dolly Parton in 1969",
+      "caption": "Nashville, 1969 — Appalachian roots meet the Porter Wagoner Show and the Grand Ole Opry dream",
+      "year": 1969
+    },
+    "music": {
+      "alt": "Dolly Parton publicity portrait, 1977",
+      "caption": "1977 — storytelling, crossover hits, and songs that moved the world",
+      "year": 1977
+    },
+    "building": {
+      "alt": "Dolly Parton accepting the Liseberg Applause Award, 2010",
+      "caption": "2010 — Dollywood, creative control, and building something that lasts",
+      "year": 2010
+    },
+    "giving": {
+      "alt": "Coat of Many Colors reproduction at Chasing Rainbows Museum, Dollywood",
+      "caption": "The coat that inspired a song — and, years later, a literacy mission for millions of children",
+      "year": 2017
+    },
+    "standing": {
+      "alt": "Dolly Parton at the Peabody Awards, 2022",
+      "caption": "2022 — still showing up for everyone, with the same sparkle and spine",
+      "year": 2022
+    }
+  },
+  "eras": {
+    "1950s": null,
+    "1960s": {
+      "alt": "Porter Wagoner and Dolly Parton in 1969",
+      "caption": "Breaking through on The Porter Wagoner Show",
+      "year": 1969
+    },
+    "1970s": {
+      "alt": "Dolly Parton publicity portrait, 1977",
+      "caption": "RCA-era portrait at the height of her songwriting power",
+      "year": 1977
+    },
+    "1980s": {
+      "alt": "Carol Burnett and Dolly Parton, 1980",
+      "caption": "Crossing into film, TV, and pop culture",
+      "year": 1980
+    },
+    "1990s": null,
+    "2000s": {
+      "alt": "Dolly Parton at the Kennedy Center, 2003",
+      "caption": "A living legend on the national stage",
+      "year": 2003
+    },
+    "2010s": {
+      "alt": "Dolly Parton accepting the Liseberg Applause Award, 2010",
+      "caption": "Dollywood honored on the world theme-park stage",
+      "year": 2010
+    },
+    "2020s": {
+      "alt": "Dolly Parton at the Peabody Awards, 2022",
+      "caption": "Philanthropy, advocacy, and new music in her eighties",
+      "year": 2022
+    }
+  },
+  "labels": {
+    "chapters/origins": "Chapter I · Where She Came From",
+    "chapters/music": "Chapter II · The Songs That Moved the World",
+    "chapters/building": "Chapter III · Building Something That Lasts",
+    "chapters/giving": "Chapter IV · Giving Back",
+    "chapters/standing": "Chapter V · Standing With Everyone",
+    "eras/1960s": "1960s",
+    "eras/1970s": "1970s",
+    "eras/1980s": "1980s",
+    "eras/2000s": "2000s",
+    "eras/2010s": "2010s",
+    "eras/2020s": "2020s"
+  }
+}

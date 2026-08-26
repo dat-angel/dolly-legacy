@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Moment } from "@/lib/types";
 import type { Chapter } from "@/lib/types";
+import { getChapterImage } from "@/lib/images";
+import { ChapterPortrait } from "./ChapterPortrait";
 import { Typewriter } from "./Typewriter";
 import { Rhinestone, StitchDivider } from "./decorative";
 import { cn } from "@/lib/utils";
@@ -109,6 +111,7 @@ export function ChapterSection({
   typewriterQuote,
 }: ChapterSectionProps) {
   const accent = CHAPTER_ACCENTS[chapterId];
+  const portrait = getChapterImage(chapterId);
 
   return (
     <section
@@ -116,7 +119,7 @@ export function ChapterSection({
       className={cn("scroll-mt-20 px-6 py-16 md:py-24", accent.bg)}
     >
       <div className="mx-auto max-w-6xl">
-        <div className="relative mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div className="relative mb-12 grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
           <div className="max-w-2xl">
             <p className="font-script text-2xl text-hot-pink md:text-3xl">
               {accent.label}
@@ -126,12 +129,19 @@ export function ChapterSection({
             </h2>
             <p className="mt-3 text-lg text-burgundy/75">{subtitle}</p>
           </div>
-          <span
-            className="font-serif text-8xl font-bold leading-none text-blush/50 md:text-9xl"
-            aria-hidden
-          >
-            {accent.number}
-          </span>
+          <div className="flex items-end justify-between gap-6 lg:flex-col lg:items-end">
+            <ChapterPortrait
+              image={portrait}
+              priority={chapterId === "origins"}
+              className="mx-auto lg:mx-0"
+            />
+            <span
+              className="hidden font-serif text-8xl font-bold leading-none text-blush/50 lg:block lg:text-9xl"
+              aria-hidden
+            >
+              {accent.number}
+            </span>
+          </div>
         </div>
 
         {typewriterQuote && (

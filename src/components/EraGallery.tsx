@@ -1,0 +1,71 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { getEraImage } from "@/lib/images";
+import { ERAS, type Era } from "@/lib/types";
+import { cn } from "@/lib/utils";
+
+interface EraGalleryProps {
+  activeEra?: Era | "all";
+  onSelectEra?: (era: Era | "all") => void;
+}
+
+export function EraGallery({ activeEra = "all", onSelectEra }: EraGalleryProps) {
+  return (
+    <div className="mb-10">
+      <div className="mb-4 flex items-end justify-between gap-4">
+        <div>
+          <p className="font-script text-2xl text-hot-pink">through the decades</p>
+          <h2 className="font-serif text-2xl font-bold text-burgundy-deep">
+            Dolly through the years
+          </h2>
+        </div>
+        <Link href="/images" className="text-sm font-semibold text-hot-pink hover:text-burgundy">
+          All photo credits →
+        </Link>
+      </div>
+
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-8">
+        {ERAS.map((era) => {
+          const image = getEraImage(era);
+          const isActive = activeEra === era;
+
+          return (
+            <button
+              key={era}
+              type="button"
+              onClick={() => onSelectEra?.(isActive ? "all" : era)}
+              className={cn(
+                "photo-frame relative aspect-[3/4] overflow-hidden text-left transition",
+                isActive && "ring-2 ring-hot-pink ring-offset-2 ring-offset-cream",
+                !image && "bg-gradient-to-br from-blush/40 to-gold/20",
+              )}
+              aria-pressed={isActive}
+            >
+              {image ? (
+                <>
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    sizes="120px"
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-burgundy-deep/80 to-transparent" />
+                </>
+              ) : (
+                <div className="absolute inset-0 flex items-center justify-center p-2 text-center">
+                  <span className="font-script text-lg text-burgundy/50">coming soon</span>
+                </div>
+              )}
+              <span className="absolute inset-x-0 bottom-0 p-2 font-mono text-xs font-bold text-cream">
+                {era}
+              </span>
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}

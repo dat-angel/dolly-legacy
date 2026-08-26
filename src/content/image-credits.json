@@ -1,0 +1,90 @@
+{
+  "chapters/origins": {
+    "commonsTitle": "Porter Wagoner and Dolly Parton 1969.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Porter_Wagoner_and_Dolly_Parton_1969.jpg",
+    "license": "Public domain",
+    "author": "Moeller Talent, Inc. Nashville (management)",
+    "description": "Photo of Porter Wagoner and Dolly Parton.\nThere are no copyright marks on the item, which can be seen at the link.\nUnited States Copyright Office page 2 \"Visually Perceptible Copies The notice for vis",
+    "localPath": "/images/chapters/origins.jpg"
+  },
+  "chapters/music": {
+    "commonsTitle": "Young-Dolly-Parton.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Young-Dolly-Parton.jpg",
+    "license": "Public domain",
+    "author": "RCA Records",
+    "description": "Publicity shot of American singer Dolly Parton, 1977",
+    "localPath": "/images/chapters/music.jpg"
+  },
+  "chapters/building": {
+    "commonsTitle": "Dolly Parton accepting Liseberg Applause Award 2010 portrait.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Dolly_Parton_accepting_Liseberg_Applause_Award_2010_portrait.jpg",
+    "license": "CC BY 3.0",
+    "author": "Curtis Hilbun",
+    "description": "Dolly Parton accepting Liseberg Applause Award 2010",
+    "localPath": "/images/chapters/building.jpg"
+  },
+  "chapters/giving": {
+    "commonsTitle": "DollyPartonCoatOfManyColors.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:DollyPartonCoatOfManyColors.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "Benjichilders",
+    "description": "The \"Coat of Many Colors\" on display at Dolly Parton's Chasing Rainbows museum at Dollywood. The coat on display is a reproduction, made by Parton's mother, Avie Lee, of the original. Also displayed a",
+    "localPath": "/images/chapters/giving.jpg"
+  },
+  "chapters/standing": {
+    "commonsTitle": "Dolly Parton in 2022.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Dolly_Parton_in_2022.jpg",
+    "license": "CC BY-SA 3.0",
+    "author": "Peabody Awards",
+    "description": "Dolly Parton from Meet the 82nd Annual Peabody Awards Presenters, uploaded to Vimeo by Peabody Awards under CC-BY-SA-3.0 Unported license on May 31, 2022.",
+    "localPath": "/images/chapters/standing.jpg"
+  },
+  "eras/1960s": {
+    "commonsTitle": "Porter Wagoner and Dolly Parton 1969.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Porter_Wagoner_and_Dolly_Parton_1969.jpg",
+    "license": "Public domain",
+    "author": "Moeller Talent, Inc. Nashville (management)",
+    "description": "Photo of Porter Wagoner and Dolly Parton.\nThere are no copyright marks on the item, which can be seen at the link.\nUnited States Copyright Office page 2 \"Visually Perceptible Copies The notice for vis",
+    "localPath": "/images/eras/1960s.jpg"
+  },
+  "eras/1970s": {
+    "commonsTitle": "Young-Dolly-Parton.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Young-Dolly-Parton.jpg",
+    "license": "Public domain",
+    "author": "RCA Records",
+    "description": "Publicity shot of American singer Dolly Parton, 1977",
+    "localPath": "/images/eras/1970s.jpg"
+  },
+  "eras/1980s": {
+    "commonsTitle": "Dolly Parton and Burnett.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Dolly_Parton_and_Burnett.jpg",
+    "license": "Public domain",
+    "author": "Unknown authorUnknown author",
+    "description": "La actriz Carol Burnett abrazando a la cantante Dolly Parton en una imagen publicitaria de 1980.",
+    "localPath": "/images/eras/1980s.jpg"
+  },
+  "eras/2000s": {
+    "commonsTitle": "Dolly Parton 2003.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Dolly_Parton_2003.jpg",
+    "license": "CC BY-SA 2.0",
+    "author": "John Mathew Smith &amp; www.celebrity-photos.com from Laurel  Maryland, USA",
+    "description": "From Kennedy Center Wash. D.C.  October 26,2003",
+    "localPath": "/images/eras/2000s.jpg"
+  },
+  "eras/2010s": {
+    "commonsTitle": "Dolly Parton accepting Liseberg Applause Award 2010 portrait.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Dolly_Parton_accepting_Liseberg_Applause_Award_2010_portrait.jpg",
+    "license": "CC BY 3.0",
+    "author": "Curtis Hilbun",
+    "description": "Dolly Parton accepting Liseberg Applause Award 2010",
+    "localPath": "/images/eras/2010s.jpg"
+  },
+  "eras/2020s": {
+    "commonsTitle": "Dolly Parton in 2022.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Dolly_Parton_in_2022.jpg",
+    "license": "CC BY-SA 3.0",
+    "author": "Peabody Awards",
+    "description": "Dolly Parton from Meet the 82nd Annual Peabody Awards Presenters, uploaded to Vimeo by Peabody Awards under CC-BY-SA-3.0 Unported license on May 31, 2022.",
+    "localPath": "/images/eras/2020s.jpg"
+  }
+}
