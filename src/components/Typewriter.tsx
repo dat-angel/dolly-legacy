@@ -48,11 +48,6 @@ export function Typewriter({
   }, [playSound]);
 
   useEffect(() => {
-    setDisplayed("");
-    setActive(!startOnView);
-  }, [text, startOnView]);
-
-  useEffect(() => {
     if (!startOnView) return;
     const el = containerRef.current;
     if (!el) return;
