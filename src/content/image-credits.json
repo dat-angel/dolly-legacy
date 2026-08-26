@@ -328,11 +328,11 @@
     "localPath": "/images/preview/dumplin-drag-queen.jpg"
   },
   "site/og-share": {
-    "commonsTitle": "Site preview asset",
-    "commonsUrl": "",
-    "license": "Site preview asset",
-    "author": "Dolly Legacy contributors",
-    "description": "Static Open Graph share image — Dolly Parton with a drag queen impersonator at the Dumplin' premiere.",
+    "commonsTitle": "Dolly Parton at 'Blue Smoke World Tour' in Knoxville.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Dolly_Parton_at_%27Blue_Smoke_World_Tour%27_in_Knoxville.jpg",
+    "license": "CC BY 2.0",
+    "author": "Kristopher Harris",
+    "description": "Static Open Graph share image — Dolly Parton performing on the Blue Smoke World Tour (cropped for LinkedIn 1200×630).",
     "localPath": "/images/og-share.jpg"
   },
   "site/og-share-moments": {

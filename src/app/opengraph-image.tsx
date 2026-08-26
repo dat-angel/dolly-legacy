@@ -20,7 +20,7 @@ export default async function OpenGraphImage() {
         subtitle={getSiteDescription()}
         footer={`${getMomentCount()} moments · Open CC BY 4.0 data`}
         photoSrc={photoSrc}
-        photoPosition="center 15%"
+        photoPosition="top"
       />
     ),
     { ...OG_SIZE },

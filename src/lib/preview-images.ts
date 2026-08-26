@@ -10,15 +10,15 @@ export const PREVIEW_IMAGES = {
     sharePath: "/images/og-share-moments.jpg",
   },
   allyship: {
-    file: "public/images/preview/dumplin-drag-queen.jpg",
-    alt: "Dolly Parton with a drag queen impersonator at the Dumplin' premiere",
-    caption: "Standing with her drag-queen following",
+    file: "public/images/moments/lgbtq-allyship.jpg",
+    alt: "Dolly Parton performing in a rhinestone orange jacket on the Blue Smoke World Tour",
+    caption: "A lifetime of standing with LGBTQ+ people",
     sharePath: "/images/og-share.jpg",
   },
 } as const;
 
 /** Bump when replacing share JPGs so link unfurlers (especially LinkedIn) fetch fresh previews. */
-export const SHARE_IMAGE_VERSION = "3";
+export const SHARE_IMAGE_VERSION = "4";
 
 export function shareImageUrl(path: string): string {
   return `${path}?v=${SHARE_IMAGE_VERSION}`;

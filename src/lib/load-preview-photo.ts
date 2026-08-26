@@ -14,7 +14,7 @@ export async function loadPreviewPhotoSrc(
   }
 
   const photo = await readFile(
-    join(process.cwd(), "public/images/preview/dumplin-drag-queen.jpg"),
+    join(process.cwd(), "public/images/moments/lgbtq-allyship.jpg"),
   );
   return bufferToDataUrl(photo);
 }
