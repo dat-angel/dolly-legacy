@@ -1,11 +1,5 @@
 {
   "moments": {
-    "appalachian-roots": {
-      "alt": "Young Dolly Parton with Larry Mathis and Bud Brewster of the Pick'n Grin Bluegrass Band",
-      "caption": "East Tennessee — already on a stage, guitar nearby, the mountains still in her voice",
-      "year": 1959,
-      "creditKey": "eras/1950s"
-    },
     "first-song": {
       "alt": "1965 Monument Records advertisement for Dolly Parton's single Happy, Happy Birthday Baby",
       "caption": "Monument's new star — writing and recording before Nashville fully knew her name",
@@ -138,6 +132,30 @@
       "year": 2016,
       "creditKey": "moments/everyone-matters"
     },
+    "dolly-variety-show": {
+      "alt": "Carol Burnett embracing Dolly Parton in a publicity photograph from the variety-show era",
+      "caption": "Dolly! — syndicated TV that booked soul, disco, and gospel alongside country",
+      "year": 1977,
+      "creditKey": "moments/dolly-variety-show"
+    },
+    "beyonce-welcome": {
+      "alt": "Dolly Parton Experience exhibit at Dollywood",
+      "caption": "2024 — welcoming Beyoncé to country when some radio gatekept her chart-topping single",
+      "year": 2024,
+      "creditKey": "moments/beyonce-welcome"
+    },
+    "common-threads-aids": {
+      "alt": "Panels of the NAMES Project AIDS Memorial Quilt on display",
+      "caption": "Sandollar funded Common Threads — an Oscar-winning film about the Quilt, when Nashville stayed quiet",
+      "year": 2012,
+      "creditKey": "moments/common-threads-aids"
+    },
+    "appalachian-roots": {
+      "alt": "Young Dolly Parton with Larry Mathis and Bud Brewster of the Pick'n Grin Bluegrass Band",
+      "caption": "East Tennessee — already on a stage, guitar nearby, the mountains still in her voice",
+      "year": 1959,
+      "creditKey": "eras/1950s"
+    },
     "porter-wagoner": {
       "alt": "Porter Wagoner and Dolly Parton in 1969",
       "caption": "The Porter Wagoner Show — the weekly stage that introduced her to America",
@@ -167,6 +185,30 @@
       "caption": "A second gift for pediatric infectious disease research — because once wasn't the point",
       "year": 2022,
       "creditKey": "chapters/standing"
+    },
+    "dixie-stampede-rename": {
+      "alt": "Dolly Parton performing at Dollywood in 2014",
+      "caption": "Renamed Dixie Stampede to The Stampede — fixing a name when she learned it caused harm",
+      "year": 2018,
+      "creditKey": "moments/dollywood"
+    },
+    "family-song": {
+      "alt": "Dolly Parton at the National Press Club, Washington D.C.",
+      "caption": "1991's \"Family\" — gay relatives written directly into a country album",
+      "year": 1991,
+      "creditKey": "eras/1990s"
+    },
+    "drag-queen-following": {
+      "alt": "Dolly Parton performing on the Blue Smoke World Tour in Knoxville, 2014",
+      "caption": "Drag queen icon — she lost her own look-alike contest and never toned herself down",
+      "year": 1999,
+      "creditKey": "moments/lgbtq-allyship"
+    },
+    "heartstrings-queer-story": {
+      "alt": "Dolly Parton with the Coat of Many Colors film crew at the Movieguide Awards",
+      "caption": "Heartstrings put a gay love story at the center — and won a GLAAD Media Award",
+      "year": 2019,
+      "creditKey": "moments/everyone-matters"
     }
   }
 }

@@ -1,11 +1,11 @@
+import { getMomentCount } from "./moments";
+
 export const FALLBACK_SITE_URL = "https://dolly-legacy.vercel.app";
 
 export const SITE = {
   name: "Dolly Legacy",
   title: "Dolly Legacy — A celebration of Dolly Parton",
   tagline: "Songs, books, backbone, and an open database you can remix",
-  description:
-    "A living scrapbook of Dolly Parton — 28 moments, quotes, song and film stories, and the people she stood with. Open CC BY 4.0 data for anyone to use.",
   shortDescription:
     "Play Dolly's life, ask what she'd say, and remix the open quotes-and-credits database.",
   keywords: [
@@ -31,6 +31,10 @@ export const SITE = {
   themeColor: "#e2b422",
   backgroundColor: "#f7f1e1",
 } as const;
+
+export function getSiteDescription(): string {
+  return `A living scrapbook of Dolly Parton — ${getMomentCount()} moments, quotes, song and film stories, and the people she stood with. Open CC BY 4.0 data for anyone to use.`;
+}
 
 export function getSiteUrl(): string {
   if (typeof window !== "undefined") {

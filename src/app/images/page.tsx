@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { getAllImageCredits, getUniqueMomentImageCredits } from "@/lib/images";
+import { getMomentCount } from "@/lib/moments";
 import { createPageMetadata } from "@/lib/metadata";
 import { StitchDivider } from "@/components/decorative";
 
@@ -16,6 +17,7 @@ export const metadata: Metadata = createPageMetadata({
 export default function ImagesPage() {
   const phaseCredits = getAllImageCredits();
   const momentCredits = getUniqueMomentImageCredits();
+  const momentCount = getMomentCount();
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-16">
@@ -46,7 +48,7 @@ export default function ImagesPage() {
         Moments
       </h2>
       <p className="mt-2 max-w-2xl text-sm text-burgundy/70">
-        Each of the 28 stories has its own photograph. A few reuse a chapter or
+        Each of the {momentCount} stories has its own photograph. A few reuse a chapter or
         era portrait when that image is the best licensed match.
       </p>
       <CreditList credits={momentCredits} showThumb />

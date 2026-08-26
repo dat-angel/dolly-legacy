@@ -9,7 +9,7 @@ import { DollyChatRoot } from "@/components/dolly-chat/DollyChatRoot";
 import { JsonLd } from "@/components/JsonLd";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { absoluteUrl, getSiteUrl, SITE } from "@/lib/site";
+import { absoluteUrl, getSiteDescription, getSiteUrl, SITE } from "@/lib/site";
 import "./globals.css";
 
 const libreBaskerville = Libre_Baskerville({
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     default: SITE.title,
     template: `%s | ${SITE.name}`,
   },
-  description: SITE.description,
+  description: getSiteDescription(),
   applicationName: SITE.name,
   keywords: [...SITE.keywords],
   authors: [{ name: SITE.creator, url: SITE.repository }],
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: SITE.title,
-    description: SITE.description,
+    description: getSiteDescription(),
     url: absoluteUrl("/"),
     siteName: SITE.name,
     locale: SITE.locale,
@@ -99,7 +99,7 @@ const websiteJsonLd = {
   name: SITE.name,
   alternateName: SITE.title,
   url: absoluteUrl("/"),
-  description: SITE.description,
+  description: getSiteDescription(),
   inLanguage: "en-US",
   publisher: {
     "@type": "Organization",

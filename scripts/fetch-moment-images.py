@@ -172,6 +172,27 @@ DOWNLOADS = {
         "caption": "Everybody should be treated with respect — a rule she applied to casts, crews, and crowds",
         "year": 2016,
     },
+    "dolly-variety-show": {
+        "file": "File:Dolly Parton and Burnett.jpg",
+        "ext": "jpg",
+        "alt": "Carol Burnett embracing Dolly Parton in a publicity photograph from the variety-show era",
+        "caption": "Dolly! — syndicated TV that booked soul, disco, and gospel alongside country",
+        "year": 1977,
+    },
+    "beyonce-welcome": {
+        "file": "File:Dolly Parton Experience.jpg",
+        "ext": "jpg",
+        "alt": "Dolly Parton Experience exhibit at Dollywood",
+        "caption": "2024 — welcoming Beyoncé to country when some radio gatekept her chart-topping single",
+        "year": 2024,
+    },
+    "common-threads-aids": {
+        "file": "File:AIDS Quilt at the National Building Museum 14074 (7617450092).jpg",
+        "ext": "jpg",
+        "alt": "Panels of the NAMES Project AIDS Memorial Quilt on display",
+        "caption": "Sandollar funded Common Threads — an Oscar-winning film about the Quilt, when Nashville stayed quiet",
+        "year": 2012,
+    },
 }
 
 REUSES = {
@@ -210,6 +231,30 @@ REUSES = {
         "alt": "Dolly Parton at the Peabody Awards, 2022",
         "caption": "A second gift for pediatric infectious disease research — because once wasn't the point",
         "year": 2022,
+    },
+    "dixie-stampede-rename": {
+        "creditKey": "moments/dollywood",
+        "alt": "Dolly Parton performing at Dollywood in 2014",
+        "caption": "Renamed Dixie Stampede to The Stampede — fixing a name when she learned it caused harm",
+        "year": 2018,
+    },
+    "family-song": {
+        "creditKey": "eras/1990s",
+        "alt": "Dolly Parton at the National Press Club, Washington D.C.",
+        "caption": "1991's \"Family\" — gay relatives written directly into a country album",
+        "year": 1991,
+    },
+    "drag-queen-following": {
+        "creditKey": "moments/lgbtq-allyship",
+        "alt": "Dolly Parton performing on the Blue Smoke World Tour in Knoxville, 2014",
+        "caption": "Drag queen icon — she lost her own look-alike contest and never toned herself down",
+        "year": 1999,
+    },
+    "heartstrings-queer-story": {
+        "creditKey": "moments/everyone-matters",
+        "alt": "Dolly Parton with the Coat of Many Colors film crew at the Movieguide Awards",
+        "caption": "Heartstrings put a gay love story at the center — and won a GLAAD Media Award",
+        "year": 2019,
     },
 }
 

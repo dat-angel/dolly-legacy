@@ -27,7 +27,7 @@ https://github.com/dat-angel/dolly-legacy
 
 | File | Description |
 |------|-------------|
-| `moments.json` | Canonical database (28 moments, v1.0.1) |
+| `moments.json` | Canonical database (35 moments, v1.1.0) |
 | `moments.schema.json` | JSON Schema for validation and tooling |
 | `letters.json` | Letters, faxes, and song-letters she sent (v1.0.0) |
 | `letters.schema.json` | JSON Schema for the letters index |

@@ -7,7 +7,7 @@ A fan celebration of Dolly Parton — her songs, books, backbone, and the people
 ## Features
 
 - **Life slider** — Scrub 1946 to now on one screen
-- **Moments scrapbook** — 28 filterable stories with quotes, tags, and era filters
+- **Moments scrapbook** — 35 filterable stories with quotes, tags, and era filters
 - **Typewriter quotes** — Her words click-clack on the page
 - **What would Dolly say?** — Ask about today's mess; get a curated quote she already said
 - **Who she stood with** — Working women, kids who need books, LGBTQ+ people, Black communities

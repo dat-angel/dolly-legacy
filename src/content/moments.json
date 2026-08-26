@@ -591,8 +591,9 @@
       ],
       "summary": "During the 2020 protests, Dolly voiced clear support: \"Of course Black lives matter.\"",
       "body": "In a Billboard interview during the summer of 2020, Dolly did not hedge. She said she understood why people needed to make themselves known, felt, and seen — and added the line that cut through: \"Do we think our little white asses are the only ones that matter? No!\" It was not a one-off. She had already renamed her Dixie Stampede dinner show after learning \"Dixie\" carried painful Confederate associations for many Black Americans, and she had long invested Whitney Houston royalties in a predominantly Black Nashville neighborhood.",
-      "hiddenFact": "She later removed \"Dixie\" from the name of a dinner attraction at Dollywood, acknowledging its Confederate associations.",
+      "hiddenFact": "She later renamed her Dixie Stampede dinner show after learning \"Dixie\" carried painful Confederate associations for many Black Americans.",
       "quote": "Of course Black lives matter. Do we think our little white asses are the only ones that matter? No!",
+      "source": "https://www.billboard.com/music/country/dolly-parton-black-lives-matter-9406765/",
       "featured": true,
       "chapter": "standing",
       "relatedIds": [
@@ -627,6 +628,7 @@
       "summary": "Dolly invested royalties from Whitney Houston's \"I Will Always Love You\" into a predominantly Black Nashville neighborhood.",
       "body": "When Whitney Houston's 1992 cover spent 14 weeks at #1 and earned Parton an estimated $10 million in royalties in the 1990s alone, Dolly did something deliberate with the money. On Watch What Happens Live, she explained that she bought a strip mall and office complex in what was then a historically Black area of Nashville — off the beaten path from Music Row's 16th Avenue. \"It was mostly just Black families and people that lived around there,\" she said. \"I thought, 'This is the perfect place for me to be, considering it was Whitney.'\" She called it \"the house that Whitney built.\"",
       "hiddenFact": "NPR reported the investment as a deliberate act of community support, not just a royalty check.",
+      "source": "https://www.npr.org/2021/08/02/1023889920/dolly-parton-invested-royalties-from-a-whitney-houston-cover-in-a-black-communit",
       "featured": true,
       "chapter": "standing",
       "relatedIds": [
@@ -659,6 +661,7 @@
       "body": "Dolly's LGBTQ+ allyship was not a modern rebrand. In the 1980s she lost friends to AIDS and helped fund the Oscar-winning documentary Common Threads: Stories from the Quilt through her production company Sandollar — while much of Nashville stayed quiet. In 1991 she put gay relatives directly into the country song \"Family.\" She built one of country music's largest gay and drag-queen followings by refusing judgment: on Larry King Now in 2017 she said, \"If you're the fine Christian that you think you are, why are you judging people? That's God's job.\" She backed marriage equality, opposed bathroom bills, apologized when Dollywood mishandled a marriage-equality T-shirt, and in 2023 told The Hollywood Reporter that trans people \"cannot help\" being trans \"any more than I can help being Dolly Parton.\"",
       "hiddenFact": "In 2023 she told The Hollywood Reporter: trans people \"cannot help\" being trans \"any more than I can help being Dolly Parton.\"",
       "quote": "If you're the fine Christian that you think you are, why are you judging people? That's God's job.",
+      "source": "https://www.advocate.com/news/people/dolly-parton-lgbtq-icon",
       "featured": true,
       "chapter": "standing",
       "relatedIds": [
@@ -935,6 +938,7 @@
       "summary": "Her syndicated TV show featured Black artists at a time when country television was dominated by white male performers.",
       "body": "On Dolly! (1976–77), Parton used one of the most expensive syndicated shows ever produced out of Nashville to book performers country TV rarely welcomed: The Staple Singers, KC and the Sunshine Band, The Hues Corporation, Marilyn McCoo and Billy Davis Jr., and more. She sang with them as equals — treating soul, disco, and gospel as natural neighbors to country, not foreign intruders.",
       "hiddenFact": "Scholars have noted that Parton's variety shows in the late 1970s and again in 1987–88 stood in sharp contrast to the white establishment that defined country music — acknowledging Black influence the industry often erased.",
+      "source": "https://en.wikipedia.org/wiki/Dolly!_(1976_TV_series)",
       "featured": true,
       "chapter": "standing",
       "relatedIds": [
@@ -969,6 +973,7 @@
       "body": "After Beyoncé's \"Texas Hold 'Em\" topped the Billboard Hot Country Songs chart in February 2024 — at a moment when some stations initially refused to playlist it — Parton posted publicly: \"I'm a big fan of Beyoncé and very excited that she's done a country album. So congratulations on your Billboard Hot Country No. 1 single. Can't wait to hear the full album! Love, Dolly.\" She later appeared on Beyoncé's Cowboy Carter album, introducing Beyoncé's reimagined version of \"Jolene\" — a direct endorsement that country belongs to everyone.",
       "hiddenFact": "Fans called it \"the queen has spoken\" — using country royalty's voice to answer gatekeeping that Black artists have faced in the genre for decades.",
       "quote": "I'm a big fan of Beyoncé and very excited that she's done a country album.",
+      "source": "https://www.wsmv.com/2024/02/23/dolly-parton-welcomes-beyonc-country-music/",
       "featured": true,
       "chapter": "standing",
       "relatedIds": [
@@ -1002,7 +1007,7 @@
       "summary": "After learning \"Dixie\" carried painful Confederate associations, Dolly renamed her dinner attraction The Stampede.",
       "body": "In 2018, Parton renamed Dixie Stampede — her dinner show in Pigeon Forge, Tennessee, and Branson, Missouri — to simply The Stampede. She told Billboard: \"When they said 'Dixie' was an offensive word, I thought, 'Well, I don't want to offend anybody. This is a business. We'll just call it The Stampede.' As soon as you realize that something is a problem, you should fix it.\"",
       "quote": "As soon as you realize that something is a problem, you should fix it.",
-      "featured": false,
+      "source": "https://www.billboard.com/music/country/dolly-parton-dixie-stampede-name-change-8456524/",
       "chapter": "standing",
       "relatedIds": [
         "blm-support",
@@ -1033,6 +1038,7 @@
       "summary": "Through Sandollar Productions, Dolly helped fund Common Threads: Stories from the Quilt — an Oscar-winning film about the AIDS Memorial Quilt.",
       "body": "In the 1980s, as the Reagan administration's response to AIDS was widely condemned as inadequate, Parton lost friends to the epidemic. Her production company Sandollar backed Common Threads: Stories from the Quilt, the documentary about the NAMES Project AIDS Memorial Quilt. The film won an Academy Award and a Peabody — at a time when most of her country-crossover peers said nothing.",
       "hiddenFact": "Parton showed up for the cause when silence was the safer career move in Nashville.",
+      "source": "https://en.wikipedia.org/wiki/Common_Threads:_Stories_from_the_Quilt",
       "featured": true,
       "chapter": "standing",
       "relatedIds": [
@@ -1065,6 +1071,7 @@
       "summary": "Years before country made room for queer stories, Dolly wrote gay relatives directly into a message of acceptance.",
       "body": "On Eagle When She Flies (1991), the song \"Family\" included a line that was radical for country radio in its era: \"Some are preachers, some are gay, some are addicts, drunks and strays. But not a one is turned away when it's family.\" In the early 1990s — when \"family values\" rhetoric was often weaponized against queer people — putting those words on a major country album was an act of quiet courage.",
       "quote": "But not a one is turned away when it's family.",
+      "source": "https://www.advocate.com/news/people/dolly-parton-lgbtq-icon",
       "featured": true,
       "chapter": "standing",
       "relatedIds": [
@@ -1097,7 +1104,8 @@
       "body": "By the late 1980s and 1990s, Parton was already famous for her enormous gay and drag-queen following. She once secretly entered a Dolly Parton look-alike contest on Santa Monica Boulevard — and lost to drag performers dressed as her. She joked she did not even come close. In interviews she said she would have been a drag queen if she had been born male, and refused industry advice to tone down her image: \"I'm just not willing to give up the girl. I wouldn't be Dolly Parton.\"",
       "hiddenFact": "In 2020 she partnered with drag star Nina West on a charity apparel collection benefiting LGBTQ+ youth and children's literacy.",
       "quote": "I've always had these drag queens dress like me. And I even lost a Dolly Parton lookalike contest.",
-      "featured": false,
+      "source": "https://www.thepinknews.com/2018/12/06/dolly-parton-drag-queen/",
+      "featured": true,
       "chapter": "standing",
       "relatedIds": [
         "lgbtq-allyship",
@@ -1129,7 +1137,8 @@
       "summary": "Her Netflix anthology series centered a gay couple navigating family rejection — and won a GLAAD Media Award.",
       "body": "In Dolly Parton's Heartstrings, the episode \"Two Doors Down\" centered a gay couple played by Andy Mientus and Michael J. Willett navigating family secrets and rejection during a New Year's Eve wedding. Some viewers reportedly walked out of a Dollywood screening after learning the two men were romantically involved. Parton stood behind the story: \"It's important that I touched on everything that all families go through. Everyone has gays in their family.\" The episode won the GLAAD Media Award for outstanding individual episode.",
       "hiddenFact": "Parton also wrote \"Travelin' Thru\" for the 2005 film Transamerica — earning an Oscar nomination for a song written for a transgender story, long before most celebrities used the word \"ally.\"",
-      "featured": false,
+      "source": "https://www.advocate.com/news/people/dolly-parton-lgbtq-icon",
+      "featured": true,
       "chapter": "standing",
       "relatedIds": [
         "lgbtq-allyship",

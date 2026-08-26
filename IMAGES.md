@@ -8,7 +8,7 @@ This document maps life phases on the site to photographs, explains licensing, a
 |-------|-------|----------|
 | **Chapters** | 5 | Homepage story chapters |
 | **Eras** | 8 decades | Archive filters + era gallery |
-| **Moments** | 28 | Individual stories, each with a photograph |
+| **Moments** | 35 | Individual stories, each with a photograph |
 
 ## Current chapter images (live)
 

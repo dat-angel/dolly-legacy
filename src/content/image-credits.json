@@ -125,7 +125,7 @@
     "license": "Public domain",
     "author": "RCA Records",
     "description": "\"Jolene\" by Dolly Parton. One of side-A labels of the original US single release (cat #APB0-0145)",
-    "localPath": "/images/moments/jolene-and-iwill.jpg"
+    "localPath": "/images/moments/jolene-and-iwill.png"
   },
   "moments/i-will-always-love-you": {
     "commonsTitle": "I will always love you by Dolly Parton 1974 US single.png",
@@ -133,7 +133,7 @@
     "license": "Public domain",
     "author": "RCA Records",
     "description": "A-side label of \"I Will Always Love You\" by Dolly Parton; 1974 US vinyl release",
-    "localPath": "/images/moments/i-will-always-love-you.jpg"
+    "localPath": "/images/moments/i-will-always-love-you.png"
   },
   "moments/nine-to-five-film": {
     "commonsTitle": "Dolly Parton Lily Tomlin Jane Fonda (48591893841).jpg",
@@ -149,7 +149,7 @@
     "license": "Public domain",
     "author": "RCA Victor",
     "description": "Porter Wagoner and Dolly Parton, 1971",
-    "localPath": "/images/moments/just-because-woman.jpg"
+    "localPath": "/images/moments/just-because-woman.png"
   },
   "moments/dollywood": {
     "commonsTitle": "Dolly Parton 2014 Dollywood.jpg",
@@ -278,5 +278,29 @@
     "author": "Movieguide®",
     "description": "Alyvia Alyn Lind, Stephen Herek and Dolly Parton at the Universal Hilton Hotel 24th Annual Movieguide® Awards",
     "localPath": "/images/moments/everyone-matters.jpg"
+  },
+  "moments/dolly-variety-show": {
+    "commonsTitle": "Dolly Parton and Burnett.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Dolly_Parton_and_Burnett.jpg",
+    "license": "Public domain",
+    "author": "Unknown authorUnknown author",
+    "description": "La actriz Carol Burnett abrazando a la cantante Dolly Parton en una imagen publicitaria de 1980.",
+    "localPath": "/images/moments/dolly-variety-show.jpg"
+  },
+  "moments/beyonce-welcome": {
+    "commonsTitle": "Dolly Parton Experience.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Dolly_Parton_Experience.jpg",
+    "license": "CC BY 4.0",
+    "author": "APK",
+    "description": "Dolly Parton Experience at Dollywood",
+    "localPath": "/images/moments/beyonce-welcome.jpg"
+  },
+  "moments/common-threads-aids": {
+    "commonsTitle": "AIDS Quilt at the National Building Museum 14074 (7617450092).jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:AIDS_Quilt_at_the_National_Building_Museum_14074_(7617450092).jpg",
+    "license": "CC BY-SA 2.0",
+    "author": "Ted Eytan",
+    "description": "2012.07 AIDS Quilt at the National Building Museum",
+    "localPath": "/images/moments/common-threads-aids.jpg"
   }
 }
