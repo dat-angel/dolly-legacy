@@ -89,3 +89,23 @@ export function truncateForMeta(text: string, max = 155): string {
   if (cleaned.length <= max) return cleaned;
   return `${cleaned.slice(0, max - 1).trim()}…`;
 }
+
+export function getMomentMetaDescription(moment: {
+  quote?: string;
+  summary: string;
+}): string {
+  if (moment.quote && moment.summary) {
+    return truncateForMeta(`"${moment.quote}" — ${moment.summary}`);
+  }
+  return truncateForMeta(moment.quote ?? moment.summary);
+}
+
+export function getMomentOgAlt(moment: {
+  title: string;
+  quote?: string;
+}): string {
+  if (moment.quote) {
+    return `${moment.title}: "${moment.quote}" — Dolly Legacy`;
+  }
+  return `${moment.title} — Dolly Legacy`;
+}

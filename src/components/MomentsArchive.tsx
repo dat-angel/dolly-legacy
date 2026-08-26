@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, startTransition } from "react";
 import { useSearchParams } from "next/navigation";
 import { AnimatePresence } from "framer-motion";
 import { filterMoments, getMomentById, getRandomMoment } from "@/lib/moments";
@@ -49,23 +49,27 @@ export function MomentsArchive() {
     const categoryParam = searchParams.get("category");
     const tagParam = searchParams.get("tag");
 
-    if (eraParam && ERAS.includes(eraParam as Era)) setEra(eraParam as Era);
-    if (categoryParam && CATEGORIES.some((c) => c.id === categoryParam)) {
-      setCategory(categoryParam as Category);
-    }
-    if (tagParam) setTag(tagParam);
+    startTransition(() => {
+      if (eraParam && ERAS.includes(eraParam as Era)) setEra(eraParam as Era);
+      if (categoryParam && CATEGORIES.some((c) => c.id === categoryParam)) {
+        setCategory(categoryParam as Category);
+      }
+      if (tagParam) setTag(tagParam);
+    });
   }, [searchParams]);
+
+  const activeMomentId = activeMoment?.id;
 
   useEffect(() => {
     const params = new URLSearchParams();
     if (category !== "all") params.set("category", category);
     if (era !== "all") params.set("era", era);
     if (tag) params.set("tag", tag);
-    if (activeMoment) params.set("highlight", activeMoment.id);
+    if (activeMomentId) params.set("highlight", activeMomentId);
 
     const query = params.toString();
     window.history.replaceState(null, "", query ? `/moments?${query}` : "/moments");
-  }, [category, era, tag, activeMoment?.id]);
+  }, [category, era, tag, activeMomentId]);
 
   const filtered = useMemo(
     () =>

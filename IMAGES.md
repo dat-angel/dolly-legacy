@@ -24,11 +24,11 @@ This document maps life phases on the site to photographs, explains licensing, a
 
 | Era | Status | Source |
 |-----|--------|--------|
-| 1950s | **Gap** — no suitable Commons portrait found | Childhood / Locust Ridge |
+| 1950s | ✅ Pick'n Grin Bluegrass Band photo (~1959) | Wikimedia CC BY 2.0 |
 | 1960s | ✅ Porter Wagoner photo (1969) | Wikimedia |
 | 1970s | ✅ RCA portrait (1977) | Wikimedia |
 | 1980s | ✅ Carol Burnett promo (1980) | Wikimedia |
-| 1990s | **Gap** — Imagination Library launch era | Need press/CC photo |
+| 1990s | ✅ National Press Club portrait (1995–2000) | Wikimedia CC BY-SA 4.0 |
 | 2000s | ✅ Kennedy Center (2003) | Wikimedia CC BY-SA 2.0 |
 | 2010s | ✅ Liseberg Award (2010) | Wikimedia CC BY 3.0 |
 | 2020s | ✅ Peabody Awards (2022) | Wikimedia CC BY-SA 3.0 |
@@ -37,7 +37,7 @@ This document maps life phases on the site to photographs, explains licensing, a
 
 ```
 public/images/chapters/   → 5 chapter hero portraits
-public/images/eras/       → 6 decade thumbnails
+public/images/eras/       → 8 decade thumbnails
 src/content/phase-images.json   → captions + alt text
 src/content/image-credits.json  → Commons attribution (auto-generated)
 src/lib/images.ts               → getters for UI
@@ -84,10 +84,8 @@ Schema change needed: add optional `image` + `imageCredit` to `moments.schema.js
 
 ## Gaps to fill next
 
-1. **1950s** — childhood / Sevier County (may need illustration or licensed archive)
-2. **1990s** — Imagination Library national expansion (1995+)
-3. **Hero homepage** — single iconic portrait (currently text-only)
-4. **Moment drawer thumbnails** — 28 images is a larger curation project
+1. **Hero homepage** — single iconic portrait (currently text-only)
+2. **Moment drawer thumbnails** — 28 images is a larger curation project
 
 ## Refreshing credits
 

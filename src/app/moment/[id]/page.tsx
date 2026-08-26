@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
 import { ShareMenuClient } from "@/components/ShareMenuClient";
 import { StitchDivider } from "@/components/decorative";
-import { createPageMetadata, truncateForMeta } from "@/lib/metadata";
+import { createPageMetadata, getMomentMetaDescription, getMomentOgAlt } from "@/lib/metadata";
 import { getMomentById, getRelatedMoments, moments } from "@/lib/moments";
 import { getMomentShareText, getMomentShareUrl } from "@/lib/share";
 import { absoluteUrl } from "@/lib/site";
@@ -20,7 +20,7 @@ export async function generateMetadata({
   const moment = getMomentById(id);
   if (!moment) return { title: "Moment — Dolly Legacy" };
 
-  const description = truncateForMeta(moment.quote ?? moment.summary);
+  const description = getMomentMetaDescription(moment);
 
   return createPageMetadata({
     title: moment.title,
@@ -28,6 +28,10 @@ export async function generateMetadata({
     path: `/moment/${moment.id}`,
     keywords: [...moment.tags, moment.category, moment.era, "Dolly Parton moment"],
     ogType: "article",
+    ogImage: {
+      url: `/moment/${moment.id}/opengraph-image`,
+      alt: getMomentOgAlt(moment),
+    },
   });
 }
 
@@ -46,6 +50,7 @@ export default async function MomentPage({ params }: PageProps<"/moment/[id]">) 
     headline: moment.title,
     description: moment.summary,
     url: shareUrl,
+    image: absoluteUrl(`/moment/${moment.id}/opengraph-image`),
     inLanguage: "en-US",
     about: {
       "@type": "Person",

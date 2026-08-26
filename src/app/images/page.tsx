@@ -74,7 +74,7 @@ export default function ImagesPage() {
       </ul>
 
       <p className="mt-12 text-sm text-burgundy/60">
-        Missing decades (1950s, 1990s) and per-moment thumbnails are tracked in{" "}
+        Per-moment thumbnails are tracked in{" "}
         <code className="rounded bg-blush/30 px-1">IMAGES.md</code> in the repository.
         Want to contribute a properly licensed photo? See{" "}
         <a

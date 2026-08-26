@@ -34,7 +34,10 @@ export async function generateMetadata({
     path: `/chapter/${chapter.id}`,
     keywords: [chapter.title, chapter.id, "Dolly Parton chapter", "Dolly Parton timeline"],
     ogType: "article",
-    ogImage: `/images/chapters/${chapter.id}.jpg`,
+    ogImage: {
+      url: `/images/chapters/${chapter.id}.jpg`,
+      alt: getChapterImage(chapter.id as Chapter).alt,
+    },
   });
 }
 
@@ -55,6 +58,7 @@ export default async function ChapterPage({ params }: PageProps<"/chapter/[id]">
     name: chapter.title,
     description: chapter.subtitle,
     url: shareUrl,
+    image: absoluteUrl(portrait.src),
     isPartOf: {
       "@type": "WebSite",
       name: "Dolly Legacy",

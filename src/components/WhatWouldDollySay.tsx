@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, startTransition } from "react";
 import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -35,8 +35,10 @@ export function WhatWouldDollySay() {
 
     const moment = getMomentById(momentId);
     if (moment) {
-      if (query) setInput(query);
-      setResult({ moment, keyword: query ?? undefined });
+      startTransition(() => {
+        if (query) setInput(query);
+        setResult({ moment, keyword: query ?? undefined });
+      });
     }
   }, [searchParams]);
 

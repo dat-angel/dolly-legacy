@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState, startTransition } from "react";
 import { AnimatePresence } from "framer-motion";
 import {
   getAllMomentsByChapter,
@@ -65,8 +65,10 @@ export function InteractiveChapterSection({
   const shareUrl = getChapterShareUrl(chapterId);
   const shareText = getChapterShareText(chapterId);
 
+  const deepLinkHandled = useRef(false);
+
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    if (typeof window === "undefined" || deepLinkHandled.current) return;
     const params = new URLSearchParams(window.location.search);
     const chapterParam = params.get("chapter");
     const momentParam = params.get("moment");
@@ -77,8 +79,11 @@ export function InteractiveChapterSection({
     if (momentParam) {
       const moment = getMomentById(momentParam);
       if (moment?.chapter === chapterId) {
-        setSelected(moment);
-        setExpanded(true);
+        deepLinkHandled.current = true;
+        startTransition(() => {
+          setSelected(moment);
+          setExpanded(true);
+        });
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
       }
     }
