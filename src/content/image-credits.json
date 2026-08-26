@@ -302,5 +302,13 @@
     "author": "Ted Eytan",
     "description": "2012.07 AIDS Quilt at the National Building Museum",
     "localPath": "/images/moments/common-threads-aids.jpg"
+  },
+  "site/favicon-portrait": {
+    "commonsTitle": "Young-Dolly-Parton.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Young-Dolly-Parton.jpg",
+    "license": "Public domain",
+    "author": "RCA Records",
+    "description": "Square crop of the 1977 RCA publicity portrait, used for the site favicon and apple-touch icon.",
+    "localPath": "/images/favicon-portrait.jpg"
   }
 }
