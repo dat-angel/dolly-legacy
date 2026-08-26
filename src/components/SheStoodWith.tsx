@@ -1,25 +1,38 @@
 import Link from "next/link";
+import { COMMUNITY_FILTERS } from "@/lib/community-tags";
 
 const CAUSES = [
+  {
+    href: COMMUNITY_FILTERS["Black community"].filterHref,
+    title: "Black communities",
+    line: "TV diversity, Whitney royalties, Beyoncé's welcome, BLM, and renaming Dixie Stampede.",
+    moments: [
+      { href: "/moment/whitney-royalties", label: "The house Whitney built" },
+      { href: "/moment/beyonce-welcome", label: "Welcoming Beyoncé" },
+      { href: "/moment/dolly-variety-show", label: "Diverse TV guests" },
+    ],
+  },
+  {
+    href: COMMUNITY_FILTERS["LGBTQ+"].filterHref,
+    title: "LGBTQ+ people",
+    line: "AIDS-era action, the 1991 song \"Family,\" drag culture, marriage equality, and Tennessee defense.",
+    moments: [
+      { href: "/moment/common-threads-aids", label: "AIDS documentary" },
+      { href: "/moment/family-song", label: "\"Family\" (1991)" },
+      { href: "/moment/lgbtq-allyship", label: "Lifetime allyship" },
+    ],
+  },
   {
     href: "/moment/nine-to-five",
     title: "Working women",
     line: "The anthem that walked out of a typewriter and into offices.",
+    moments: [],
   },
   {
     href: "/moment/imagination-library",
     title: "Kids who need books",
     line: "One book a month, in honor of a daddy who never learned to read.",
-  },
-  {
-    href: "/moment/lgbtq-allyship",
-    title: "LGBTQ+ people",
-    line: "Love is love is love — and she said it in public, on purpose.",
-  },
-  {
-    href: "/moment/blm-support",
-    title: "Black communities",
-    line: "She showed up with money, royalties, and a simple rule: everybody matters.",
+    moments: [],
   },
 ] as const;
 
@@ -39,18 +52,33 @@ export function SheStoodWith() {
         </p>
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
           {CAUSES.map((cause) => (
-            <Link
+            <article
               key={cause.href}
-              href={cause.href}
               className="border border-burgundy/10 bg-cream p-5 transition hover:border-gold hover:bg-gold/10"
             >
-              <h3 className="font-serif text-xl font-bold text-burgundy-deep">
-                {cause.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-burgundy/75">
-                {cause.line}
-              </p>
-            </Link>
+              <Link href={cause.href} className="block">
+                <h3 className="font-serif text-xl font-bold text-burgundy-deep">
+                  {cause.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-burgundy/75">
+                  {cause.line}
+                </p>
+              </Link>
+              {cause.moments.length > 0 && (
+                <ul className="mt-4 flex flex-wrap gap-2">
+                  {cause.moments.map((moment) => (
+                    <li key={moment.href}>
+                      <Link
+                        href={moment.href}
+                        className="inline-flex min-h-9 items-center rounded-sm border border-burgundy/10 bg-white/70 px-2.5 py-1 text-xs font-semibold text-burgundy transition hover:border-gold hover:text-burgundy-deep"
+                      >
+                        {moment.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </article>
           ))}
         </div>
       </div>

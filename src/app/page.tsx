@@ -10,6 +10,7 @@ import { StatsStrip } from "@/components/StatsStrip";
 import { WhatWouldDollySay } from "@/components/WhatWouldDollySay";
 import { dollyButtonClass } from "@/components/ui/DollyButton";
 import { createPageMetadata } from "@/lib/metadata";
+import { getMomentCount } from "@/lib/moments";
 
 export const metadata: Metadata = createPageMetadata({
   title: "A living scrapbook of Dolly Parton",
@@ -25,6 +26,8 @@ export const metadata: Metadata = createPageMetadata({
 });
 
 export default function HomePage() {
+  const momentCount = getMomentCount();
+
   return (
     <>
       <Suspense fallback={null}>
@@ -45,7 +48,7 @@ export default function HomePage() {
 
       <section className="px-4 py-16 text-center sm:px-6 md:py-20">
         <h2 className="font-serif text-3xl font-bold text-burgundy-deep md:text-4xl">
-          All 28 moments
+          All {momentCount} moments
         </h2>
         <p className="mx-auto mt-4 max-w-lg text-burgundy/75">
           Filter by era, category, and who she stood with. Press{" "}

@@ -2,11 +2,14 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { MomentsArchive } from "@/components/MomentsArchive";
 import { createPageMetadata } from "@/lib/metadata";
+import { getMomentCount } from "@/lib/moments";
+
+const momentCount = getMomentCount();
 
 export const metadata: Metadata = createPageMetadata({
   title: "All moments archive",
   description:
-    "Browse 28 Dolly Parton moments with quotes, hidden facts, era filters, and shareable links — from Appalachian roots and Jolene to the Imagination Library and modern advocacy.",
+    `Browse ${momentCount} Dolly Parton moments with quotes, hidden facts, era filters, and shareable links — from Appalachian roots and Jolene to the Imagination Library, Black community allyship, and LGBTQ+ advocacy.`,
   path: "/moments",
   keywords: [
     "Dolly Parton archive",

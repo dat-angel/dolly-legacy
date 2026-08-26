@@ -134,7 +134,7 @@ export const LIFE_STAGES: Record<Era, LifeStage> = {
       { label: "Ambition", text: "I need courage to go after something bigger" },
       { label: "Home", text: "I want to build something that lasts in my hometown" },
     ],
-    fallbackIds: ["nine-to-five", "cup-of-ambition", "dollywood"],
+    fallbackIds: ["nine-to-five", "common-threads-aids", "cup-of-ambition", "dollywood"],
   },
   "1990s": {
     era: "1990s",
@@ -148,7 +148,7 @@ export const LIFE_STAGES: Record<Era, LifeStage> = {
       { label: "Dreams", text: "I'm scared my dream is too big" },
       { label: "Reading", text: "Someone I love never learned to read" },
     ],
-    fallbackIds: ["imagination-library", "dreamer-dream"],
+    fallbackIds: ["imagination-library", "family-song", "drag-queen-following", "dreamer-dream"],
   },
   "2000s": {
     era: "2000s",
@@ -176,7 +176,7 @@ export const LIFE_STAGES: Record<Era, LifeStage> = {
       { label: "Belonging", text: "I feel like I don't belong" },
       { label: "Home", text: "My community is hurting and I want to help" },
     ],
-    fallbackIds: ["lgbtq-allyship", "everyone-matters", "do-it-on-purpose"],
+    fallbackIds: ["lgbtq-allyship", "heartstrings-queer-story", "everyone-matters", "do-it-on-purpose"],
   },
   "2020s": {
     era: "2020s",
@@ -190,7 +190,7 @@ export const LIFE_STAGES: Record<Era, LifeStage> = {
       { label: "Care", text: "I want to help people who are being treated unfairly" },
       { label: "Health", text: "People around me are sick and I don't know how to help" },
     ],
-    fallbackIds: ["blm-support", "trans-support", "covid-vaccine", "everyone-matters"],
+    fallbackIds: ["blm-support", "trans-support", "beyonce-welcome", "covid-vaccine", "everyone-matters"],
   },
 };
 

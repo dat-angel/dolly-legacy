@@ -3,7 +3,9 @@
 import { useEffect, useMemo, useState, startTransition } from "react";
 import { useSearchParams } from "next/navigation";
 import { AnimatePresence } from "framer-motion";
-import { filterMoments, getMomentById, getRandomMoment } from "@/lib/moments";
+import { CommunityFilterBanner } from "@/components/CommunityFilterBanner";
+import { getCommunityFilter } from "@/lib/community-tags";
+import { filterMoments, getMomentById, getMomentCount, getRandomMoment } from "@/lib/moments";
 import { getMomentShareUrl } from "@/lib/share";
 import { CATEGORIES, ERAS, type Category, type Era, type Moment, type Mood } from "@/lib/types";
 import { MomentCard } from "./ChapterSection";
@@ -82,6 +84,9 @@ export function MomentsArchive() {
     [category, era, tag, search],
   );
 
+  const communityFilter = getCommunityFilter(tag);
+  const momentCount = getMomentCount();
+
   function surprise(mood?: Mood) {
     const m = getRandomMoment(mood);
     setDismissedHighlight(true);
@@ -122,7 +127,7 @@ export function MomentsArchive() {
       <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
           <h1 className="font-serif text-4xl font-bold text-burgundy-deep md:text-5xl">
-            All 28 moments
+            All {momentCount} moments
           </h1>
           <p className="mt-2 text-burgundy/70">
             {filtered.length} moment{filtered.length !== 1 ? "s" : ""}
@@ -149,6 +154,8 @@ export function MomentsArchive() {
           ))}
         </div>
       </div>
+
+      {communityFilter && <CommunityFilterBanner community={communityFilter} />}
 
       <EraGallery activeEra={era} onSelectEra={setEra} />
 

@@ -23,6 +23,10 @@ const database = momentsData as MomentsDatabase;
 export const momentsMeta = database.meta;
 export const moments = database.moments;
 
+export function getMomentCount(): number {
+  return moments.length;
+}
+
 export function getMomentById(id: string): Moment | undefined {
   return moments.find((m) => m.id === id);
 }
