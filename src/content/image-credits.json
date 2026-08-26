@@ -310,5 +310,21 @@
     "author": "RCA Records",
     "description": "Square crop of the 1977 RCA publicity portrait, used for the site favicon and apple-touch icon.",
     "localPath": "/images/favicon-portrait.jpg"
+  },
+  "preview/imagination-library-reading": {
+    "commonsTitle": "Site preview asset",
+    "commonsUrl": "",
+    "license": "Site preview asset",
+    "author": "Dolly Legacy contributors",
+    "description": "Dolly Parton reading to children at a Library of Congress Imagination Library event. Used for social preview cards.",
+    "localPath": "/images/preview/imagination-library-reading.jpg"
+  },
+  "preview/dumplin-drag-queen": {
+    "commonsTitle": "Site preview asset",
+    "commonsUrl": "",
+    "license": "Site preview asset",
+    "author": "Dolly Legacy contributors",
+    "description": "Dolly Parton with a drag queen impersonator at the Dumplin' premiere. Used for moments archive social preview cards.",
+    "localPath": "/images/preview/dumplin-drag-queen.jpg"
   }
 }

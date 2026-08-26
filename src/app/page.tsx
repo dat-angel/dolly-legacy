@@ -14,7 +14,7 @@ import { getMomentCount } from "@/lib/moments";
 import { getSiteDescription } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "A living scrapbook of Dolly Parton",
+  title: "A scrapbook of Dolly Parton",
   description: getSiteDescription(),
   path: "/",
   keywords: [

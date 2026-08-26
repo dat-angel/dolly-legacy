@@ -12,7 +12,7 @@ A fan celebration of Dolly Parton — her songs, books, backbone, and the people
 - **What would Dolly say?** — Ask about today's mess; get a curated quote she already said
 - **Who she stood with** — Working women, kids who need books, LGBTQ+ people, Black communities
 - **Letters she sent** — Typed notes, signed faxes, and songs that were letters — stationery, not a click-clack archive
-- **Open data harbor** — `moments.json`, `letters.json`, schema, photo credits — take it
+- **Open data harbor** — `data/moments.json`, schema, photo credits — take it
 - **Surprise me** — Press `?` on the archive for a random moment
 
 ## Quick start
@@ -37,14 +37,16 @@ npx vercel --prod
 ## Project structure
 
 ```
+data/                 # Flat open-data export (moments.json — the harbor)
+public/data/          # Same file served at /data/moments.json
 src/
-├── app/              # Next.js App Router pages (`/data` is the harbor)
+├── app/              # Next.js App Router pages (`/data` explains the harbor)
 ├── components/       # UI including Typewriter & WhatWouldDollySay
-├── content/          # moments.json — the open database
+├── content/          # moments.json source of truth (synced → data/)
 └── lib/              # Types, filters, dolly-say matching
 ```
 
-To add a moment, edit `src/content/moments.json`.
+To add a moment, edit `src/content/moments.json`, then run `npm run sync-data`.
 
 ## Disclaimer
 
@@ -57,7 +59,7 @@ This repository uses **dual licensing**:
 | Component | License | Details |
 |-----------|---------|---------|
 | **Code** (website, scripts, schema) | [MIT](LICENSE) | Use freely with attribution |
-| **Database** (`src/content/moments.json`) | [CC BY 4.0](src/content/LICENSE-CC-BY-4.0.txt) | Share and adapt with attribution |
+| **Database** (`data/moments.json`, synced from `src/content/`) | [CC BY 4.0](src/content/LICENSE-CC-BY-4.0.txt) | Share and adapt with attribution |
 
 See [DATA.md](DATA.md) for attribution examples, export instructions, and third-party content notes.
 

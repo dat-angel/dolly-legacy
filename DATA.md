@@ -1,6 +1,8 @@
 # Open Data — Dolly Legacy Moments
 
-The **[moments database](src/content/moments.json)** is published as open data under **CC BY 4.0**.
+The **[moments database](data/moments.json)** is published as open data under **CC BY 4.0**.
+
+The canonical source for edits is [`src/content/moments.json`](src/content/moments.json). Run `npm run sync-data` (or `npm run build`) to refresh the flat export in [`data/moments.json`](data/moments.json) and the live file at `/data/moments.json`.
 
 ## Quick reference
 
@@ -37,17 +39,18 @@ https://github.com/dat-angel/dolly-legacy
 
 ## Exporting the data
 
-The canonical file is `src/content/moments.json`. It includes a `meta` block with version, license, and attribution strings for programmatic use.
+| Where | URL / path |
+|-------|------------|
+| **Repo harbor** | [`data/moments.json`](data/moments.json) |
+| **Live download** | https://www.dollyparton.page/data/moments.json |
+| **Source (edit here)** | [`src/content/moments.json`](src/content/moments.json) |
 
-```json
-{
-  "meta": {
-    "license": "CC-BY-4.0",
-    "attribution": "Dolly Legacy contributors",
-    "version": "1.0.0"
-  },
-  "moments": [ ... ]
-}
+Refresh after edits:
+
+```bash
+npm run sync-data
 ```
+
+The file includes a `meta` block with version, license, and attribution strings for programmatic use.
 
 See [src/content/README.md](src/content/README.md) for validation and usage examples.

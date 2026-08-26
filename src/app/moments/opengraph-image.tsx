@@ -4,21 +4,20 @@ import { loadPreviewPhotoSrc } from "@/lib/load-preview-photo";
 import { OgPhotoCard } from "@/lib/og-photo-card";
 import { getMomentCount } from "@/lib/moments";
 import { PREVIEW_IMAGES } from "@/lib/preview-images";
-import { getSiteDescription, SITE } from "@/lib/site";
 
-export const alt = SITE.title;
+export const alt = "Dolly Legacy — moments archive";
 export const size = OG_SIZE;
 export const contentType = "image/png";
 
-export default async function OpenGraphImage() {
-  const photoSrc = await loadPreviewPhotoSrc("literacy");
+export default async function MomentsOpenGraphImage() {
+  const photoSrc = await loadPreviewPhotoSrc("allyship");
 
   return new ImageResponse(
     (
       <OgPhotoCard
         title="Dolly Legacy"
-        subtitle={getSiteDescription()}
-        footer={`${getMomentCount()} moments · Open CC BY 4.0 data`}
+        subtitle={`${getMomentCount()} moments — quotes, advocacy, and the people she stood with. Open CC BY 4.0 data.`}
+        footer={PREVIEW_IMAGES.allyship.caption}
         photoSrc={photoSrc}
       />
     ),

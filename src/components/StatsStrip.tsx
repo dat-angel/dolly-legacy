@@ -7,7 +7,7 @@ const stats = [
   { key: "books" as const, label: "Books into kids' hands" },
   { key: "songs" as const, label: "Songs written" },
   { key: "countries" as const, label: "Countries with free books" },
-  { key: "years" as const, label: "Years — and counting" },
+  { key: "years" as const, label: "Years young" },
 ] as const;
 
 export function StatsStrip() {

@@ -96,11 +96,21 @@ export function getAllTags(): string[] {
 }
 
 export function getImpactStats() {
+  const born = new Date(1946, 0, 19);
+  const now = new Date();
+  let age = now.getFullYear() - born.getFullYear();
+  if (
+    now.getMonth() < born.getMonth() ||
+    (now.getMonth() === born.getMonth() && now.getDate() < born.getDate())
+  ) {
+    age -= 1;
+  }
+
   return {
     books: "240M+",
     songs: "3,000+",
     countries: "5",
-    years: "80",
+    years: String(age),
   };
 }
 

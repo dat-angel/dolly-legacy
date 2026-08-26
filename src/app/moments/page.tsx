@@ -9,8 +9,9 @@ const momentCount = getMomentCount();
 export const metadata: Metadata = createPageMetadata({
   title: "All moments archive",
   description:
-    `Browse ${momentCount} Dolly Parton moments with quotes, hidden facts, era filters, and shareable links — from Appalachian roots and Jolene to the Imagination Library, Black community allyship, and LGBTQ+ advocacy.`,
+    `${momentCount} Dolly Parton moments with quotes, hidden facts, era filters, and shareable links — from Appalachian roots and Jolene to the Imagination Library, Black community allyship, and LGBTQ+ advocacy.`,
   path: "/moments",
+  ogImage: "/moments/opengraph-image",
   keywords: [
     "Dolly Parton archive",
     "Dolly Parton quotes",

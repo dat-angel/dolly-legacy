@@ -1,14 +1,11 @@
 import { ImageResponse } from "next/og";
-import { readFile } from "node:fs/promises";
-import { join } from "node:path";
+import { loadPreviewPhotoSrc } from "@/lib/load-preview-photo";
 import { getMomentCount } from "@/lib/moments";
-import { getSiteDescription, SITE } from "@/lib/site";
-import { STORY_SIZE, StoryCardMarkup, bufferToDataUrl } from "@/lib/og-story";
+import { SITE } from "@/lib/site";
+import { STORY_SIZE, StoryCardMarkup } from "@/lib/og-story";
 
 export async function GET() {
-  const photo = await readFile(
-    join(process.cwd(), "public/images/chapters/music.jpg"),
-  );
+  const photoSrc = await loadPreviewPhotoSrc("literacy");
   const momentCount = getMomentCount();
 
   return new ImageResponse(
@@ -17,7 +14,7 @@ export async function GET() {
         title="Dolly Legacy"
         quote={SITE.tagline}
         year={`${momentCount} moments`}
-        photoSrc={bufferToDataUrl(photo)}
+        photoSrc={photoSrc}
       />
     ),
     { ...STORY_SIZE },

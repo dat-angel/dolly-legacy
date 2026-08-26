@@ -16,6 +16,8 @@
   ],
   "scripts": {
     "dev": "next dev",
+    "sync-data": "node scripts/sync-data-export.mjs",
+    "prebuild": "npm run sync-data",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

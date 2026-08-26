@@ -43,8 +43,8 @@ export function Hero() {
             Songs. Books. Backbone. A cup of ambition.
           </p>
           <p className="mt-5 max-w-lg text-base leading-relaxed text-burgundy/80 sm:text-lg">
-            A living scrapbook — the hits, the typewriter, and everyone she
-            stood with. Play the tape. Steal a quote. Remix the open data.
+            A scrapbook — the hits, the typewriter, and everyone she stood
+            with. Play the tape. Steal a quote. Remix the open data.
           </p>
 
           <div className="mt-8 flex w-full flex-col gap-3 sm:flex-row sm:items-center">

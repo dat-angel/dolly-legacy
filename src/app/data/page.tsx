@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createPageMetadata } from "@/lib/metadata";
 import { moments, momentsMeta } from "@/lib/moments";
-import { SITE } from "@/lib/site";
+import { absoluteUrl, SITE } from "@/lib/site";
 import { dollyButtonClass } from "@/components/ui/DollyButton";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Open data harbor",
   description:
-    "Free CC BY 4.0 Dolly Parton moments database — quotes, song and film stories, philanthropy, advocacy, and photo credits for remixing.",
+    `${moments.length} Dolly Parton moments as free CC BY 4.0 JSON — quotes, song and film stories, philanthropy, advocacy, and photo credits for remixing.`,
   path: "/data",
   keywords: [
     "Dolly Parton open data",
@@ -21,8 +21,10 @@ export const metadata: Metadata = createPageMetadata({
 const FILES = [
   {
     name: "moments.json",
-    href: "https://github.com/dat-angel/dolly-legacy/blob/main/src/content/moments.json",
+    href: absoluteUrl("/data/moments.json"),
+    github: "https://github.com/dat-angel/dolly-legacy/blob/main/data/moments.json",
     use: "The harbor — quotes, years, tags, sources, who she stood with",
+    primary: true,
   },
   {
     name: "moments.schema.json",
@@ -60,22 +62,25 @@ export default function DataPage() {
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
         <a
-          href="https://github.com/dat-angel/dolly-legacy"
-          target="_blank"
-          rel="noopener noreferrer"
+          href={absoluteUrl("/data/moments.json")}
+          download
           className={dollyButtonClass("primary", "w-full sm:w-auto")}
         >
-          GitHub repo
+          Download moments.json
         </a>
         <a
-          href="https://raw.githubusercontent.com/dat-angel/dolly-legacy/main/src/content/moments.json"
+          href="https://github.com/dat-angel/dolly-legacy"
           target="_blank"
           rel="noopener noreferrer"
           className={dollyButtonClass("secondary", "w-full sm:w-auto")}
         >
-          Download moments.json
+          GitHub repo
         </a>
       </div>
+
+      <p className="mt-4 font-mono text-sm text-burgundy/70">
+        {absoluteUrl("/data/moments.json")}
+      </p>
 
       <h2 className="mt-14 font-serif text-2xl font-bold text-burgundy-deep">
         Files
@@ -85,13 +90,24 @@ export default function DataPage() {
           <li key={file.name} className="py-4">
             <a
               href={file.href}
-              target="_blank"
-              rel="noopener noreferrer"
+              target={"primary" in file ? undefined : "_blank"}
+              rel={"primary" in file ? undefined : "noopener noreferrer"}
+              download={"primary" in file ? "moments.json" : undefined}
               className="font-mono text-sm font-semibold text-burgundy-deep hover:text-burgundy"
             >
               {file.name}
             </a>
             <p className="mt-1 text-sm text-burgundy/70">{file.use}</p>
+            {"github" in file && file.github ? (
+              <a
+                href={file.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-1 inline-block text-xs text-burgundy/60 hover:text-burgundy-deep"
+              >
+                Also on GitHub → data/moments.json
+              </a>
+            ) : null}
           </li>
         ))}
       </ul>

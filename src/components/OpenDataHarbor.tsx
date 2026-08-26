@@ -66,12 +66,11 @@ export function OpenDataHarbor() {
             Browse the files
           </Link>
           <a
-            href="https://github.com/dat-angel/dolly-legacy/blob/main/src/content/moments.json"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/data/moments.json"
+            download
             className={dollyButtonClass("secondary", "w-full sm:w-auto")}
           >
-            moments.json on GitHub
+            Download moments.json
           </a>
         </div>
       </div>
