@@ -18,13 +18,6 @@ UA = "DollyLegacyBot/1.0 (https://github.com/dat-angel/dolly-legacy; tribute sit
 
 # Unique Commons files to download. Reused chapter/era photos are referenced by creditKey only.
 DOWNLOADS = {
-    "appalachian-roots": {
-        "file": "File:Parton-cemetery-greenbrier2.jpg",
-        "ext": "jpg",
-        "alt": "Parton Cemetery in Greenbrier, in the Great Smoky Mountains of East Tennessee",
-        "caption": "Family ground in the Smokies — the mountain roots she never left behind",
-        "year": 2008,
-    },
     "first-song": {
         "file": "File:Happy, Happy Birthday Baby - ad 1965.jpg",
         "ext": "jpg",
@@ -182,6 +175,12 @@ DOWNLOADS = {
 }
 
 REUSES = {
+    "appalachian-roots": {
+        "creditKey": "eras/1950s",
+        "alt": "Young Dolly Parton with Larry Mathis and Bud Brewster of the Pick'n Grin Bluegrass Band",
+        "caption": "East Tennessee — already on a stage, guitar nearby, the mountains still in her voice",
+        "year": 1959,
+    },
     "porter-wagoner": {
         "creditKey": "chapters/origins",
         "alt": "Porter Wagoner and Dolly Parton in 1969",

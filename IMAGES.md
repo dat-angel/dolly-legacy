@@ -71,10 +71,11 @@ src/app/images/page.tsx         → public credits page
 
 ## Per-moment images
 
-Every moment has a photograph on cards, drawers, and share pages. Unique Commons files live in `public/images/moments/`. Five moments reuse the best chapter/era portrait when that image is the strongest licensed match:
+Every moment has a photograph on cards, drawers, and share pages. Unique Commons files live in `public/images/moments/`. Six moments reuse the best chapter/era portrait when that image is the strongest licensed match:
 
 | Moment ID | Visual |
 |-----------|--------|
+| `appalachian-roots` | Young Dolly with the Pick'n Grin Bluegrass Band (1950s era) — not the family cemetery |
 | `porter-wagoner` | 1969 duo photo (Chapter I) |
 | `nine-to-five` | 1980 Burnett promo (1980s era) |
 | `business-autonomy` | RCA portrait, 1977 (Chapter II) |
