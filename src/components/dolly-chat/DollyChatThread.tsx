@@ -175,6 +175,7 @@ function EraChip({
       type="button"
       role="radio"
       aria-checked={selected}
+      aria-label={`${label}, ${sub}`}
       onClick={onSelect}
       className={cn(
         "flex shrink-0 flex-col items-center gap-1 rounded-2xl px-1 py-1 text-center transition",
@@ -193,7 +194,7 @@ function EraChip({
         {photo ? (
           <Image src={photo} alt={photoAlt ?? label} fill sizes="56px" className="object-cover" />
         ) : (
-          <span className="flex h-full w-full items-center justify-center bg-gradient-to-br from-gold/40 to-hot-pink/30 font-script text-lg text-burgundy-deep">
+          <span className="flex h-full w-full items-center justify-center bg-gradient-to-br from-gold/40 to-hot-pink/30 font-script text-lg text-burgundy-deep" aria-hidden>
             all
           </span>
         )}
