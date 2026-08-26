@@ -304,12 +304,12 @@
     "localPath": "/images/moments/common-threads-aids.jpg"
   },
   "site/favicon-portrait": {
-    "commonsTitle": "Young-Dolly-Parton.jpg",
-    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Young-Dolly-Parton.jpg",
-    "license": "Public domain",
-    "author": "RCA Records",
-    "description": "Square crop of the 1977 RCA publicity portrait, used for the site favicon and apple-touch icon.",
-    "localPath": "/images/favicon-portrait.jpg"
+    "commonsTitle": "Site brand mark",
+    "commonsUrl": "",
+    "license": "Site asset",
+    "author": "Dolly Legacy contributors",
+    "description": "Original wig-and-rhinestones brand mark used for the favicon, apple-touch icon, and header logo.",
+    "localPath": "/icon"
   },
   "preview/imagination-library-reading": {
     "commonsTitle": "Site preview asset",
