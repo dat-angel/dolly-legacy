@@ -15,8 +15,14 @@ export function SiteHeader() {
         </Link>
         <nav className="flex shrink-0 items-center gap-1 text-sm font-semibold">
           <Link
+            href="/#life"
+            className="inline-flex min-h-11 items-center rounded-full px-2.5 text-burgundy transition hover:bg-blush/40 hover:text-hot-pink sm:px-4"
+          >
+            Life
+          </Link>
+          <Link
             href="/moments"
-            className="inline-flex min-h-11 items-center rounded-full px-3 text-burgundy transition hover:bg-blush/40 hover:text-hot-pink sm:px-4"
+            className="inline-flex min-h-11 items-center rounded-full px-2.5 text-burgundy transition hover:bg-blush/40 hover:text-hot-pink sm:px-4"
           >
             Moments
           </Link>

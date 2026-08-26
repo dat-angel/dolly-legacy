@@ -73,8 +73,8 @@ export default async function ChapterPage({ params }: PageProps<"/chapter/[id]">
   return (
     <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
       <JsonLd data={chapterJsonLd} />
-      <Link href="/" className="text-sm font-semibold text-hot-pink hover:text-burgundy">
-        ← Back to exhibit
+      <Link href="/#life" className="text-sm font-semibold text-hot-pink hover:text-burgundy">
+        ← Back to her life
       </Link>
 
       <div className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">

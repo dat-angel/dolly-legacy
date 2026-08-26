@@ -35,11 +35,10 @@ export function MomentDrawer({ moment, onClose, onSelect }: MomentDrawerProps) {
     if (path === "/moments") {
       window.history.replaceState(null, "", `/moments?highlight=${moment.id}`);
     } else if (!path.startsWith("/moment/")) {
-      const chapter = moment.chapter ? `&chapter=${moment.chapter}` : "";
       window.history.replaceState(
         null,
         "",
-        `/?moment=${moment.id}${chapter}#${moment.chapter ?? "moments"}`,
+        `/?moment=${moment.id}${moment.chapter ? `&chapter=${moment.chapter}` : ""}#life`,
       );
     }
 

@@ -16,6 +16,10 @@ export function getEraShareUrl(era: Era): string {
   return absoluteUrl(`/moments?era=${encodeURIComponent(era)}`);
 }
 
+export function getLifeShareUrl(momentId: string): string {
+  return absoluteUrl(`/?moment=${encodeURIComponent(momentId)}#life`);
+}
+
 export function getDollySayShareUrl(
   momentId: string,
   query?: string,

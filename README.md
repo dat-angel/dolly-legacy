@@ -6,9 +6,9 @@ A fan tribute website celebrating Dolly Parton — her music, philanthropy, and 
 
 ## Features
 
-- **Scroll exhibit** — Five chapters from Appalachian roots to standing with everyone
+- **Life slider** — Scrub 1946 to now on one screen instead of scrolling five long chapters
 - **Moments archive** — 28+ filterable moments with quotes, tags, and era filters
-- **Typewriter mode** — The 9 to 5 quote types out with click-clack sounds (scroll to the Music chapter)
+- **Typewriter mode** — The 9 to 5 quote types out on the Music chapter page
 - **What would Dolly say?** — Chat with her across decades. Pick a time in her life and get a curated quote from that era.
 - **Surprise me** — Press `?` on the archive page for a random moment
 - **Jolene easter egg** — Type `jolene` in search

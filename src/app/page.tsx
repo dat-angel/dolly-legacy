@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
-import { CHAPTERS } from "@/lib/types";
-import { getMomentsByChapter } from "@/lib/moments";
 import { Hero } from "@/components/Hero";
 import { HomeUrlSync } from "@/components/HomeUrlSync";
-import { InteractiveChapterSection } from "@/components/InteractiveChapterSection";
+import { LifeTimeline } from "@/components/LifeTimeline";
 import { StatsStrip } from "@/components/StatsStrip";
 import { WhatWouldDollySay } from "@/components/WhatWouldDollySay";
 import { StitchDivider, Rhinestone, StarBurst } from "@/components/decorative";
@@ -15,7 +13,7 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata: Metadata = createPageMetadata({
   title: "Interactive Dolly Parton tribute",
   description:
-    "Scroll five life chapters, browse 28 shareable moments, then ask Dolly what she'd say at a certain time in her life — an open tribute to her music, philanthropy, and advocacy.",
+    "Slide through Dolly Parton's life from Locust Ridge to now, then ask what she'd say at a certain time — an open tribute to her music, philanthropy, and advocacy.",
   path: "/",
   keywords: [
     "interactive Dolly Parton exhibit",
@@ -23,8 +21,6 @@ export const metadata: Metadata = createPageMetadata({
     "what would Dolly say",
   ],
 });
-
-const TYPEWRITER_CHAPTER = "music";
 
 export default function HomePage() {
   return (
@@ -34,22 +30,9 @@ export default function HomePage() {
       </Suspense>
       <Hero />
       <StatsStrip />
-
-      {CHAPTERS.map((chapter) => (
-        <InteractiveChapterSection
-          key={chapter.id}
-          id={chapter.id}
-          chapterId={chapter.id}
-          title={chapter.title}
-          subtitle={chapter.subtitle}
-          featuredMoments={getMomentsByChapter(chapter.id)}
-          typewriterQuote={
-            chapter.id === TYPEWRITER_CHAPTER
-              ? "Tumble outta bed and stumble to the kitchen. Pour myself a cup of ambition, and yawn and stretch and try to come to life."
-              : undefined
-          }
-        />
-      ))}
+      <Suspense fallback={<section id="life" className="min-h-[100svh] bg-burgundy-deep" />}>
+        <LifeTimeline />
+      </Suspense>
 
       <section className="section-warm px-4 py-12 sm:px-6 md:py-24">
         <div className="mx-auto max-w-4xl">

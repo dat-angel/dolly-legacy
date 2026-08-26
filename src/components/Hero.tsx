@@ -48,17 +48,17 @@ export function Hero() {
           Songs. Books. Backbone.
         </p>
         <p className="mt-5 max-w-lg text-base leading-relaxed text-cream/85 sm:text-lg">
-          28 moments from the holler to the Hall of Fame — tap one, share it,
-          or ask what she&apos;d say at a certain time in her life.
+          28 moments from the holler to the Hall of Fame — slide the timeline,
+          don&apos;t scroll forever.
         </p>
 
         <div className="mt-8 flex w-full flex-col gap-3 sm:flex-row sm:items-center">
           <Link
-            href="/moments"
+            href="#life"
             className={dollyButtonClass("primary", "w-full sm:w-auto")}
           >
             <Rhinestone size={16} className="text-gold-light" />
-            Start with a moment
+            Slide her life
           </Link>
           <Link
             href="#what-would-dolly-say"
