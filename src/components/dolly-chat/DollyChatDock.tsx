@@ -56,8 +56,6 @@ export function DollyChatDock() {
     };
   }, [dockOpen]);
 
-  const hideFab = sectionVisible && !dockOpen;
-
   return (
     <div
       className={cn(
