@@ -22,12 +22,6 @@ export function SiteHeader() {
             Moments
           </Link>
           <Link
-            href="/letters"
-            className="hidden min-h-11 items-center px-2.5 text-sm font-medium text-burgundy/80 transition hover:text-burgundy-deep sm:inline-flex sm:px-3"
-          >
-            Letters
-          </Link>
-          <Link
             href="/data"
             className="inline-flex min-h-11 items-center px-2.5 text-sm font-medium text-burgundy/80 transition hover:text-burgundy-deep sm:px-3"
           >

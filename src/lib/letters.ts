@@ -37,7 +37,3 @@ const database = lettersData as LettersDatabase;
 
 export const lettersMeta = database.meta;
 export const letters = database.letters;
-
-export function getFeaturedLetter(): Letter | undefined {
-  return letters.find((letter) => letter.featured) ?? letters[0];
-}

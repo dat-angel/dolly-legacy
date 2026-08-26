@@ -4,7 +4,6 @@ import { Suspense } from "react";
 import { Hero } from "@/components/Hero";
 import { HomeUrlSync } from "@/components/HomeUrlSync";
 import { LifeTimeline } from "@/components/LifeTimeline";
-import { LettersMemo } from "@/components/LettersMemo";
 import { OpenDataHarbor } from "@/components/OpenDataHarbor";
 import { SheStoodWith } from "@/components/SheStoodWith";
 import { StatsStrip } from "@/components/StatsStrip";
@@ -42,7 +41,6 @@ export default function HomePage() {
       </section>
 
       <SheStoodWith />
-      <LettersMemo />
       <OpenDataHarbor />
 
       <section className="px-4 py-16 text-center sm:px-6 md:py-20">

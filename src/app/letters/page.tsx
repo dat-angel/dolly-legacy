@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { FeaturedLetterLine } from "@/components/FeaturedLetterLine";
 import { dollyButtonClass } from "@/components/ui/DollyButton";
-import { getFeaturedLetter, letters, lettersMeta } from "@/lib/letters";
+import { letters, lettersMeta } from "@/lib/letters";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createPageMetadata({
@@ -26,8 +25,6 @@ const FORM_LABEL: Record<(typeof letters)[number]["form"], string> = {
 };
 
 export default function LettersPage() {
-  const featured = getFeaturedLetter();
-
   return (
     <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
       <p className="font-mono text-xs uppercase tracking-[0.18em] text-walnut">
@@ -36,26 +33,9 @@ export default function LettersPage() {
       <h1 className="mt-3 font-serif text-4xl font-bold text-burgundy-deep md:text-5xl">
         Letters she sent
       </h1>
-      <p className="mt-4 text-lg leading-relaxed text-burgundy/80">
-        Reba McEntire has said she only has a fax number for Dolly. Miley
-        still collects signed faxes through a lawyer&apos;s office. Kenny got
-        a typed letter. Porter got a song. The specialness is the time she
-        takes.
+      <p className="mt-4 max-w-xl text-lg leading-relaxed text-burgundy/80">
+        A famous name that still takes the time to put TO: on the page.
       </p>
-
-      {featured && (
-        <div className="typewriter-frame mt-10 p-5 sm:p-8">
-          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-walnut">
-            Featured · {featured.form} · {featured.year}
-          </p>
-          <p className="mt-4">
-            <FeaturedLetterLine text={featured.excerpt} />
-          </p>
-          <p className="mt-4 text-sm text-burgundy/70">
-            TO: {featured.to} · FROM: Dolly
-          </p>
-        </div>
-      )}
 
       <ul className="mt-12 space-y-6">
         {letters.map((letter) => (
