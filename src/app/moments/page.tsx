@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import { MomentsArchive } from "@/components/MomentsArchive";
 import { createPageMetadata } from "@/lib/metadata";
 import { getMomentCount } from "@/lib/moments";
-import { PREVIEW_IMAGES } from "@/lib/preview-images";
+import { PREVIEW_IMAGES, shareImageUrl } from "@/lib/preview-images";
 
 const momentCount = getMomentCount();
 
@@ -13,7 +13,7 @@ export const metadata: Metadata = createPageMetadata({
     `${momentCount} Dolly Parton moments with quotes, hidden facts, era filters, and shareable links — from Appalachian roots and Jolene to the Imagination Library, Black community allyship, and LGBTQ+ advocacy.`,
   path: "/moments",
   ogImage: {
-    url: "/moments/opengraph-image",
+    url: shareImageUrl(PREVIEW_IMAGES.literacy.sharePath),
     alt: PREVIEW_IMAGES.literacy.alt,
   },
   keywords: [

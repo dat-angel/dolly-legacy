@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { createPageMetadata } from "./metadata";
-import { PREVIEW_IMAGES } from "./preview-images";
+import { PREVIEW_IMAGES, shareImageUrl } from "./preview-images";
 import { getSiteDescription, getSiteUrl, SITE, absoluteUrl } from "./site";
 
 export function getRootMetadata(): Metadata {
@@ -12,7 +12,7 @@ export function getRootMetadata(): Metadata {
     ogType: "website",
     includeStoryImage: false,
     ogImage: {
-      url: "/opengraph-image",
+      url: shareImageUrl(PREVIEW_IMAGES.allyship.sharePath),
       alt: PREVIEW_IMAGES.allyship.alt,
     },
   });

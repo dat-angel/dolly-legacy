@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { absoluteUrl, SITE } from "./site";
+import { PREVIEW_IMAGES, shareImageUrl } from "./preview-images";
 
 type OgType = "website" | "article";
 
@@ -34,7 +35,7 @@ export function createPageMetadata({
     ? image.url.startsWith("http")
       ? image.url
       : absoluteUrl(image.url)
-    : absoluteUrl("/opengraph-image");
+    : absoluteUrl(shareImageUrl(PREVIEW_IMAGES.allyship.sharePath));
   const storyUrl = absoluteUrl(
     path.startsWith("/moment/") ? `${path}/story-image` : "/story-image",
   );
