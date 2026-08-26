@@ -1,11 +1,23 @@
 #!/usr/bin/env node
-import { execFileSync } from "node:child_process";
+/**
+ * Regenerate static LinkedIn OG JPGs (1200×630). Requires ffmpeg locally.
+ * Outputs are committed under public/images/ — Vercel builds do NOT run this script.
+ */
+import { execFileSync, spawnSync } from "node:child_process";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const width = 1200;
 const height = 630;
+
+const ffmpegCheck = spawnSync("ffmpeg", ["-version"], { stdio: "ignore" });
+if (ffmpegCheck.error?.code === "ENOENT") {
+  console.warn(
+    "ffmpeg not found — skipping share image generation. Use committed public/images/og-share*.jpg.",
+  );
+  process.exit(0);
+}
 
 /** crop: ffmpeg crop x:y after scale — "0:0" keeps faces when source is portrait/tall */
 const targets = [

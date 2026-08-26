@@ -18,7 +18,7 @@
     "dev": "next dev",
     "sync-data": "node scripts/sync-data-export.mjs",
     "sync-share-images": "node scripts/build-share-images.mjs",
-    "prebuild": "npm run sync-data && npm run sync-share-images",
+    "prebuild": "npm run sync-data",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
