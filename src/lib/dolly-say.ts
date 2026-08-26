@@ -170,7 +170,7 @@ export const LIFE_STAGES: Record<Era, LifeStage> = {
     sheWas: "showing up for her hometown, and saying out loud that everybody deserves respect",
     years: "2010–2019",
     greeting:
-      "The 2010s. Wildfire relief in Gatlinburg, Dollywood on a world stage, and a public stand with LGBTQ+ people. Ask her about belonging, faith, or showing up.",
+      "The 2010s. Wildfire relief in Gatlinburg, Dollywood on a world stage, and a public stand with LGBTQ+ folks. Ask her about belonging, faith, or showing up.",
     prompts: [
       { label: "Acceptance", text: "Someone I love is different and I want to understand" },
       { label: "Belonging", text: "I feel like I don't belong" },

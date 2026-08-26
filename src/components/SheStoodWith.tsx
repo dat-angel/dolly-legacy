@@ -24,7 +24,7 @@ const CAUSES = [
   },
   {
     href: COMMUNITY_FILTERS["LGBTQ+"].filterHref,
-    title: "LGBTQ+ people",
+    title: "LGBTQ+ folks",
     line: "AIDS-era action, the 1991 song \"Family,\" drag culture, marriage equality, and Tennessee defense.",
     moments: [
       { href: "/moment/common-threads-aids", label: "AIDS documentary" },

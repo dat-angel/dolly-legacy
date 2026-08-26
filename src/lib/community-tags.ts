@@ -27,7 +27,7 @@ export const COMMUNITY_FILTERS: Record<CommunityFilterTag, CommunityFilterMeta> 
   },
   "LGBTQ+": {
     tag: "LGBTQ+",
-    title: "Standing with LGBTQ+ people",
+    title: "Standing with LGBTQ+ folks",
     intro:
       "Long before Pride became corporate, Dolly showed up during the AIDS crisis, wrote gay relatives into a country song in 1991, embraced drag culture, backed marriage equality, and defended trans people in her home state — all while refusing to weaponize her Christian faith against queer people.",
     highlights: [

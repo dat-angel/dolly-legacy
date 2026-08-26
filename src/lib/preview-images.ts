@@ -12,7 +12,7 @@ export const PREVIEW_IMAGES = {
   allyship: {
     file: "public/images/moments/lgbtq-allyship.jpg",
     alt: "Dolly Parton performing in a rhinestone orange jacket on the Blue Smoke World Tour",
-    caption: "A lifetime of standing with LGBTQ+ people",
+    caption: "A lifetime of standing with LGBTQ+ folks",
     sharePath: "/images/og-share.jpg",
   },
 } as const;

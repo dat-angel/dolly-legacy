@@ -10,7 +10,7 @@ A fan celebration of Dolly Parton — her songs, books, backbone, and the people
 - **Moments archive** — 35 filterable stories with quotes, tags, and era filters
 - **Typewriter quotes** — Her words click-clack on the page
 - **What would Dolly say?** — Ask about today's mess; get a curated quote she already said
-- **Who she stood with** — Working women, kids who need books, Tennessee, LGBTQ+ people, Black communities
+- **Who she stood with** — Working women, kids who need books, Tennessee, LGBTQ+ folks, Black communities
 - **Letters she sent** — Typed notes, signed faxes, and songs that were letters — stationery, not a click-clack archive
 - **Open data harbor** — `data/moments.json`, schema, photo credits — take it
 - **Surprise me** — Press `?` on the archive for a random moment
