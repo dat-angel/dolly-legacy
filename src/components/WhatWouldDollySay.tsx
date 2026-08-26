@@ -14,10 +14,6 @@ export function WhatWouldDollySay() {
         <h2 className="text-center font-serif text-2xl font-bold text-burgundy-deep sm:text-3xl md:text-4xl">
           What would Dolly say?
         </h2>
-        <p className="mx-auto mt-3 max-w-lg text-center text-sm text-burgundy/70 sm:text-base">
-          Ask about something on your mind. The answer is a quote she actually
-          said.
-        </p>
 
         <Suspense fallback={null}>
           <DollyChatUrlSync />
