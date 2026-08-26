@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function SiteFooter() {
   return (
-    <footer className="relative border-t border-walnut/40 bg-forest py-12 pb-[max(3rem,env(safe-area-inset-bottom))] text-cream sm:py-14">
+    <footer className="relative border-t border-black/10 bg-walnut py-12 pb-[max(3rem,env(safe-area-inset-bottom))] text-cream sm:py-14">
       <div className="mx-auto max-w-6xl px-4 text-center sm:px-6">
         <p className="font-serif text-2xl font-bold text-cream">
           A fan tribute to Dolly Parton

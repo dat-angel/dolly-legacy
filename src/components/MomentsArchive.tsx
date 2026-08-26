@@ -169,8 +169,8 @@ export function MomentsArchive() {
           className={cn(
             "min-h-11 rounded-sm px-4 py-2 text-sm transition",
             category === "all"
-              ? "bg-burgundy text-cream"
-              : "border border-gold/35 text-burgundy hover:border-gold hover:text-burgundy-deep",
+              ? "bg-gold text-burgundy-deep"
+              : "border border-burgundy/20 text-burgundy hover:border-gold hover:text-burgundy-deep",
           )}
         >
           All
@@ -183,8 +183,8 @@ export function MomentsArchive() {
             className={cn(
               "min-h-11 rounded-sm px-4 py-2 text-sm capitalize transition",
               category === c.id
-                ? "bg-burgundy text-cream"
-                : "border border-gold/35 text-burgundy hover:border-gold",
+                ? "bg-gold text-burgundy-deep"
+                : "border border-burgundy/20 text-burgundy hover:border-gold",
             )}
           >
             {c.label}
@@ -199,7 +199,7 @@ export function MomentsArchive() {
           className={cn(
             "min-h-11 rounded-sm px-3 py-2 text-xs transition",
             era === "all"
-              ? "bg-burgundy text-cream"
+              ? "bg-gold text-burgundy-deep"
               : "text-burgundy/60 hover:text-burgundy",
           )}
         >
@@ -213,7 +213,7 @@ export function MomentsArchive() {
             className={cn(
               "min-h-11 rounded-sm px-3 py-2 text-xs transition",
               era === e
-                ? "bg-burgundy text-cream"
+                ? "bg-gold text-burgundy-deep"
                 : "text-burgundy/60 hover:text-burgundy",
             )}
           >

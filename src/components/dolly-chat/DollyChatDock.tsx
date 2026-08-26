@@ -100,7 +100,7 @@ export function DollyChatDock() {
         type="button"
         onClick={toggleDock}
         className={cn(
-          "pointer-events-auto relative ml-auto inline-flex items-center gap-2 border border-walnut/50 bg-forest p-1.5 pr-4 text-left text-cream",
+          "pointer-events-auto relative ml-auto inline-flex items-center gap-2 border border-gold/70 bg-walnut p-1.5 pr-4 text-left text-cream",
           hideFab && "invisible pointer-events-none",
           dockOpen && "max-sm:hidden",
         )}

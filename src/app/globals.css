@@ -1,22 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f6f1e4;
-  --foreground: #1e3556;
-  --blush: #ece4d2;
-  --blush-deep: #cbb892;
-  --cream: #faf6ec;
-  --gold: #c4a046;
-  --gold-light: #d9bc6a;
-  --burgundy: #1e3556;
-  --burgundy-deep: #162844;
-  --hot-pink: #c4a046;
-  --hot-pink-light: #d9bc6a;
-  --mountain-mist: #5d6b63;
-  --patch-green: #2c4034;
-  --forest: #2c4034;
-  --walnut: #6b4e3a;
-  --quilt-stitch: #8a7344;
+  --background: #f7f1e1;
+  --foreground: #2f261c;
+  --blush: #efe4cc;
+  --blush-deep: #d4c19a;
+  --cream: #fbf6ea;
+  --gold: #e2b422;
+  --gold-light: #f0c94a;
+  --burgundy: #3d3126;
+  --burgundy-deep: #2a221b;
+  --hot-pink: #e2b422;
+  --hot-pink-light: #f0c94a;
+  --mountain-mist: #7a6e5e;
+  --patch-green: #3d3126;
+  --forest: #5c4332;
+  --walnut: #5c4332;
+  --quilt-stitch: #a0804a;
 }
 
 @theme inline {
@@ -53,7 +53,7 @@ body {
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
   background-image:
-    radial-gradient(ellipse 90% 50% at 50% 0%, rgba(201, 160, 70, 0.08), transparent 55%);
+    radial-gradient(ellipse 90% 45% at 50% 0%, rgba(226, 180, 34, 0.12), transparent 55%);
 }
 
 button,
@@ -144,8 +144,8 @@ a,
   top: -100%;
   z-index: 80;
   border-radius: 2px;
-  background: var(--forest);
-  color: var(--cream);
+  background: var(--gold);
+  color: var(--burgundy-deep);
   padding: 0.65rem 1.1rem;
   font-weight: 600;
 }

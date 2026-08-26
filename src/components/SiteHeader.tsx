@@ -3,7 +3,7 @@ import { AskDollyButton } from "./AskDollyButton";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 border-b border-walnut/50 bg-forest pt-[env(safe-area-inset-top)]">
+    <header className="sticky top-0 z-50 border-b border-black/10 bg-walnut pt-[env(safe-area-inset-top)]">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-2.5 sm:px-6 sm:py-3">
         <Link href="/" className="min-w-0 truncate font-serif text-lg font-bold text-cream sm:text-xl">
           Dolly Legacy
