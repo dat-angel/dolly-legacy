@@ -1,6 +1,7 @@
 import { ImageResponse } from "next/og";
 import { OG_BRAND, OG_COLORS, OG_SIZE, truncateOg } from "@/lib/og-brand";
-import { SITE } from "@/lib/site";
+import { getMomentCount } from "@/lib/moments";
+import { getSiteDescription, SITE } from "@/lib/site";
 
 export const alt = SITE.title;
 export const size = OG_SIZE;
@@ -38,11 +39,11 @@ export default function OpenGraphImage() {
             Dolly Legacy
           </div>
           <div style={{ fontSize: 40, lineHeight: 1.25, maxWidth: 920 }}>
-            {truncateOg(SITE.tagline, 90)}
+            {truncateOg(getSiteDescription(), 110)}
           </div>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", fontSize: 26, color: OG_COLORS.burgundy }}>
-          <span>Open data · quotes · songs · who she stood with</span>
+          <span>{getMomentCount()} moments · Open CC BY 4.0 data</span>
           <span>{OG_BRAND.footer}</span>
         </div>
       </div>

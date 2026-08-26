@@ -11,11 +11,11 @@ import { WhatWouldDollySay } from "@/components/WhatWouldDollySay";
 import { dollyButtonClass } from "@/components/ui/DollyButton";
 import { createPageMetadata } from "@/lib/metadata";
 import { getMomentCount } from "@/lib/moments";
+import { getSiteDescription } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "A living scrapbook of Dolly Parton",
-  description:
-    "Play Dolly Parton's life, ask what she'd say, and remix the open CC BY database of quotes, songs, films, and the people she stood with.",
+  description: getSiteDescription(),
   path: "/",
   keywords: [
     "Dolly Parton celebration",

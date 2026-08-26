@@ -1,6 +1,7 @@
 import { getMomentCount } from "./moments";
 
-export const FALLBACK_SITE_URL = "https://dollyparton.page";
+export const FALLBACK_SITE_URL = "https://www.dollyparton.page";
+export const CANONICAL_SITE_URL = "https://www.dollyparton.page";
 
 export const SITE = {
   name: "Dolly Legacy",
@@ -45,8 +46,9 @@ export function getSiteUrl(): string {
     return process.env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, "");
   }
 
-  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
-    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL.replace(/\/$/, "")}`;
+  const vercelHost = process.env.VERCEL_PROJECT_PRODUCTION_URL?.replace(/\/$/, "");
+  if (vercelHost && !vercelHost.includes("vercel.app")) {
+    return `https://${vercelHost}`;
   }
 
   return FALLBACK_SITE_URL;

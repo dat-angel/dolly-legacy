@@ -13,7 +13,7 @@ export const OG_COLORS = {
 
 export const OG_BRAND = {
   eyebrow: "DOLLY LEGACY",
-  footer: "dollyparton.page",
+  footer: "www.dollyparton.page",
 } as const;
 
 export function truncateOg(text: string, max = 140): string {

@@ -9,7 +9,8 @@ import { DollyChatRoot } from "@/components/dolly-chat/DollyChatRoot";
 import { JsonLd } from "@/components/JsonLd";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { absoluteUrl, getSiteDescription, getSiteUrl, SITE } from "@/lib/site";
+import { getRootMetadata } from "@/lib/root-metadata";
+import { absoluteUrl, getSiteDescription, SITE } from "@/lib/site";
 import "./globals.css";
 
 const libreBaskerville = Libre_Baskerville({
@@ -33,58 +34,7 @@ const typewriter = Special_Elite({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL(getSiteUrl()),
-  title: {
-    default: SITE.title,
-    template: `%s | ${SITE.name}`,
-  },
-  description: getSiteDescription(),
-  applicationName: SITE.name,
-  keywords: [...SITE.keywords],
-  authors: [{ name: SITE.creator, url: SITE.repository }],
-  creator: SITE.creator,
-  publisher: SITE.name,
-  category: "entertainment",
-  alternates: {
-    canonical: absoluteUrl("/"),
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
-    },
-  },
-  openGraph: {
-    title: SITE.title,
-    description: getSiteDescription(),
-    url: absoluteUrl("/"),
-    siteName: SITE.name,
-    locale: SITE.locale,
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: SITE.title,
-    description: SITE.shortDescription,
-  },
-  appleWebApp: {
-    capable: true,
-    title: SITE.name,
-    statusBarStyle: "default",
-  },
-  formatDetection: {
-    telephone: false,
-  },
-  other: {
-    "apple-mobile-web-app-title": SITE.name,
-  },
-};
+export const metadata: Metadata = getRootMetadata();
 
 export const viewport: Viewport = {
   width: "device-width",
