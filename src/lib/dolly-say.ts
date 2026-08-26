@@ -176,7 +176,7 @@ export const LIFE_STAGES: Record<Era, LifeStage> = {
       { label: "Belonging", text: "I feel like I don't belong" },
       { label: "Home", text: "My community is hurting and I want to help" },
     ],
-    fallbackIds: ["lgbtq-allyship", "heartstrings-queer-story", "everyone-matters", "do-it-on-purpose"],
+    fallbackIds: ["gatlinburg-relief", "dollywood", "lgbtq-allyship", "heartstrings-queer-story", "everyone-matters", "do-it-on-purpose"],
   },
   "2020s": {
     era: "2020s",

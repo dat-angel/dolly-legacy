@@ -332,6 +332,7 @@
       "category": "career",
       "tags": [
         "Tennessee",
+        "Home state",
         "Appalachia"
       ],
       "summary": "A theme park in the Great Smoky Mountains celebrating Appalachian culture — and one of Tennessee's largest employers.",
@@ -396,7 +397,8 @@
       "category": "philanthropy",
       "tags": [
         "literacy",
-        "Tennessee"
+        "Tennessee",
+        "Home state"
       ],
       "summary": "Created to inspire and educate children in the Smoky Mountains — the seed of the Imagination Library.",
       "body": "The foundation began with scholarships for local students and grew into one of the world's most ambitious literacy programs. Dolly's father's inability to read and write was the emotional core.",
@@ -426,7 +428,8 @@
       "tags": [
         "literacy",
         "children",
-        "Tennessee"
+        "Tennessee",
+        "Home state"
       ],
       "summary": "Free books mailed monthly to children from birth to age five — inspired by her father's illiteracy. Over 240 million books gifted worldwide.",
       "body": "What started in Sevier County, Tennessee, now spans the U.S., Canada, the UK, Ireland, and Australia. By 2024, roughly 1 in 7 American children under five received a book each month from the program.",
@@ -493,6 +496,7 @@
       "category": "philanthropy",
       "tags": [
         "Tennessee",
+        "Home state",
         "disaster relief"
       ],
       "summary": "After devastating wildfires near Dollywood, Dolly's My People Fund gave $1,000 a month for six months to families who lost their homes.",
@@ -524,7 +528,9 @@
       "era": "2020s",
       "category": "philanthropy",
       "tags": [
-        "health"
+        "health",
+        "Tennessee",
+        "Home state"
       ],
       "summary": "Dolly donated $1 million to Vanderbilt University Medical Center — credited in the preliminary Moderna vaccine report.",
       "body": "The Dolly Parton COVID-19 Research Fund supported early-stage work including the high-quality test used to evaluate the Moderna vaccine's immune response. In March 2021, she received her own shot from her friend Dr. Naji Abumrad.",
@@ -751,7 +757,8 @@
       "era": "2020s",
       "category": "personal",
       "tags": [
-        "Tennessee"
+        "Tennessee",
+        "Home state"
       ],
       "summary": "Tennessee Governor Bill Lee declared January 19 — Dolly's birthday and MLK Day in 2026 — as Dolly Parton Day.",
       "body": "Dolly turned 80 on January 19, 2026, the same day the nation honors Martin Luther King Jr. The dual commemoration highlighted her decades of support for civil rights and marginalized communities.",
@@ -841,7 +848,10 @@
       "year": 2000,
       "era": "2000s",
       "category": "personal",
-      "tags": [],
+      "tags": [
+        "Tennessee",
+        "Home state"
+      ],
       "summary": "Dolly on resilience — storms don't break you, they anchor you.",
       "quote": "Storms make trees take deeper roots.",
       "featured": false,

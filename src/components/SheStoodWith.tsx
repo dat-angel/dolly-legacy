@@ -13,6 +13,16 @@ const CAUSES = [
     ],
   },
   {
+    href: COMMUNITY_FILTERS["Home state"].filterHref,
+    title: "Tennessee",
+    line: "Dollywood jobs, Smoky Mountain books, Gatlinburg wildfire relief, and a state holiday.",
+    moments: [
+      { href: "/moment/dollywood", label: "Dollywood opens" },
+      { href: "/moment/gatlinburg-relief", label: "Wildfire relief" },
+      { href: "/moment/imagination-library", label: "Imagination Library" },
+    ],
+  },
+  {
     href: COMMUNITY_FILTERS["LGBTQ+"].filterHref,
     title: "LGBTQ+ people",
     line: "AIDS-era action, the 1991 song \"Family,\" drag culture, marriage equality, and Tennessee defense.",
@@ -48,7 +58,7 @@ export function SheStoodWith() {
         </h2>
         <p className="mt-3 max-w-2xl text-burgundy/75">
           A famous name, used on purpose — for working women, kids who needed
-          books, and people who were told they didn&apos;t belong.
+          books, her home state, and people who were told they didn&apos;t belong.
         </p>
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
           {CAUSES.map((cause) => (

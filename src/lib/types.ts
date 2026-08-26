@@ -85,6 +85,6 @@ export const CHAPTERS: { id: Chapter; title: string; subtitle: string }[] = [
   {
     id: "standing",
     title: "Standing With Everyone",
-    subtitle: "Allyship for Black communities, LGBTQ+ people, and working women",
+    subtitle: "Allyship for Black communities, LGBTQ+ people, Tennessee, and working women",
   },
 ];

@@ -16,6 +16,7 @@ import { cn } from "@/lib/utils";
 const TAGS = [
   "LGBTQ+",
   "Black community",
+  "Home state",
   "women",
   "literacy",
   "Tennessee",

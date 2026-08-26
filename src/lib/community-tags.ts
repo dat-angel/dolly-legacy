@@ -1,4 +1,4 @@
-export const COMMUNITY_FILTER_TAGS = ["Black community", "LGBTQ+"] as const;
+export const COMMUNITY_FILTER_TAGS = ["Black community", "LGBTQ+", "Home state"] as const;
 
 export type CommunityFilterTag = (typeof COMMUNITY_FILTER_TAGS)[number];
 
@@ -38,6 +38,20 @@ export const COMMUNITY_FILTERS: Record<CommunityFilterTag, CommunityFilterMeta> 
       { id: "heartstrings-queer-story", label: "Heartstrings episode" },
     ],
     filterHref: "/moments?tag=LGBTQ%2B",
+  },
+  "Home state": {
+    tag: "Home state",
+    title: "Standing with Tennessee",
+    intro:
+      "She never really left the Smokies — she built Dollywood into one of the state's largest employers, seeded the Imagination Library in Sevier County, funded Vanderbilt's COVID research in Nashville, and wrote checks for six months when Gatlinburg burned. Tennessee made her; she kept showing up for it.",
+    highlights: [
+      { id: "dollywood", label: "Dollywood opens" },
+      { id: "imagination-library", label: "Imagination Library" },
+      { id: "gatlinburg-relief", label: "Gatlinburg wildfire relief" },
+      { id: "covid-vaccine", label: "Vanderbilt COVID fund" },
+      { id: "dolly-parton-day", label: "Dolly Parton Day" },
+    ],
+    filterHref: "/moments?tag=Home%20state",
   },
 };
 
