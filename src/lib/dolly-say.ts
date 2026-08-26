@@ -266,6 +266,18 @@ function scoreMoment(
       }
     }
 
+    const extraTerms = [...(moment.tags ?? []), ...(moment.moodTags ?? [])];
+    for (const term of extraTerms) {
+      const value = term.toLowerCase();
+      if (word === value || (word.length >= 4 && value.includes(word))) {
+        const score = 6 + (word === value ? 4 : 0);
+        if (score > bestScore) {
+          bestScore = score;
+          matchedKeyword = matchedKeyword ?? term;
+        }
+      }
+    }
+
     const haystack = [
       moment.title,
       ...(moment.tags ?? []),

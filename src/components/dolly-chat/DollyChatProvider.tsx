@@ -62,9 +62,8 @@ export function DollyChatProvider({ children }: { children: ReactNode }) {
   const [pending, setPending] = useState(false);
   const hydrated = useRef(false);
   const replyTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
-  const eraRef = useRef<ChatEra>(era);
+  const eraRef = useRef<ChatEra>("any");
   const pendingRef = useRef(false);
-  eraRef.current = era;
 
   const setEra = useCallback((next: ChatEra) => {
     if (eraRef.current === next) return;

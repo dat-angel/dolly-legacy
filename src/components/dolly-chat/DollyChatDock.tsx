@@ -13,26 +13,28 @@ export function DollyChatDock() {
   const { era, dockOpen, closeDock, toggleDock } = useDollyChat();
   const titleId = useId();
   const pathname = usePathname();
+  const onHome = pathname === "/";
   const [sectionVisible, setSectionVisible] = useState(false);
   const portrait = era === "any" ? getEraImage("1970s") : getEraImage(era);
   const nickname = era === "any" ? "Any time" : LIFE_STAGES[era].nickname;
 
   useEffect(() => {
-    setSectionVisible(false);
+    if (!onHome) return;
     const section = document.getElementById("what-would-dolly-say");
     if (!section) return;
     const observer = new IntersectionObserver(
-      ([entry]) =>
-        setSectionVisible(entry.isIntersecting && entry.intersectionRatio > 0.35),
+      ([entry]) => {
+        const visible = entry.isIntersecting && entry.intersectionRatio > 0.35;
+        setSectionVisible(visible);
+        if (visible) closeDock();
+      },
       { threshold: [0, 0.35, 0.6] },
     );
     observer.observe(section);
     return () => observer.disconnect();
-  }, [pathname]);
+  }, [onHome, closeDock]);
 
-  useEffect(() => {
-    if (sectionVisible && dockOpen) closeDock();
-  }, [sectionVisible, dockOpen, closeDock]);
+  const hideFab = onHome && sectionVisible && !dockOpen;
 
   useEffect(() => {
     if (!dockOpen) return;
