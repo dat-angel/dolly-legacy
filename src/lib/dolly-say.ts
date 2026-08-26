@@ -197,13 +197,13 @@ export const LIFE_STAGES: Record<Era, LifeStage> = {
 export const ANY_TIME_STAGE = {
   nickname: "Any time",
   years: "1946–now",
-  greeting:
-    "Pick a time in her life — or ask from any decade. Replies are words she actually said, tied to the year she said them.",
+  greeting: "Tap something on your mind. She answers in her own words.",
   prompts: [
     { label: "Work stress", text: "My boss doesn't respect me and I'm exhausted" },
     { label: "Need courage", text: "I'm scared and need courage today" },
-    { label: "Acceptance", text: "Someone I love is different and I want to understand" },
-    { label: "Giving back", text: "I want to help children in my community" },
+    { label: "Someone came out", text: "Someone I love came out to me" },
+    { label: "I don't belong", text: "I feel like I don't belong" },
+    { label: "Help kids", text: "I want to help children in my community" },
     { label: "Hard times", text: "I'm going through a really tough time right now" },
   ],
 } as const;

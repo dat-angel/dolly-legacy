@@ -97,7 +97,7 @@ export function InteractiveChapterSection({
       <div className="mx-auto max-w-6xl">
         <div className="relative mb-8 grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
           <div className="max-w-2xl">
-            <p className="font-script text-2xl text-hot-pink md:text-3xl">
+            <p className="font-script text-2xl text-gold md:text-3xl">
               {accent.label}
             </p>
             <h2 className="font-serif text-3xl font-bold text-burgundy-deep md:text-5xl">
@@ -164,17 +164,17 @@ export function InteractiveChapterSection({
             type="button"
             onClick={() => setRevealedFacts((v) => !v)}
             className={cn(
-              "min-h-11 rounded-full border-2 border-dashed px-4 py-2 text-sm font-semibold transition",
+              "min-h-11 rounded-sm border px-4 py-2 text-sm font-semibold transition",
               revealedFacts
                 ? "border-gold bg-gold/20 text-burgundy-deep"
-                : "border-blush-deep/40 text-burgundy hover:border-hot-pink",
+                : "border-gold/40 text-burgundy hover:border-gold",
             )}
           >
-            {revealedFacts ? "Hide rhinestones" : "Reveal hidden facts"}
+            {revealedFacts ? "Hide liner notes" : "Show liner notes"}
           </button>
           <Link
             href={`/chapter/${chapterId}`}
-            className="text-sm font-semibold text-hot-pink hover:text-burgundy"
+            className="text-sm font-semibold text-gold hover:text-burgundy"
           >
             Open chapter page →
           </Link>

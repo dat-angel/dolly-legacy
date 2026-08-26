@@ -27,7 +27,7 @@ export function Hero() {
         {onThisDay && (
           <Link
             href={`/moment/${onThisDay.id}`}
-            className="mb-5 inline-flex max-w-full items-center gap-2 self-start rounded-full border border-cream/30 bg-burgundy-deep/40 px-4 py-2.5 text-left text-sm text-cream backdrop-blur-sm"
+            className="mb-5 inline-flex max-w-full items-center gap-2 self-start rounded-sm border border-cream/30 bg-burgundy-deep/40 px-4 py-2.5 text-left text-sm text-cream backdrop-blur-sm"
           >
             <Rhinestone size={14} className="shrink-0 text-gold-light" />
             <span className="min-w-0">
@@ -38,8 +38,8 @@ export function Hero() {
           </Link>
         )}
 
-        <p className="font-script text-3xl text-hot-pink-light sm:text-4xl">
-          y&apos;all already know
+        <p className="font-script text-3xl text-gold-light sm:text-4xl">
+          the country star
         </p>
         <h1 className="mt-1 font-serif text-5xl font-bold leading-[0.95] sm:text-7xl md:text-8xl">
           Dolly.

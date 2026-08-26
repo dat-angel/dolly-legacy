@@ -12,7 +12,6 @@ import {
 } from "react";
 import {
   getGreetingForEra,
-  isEra,
   replyFromMoment,
   whatWouldDollySay,
   type ChatEra,
@@ -66,25 +65,15 @@ export function DollyChatProvider({ children }: { children: ReactNode }) {
   const pendingRef = useRef(false);
 
   const setEra = useCallback((next: ChatEra) => {
-    if (eraRef.current === next) return;
     eraRef.current = next;
     setEraState(next);
-    setMessages((prev) => [
-      ...prev,
-      {
-        id: nextId("stage"),
-        role: "stage",
-        era: next,
-        text: getGreetingForEra(next),
-      },
-    ]);
   }, []);
 
   const ask = useCallback((raw: string) => {
     const text = raw.trim();
     if (!text || pendingRef.current) return;
 
-    const askedEra = eraRef.current;
+    const askedEra = "any";
     if (replyTimer.current) clearTimeout(replyTimer.current);
     pendingRef.current = true;
     setMessages((prev) => [...prev, { id: nextId("user"), role: "user", text }]);
@@ -115,7 +104,7 @@ export function DollyChatProvider({ children }: { children: ReactNode }) {
       if (!moment) return;
       hydrated.current = true;
 
-      const requested: ChatEra = isEra(options.era) ? options.era : "any";
+      const requested: ChatEra = "any";
       const query = options.query?.trim() || "What would Dolly say?";
       eraRef.current = requested;
       setEraState(requested);
@@ -124,7 +113,7 @@ export function DollyChatProvider({ children }: { children: ReactNode }) {
           id: "welcome",
           role: "stage",
           era: requested,
-          text: getGreetingForEra(requested),
+          text: getGreetingForEra("any"),
         },
         { id: "shared-user", role: "user", text: query },
         {

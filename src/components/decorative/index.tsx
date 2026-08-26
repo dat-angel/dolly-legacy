@@ -96,11 +96,9 @@ export function StarBurst({
 export function StitchDivider({ className }: { className?: string }) {
   return (
     <div className={cn("stitch-divider", className)} aria-hidden>
-      <Rhinestone size={14} className="text-gold" />
       <span className="stitch-line" />
-      <StarBurst size={16} className="text-hot-pink" />
+      <span className="h-1.5 w-1.5 rounded-full bg-gold" />
       <span className="stitch-line" />
-      <Rhinestone size={14} className="text-gold" />
     </div>
   );
 }

@@ -6,14 +6,13 @@ import { HomeUrlSync } from "@/components/HomeUrlSync";
 import { LifeTimeline } from "@/components/LifeTimeline";
 import { StatsStrip } from "@/components/StatsStrip";
 import { WhatWouldDollySay } from "@/components/WhatWouldDollySay";
-import { StitchDivider, Rhinestone, StarBurst } from "@/components/decorative";
 import { dollyButtonClass } from "@/components/ui/DollyButton";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Interactive Dolly Parton tribute",
   description:
-    "Slide through Dolly Parton's life from Locust Ridge to now, then ask what she'd say at a certain time — an open tribute to her music, philanthropy, and advocacy.",
+    "Slide through Dolly Parton's life from Locust Ridge to now, then ask what she'd say — an open tribute to her music, philanthropy, and advocacy.",
   path: "/",
   keywords: [
     "interactive Dolly Parton exhibit",
@@ -38,24 +37,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden border-t-2 border-dashed border-blush-deep/40 bg-gradient-to-b from-cream to-blush/20 px-4 py-16 text-center sm:px-6 md:py-20">
-        <StarBurst
-          size={32}
-          className="absolute left-[15%] top-[20%] text-gold/40"
-        />
-        <Rhinestone
-          size={20}
-          className="absolute right-[18%] top-[30%] text-hot-pink/50"
-        />
-
-        <p className="font-script text-3xl text-hot-pink">one more thing, honey</p>
-        <h2 className="mt-2 font-serif text-3xl font-bold text-burgundy-deep md:text-4xl">
-          Ready to explore everything?
+      <section className="relative overflow-hidden border-t border-gold/20 bg-burgundy-deep px-4 py-16 text-center text-cream sm:px-6 md:py-20">
+        <p className="font-script text-2xl text-gold sm:text-3xl">the archive</p>
+        <h2 className="mt-2 font-serif text-3xl font-bold md:text-4xl">
+          Every moment, on paper.
         </h2>
-        <StitchDivider className="mx-auto max-w-xs" />
-        <p className="mx-auto max-w-lg text-burgundy/75">
+        <div className="mx-auto my-6 h-px max-w-xs bg-gold/30" />
+        <p className="mx-auto max-w-lg text-cream/75">
           Browse the full archive — filter by era, category, and theme. Press{" "}
-          <kbd className="rounded border-2 border-dashed border-blush px-2 py-0.5 font-mono text-xs">
+          <kbd className="rounded-sm border border-gold/40 px-2 py-0.5 font-mono text-xs text-gold">
             ?
           </kbd>{" "}
           for a surprise.

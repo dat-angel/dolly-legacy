@@ -75,17 +75,17 @@ export default async function MomentPage({ params }: PageProps<"/moment/[id]">) 
   return (
     <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
       <JsonLd data={articleJsonLd} />
-      <Link href="/moments" className="text-sm font-semibold text-hot-pink hover:text-burgundy">
+      <Link href="/moments" className="text-sm font-semibold text-gold hover:text-burgundy">
         ← All moments
       </Link>
 
       <div className="mt-8 flex flex-wrap gap-2">
         {moment.year && (
-          <span className="rounded-full bg-blush/50 px-2.5 py-0.5 text-xs font-medium">
+          <span className="rounded-sm bg-burgundy-deep px-2.5 py-0.5 font-mono text-xs font-medium text-gold">
             {moment.year}
           </span>
         )}
-        <span className="rounded-full bg-cream px-2.5 py-0.5 text-xs capitalize">
+        <span className="rounded-sm border border-gold/40 bg-cream px-2.5 py-0.5 font-mono text-xs capitalize">
           {moment.category}
         </span>
       </div>
@@ -105,7 +105,7 @@ export default async function MomentPage({ params }: PageProps<"/moment/[id]">) 
       )}
 
       {moment.quote && (
-        <blockquote className="mt-8 font-serif text-2xl italic leading-snug text-burgundy rhinestone md:text-3xl">
+        <blockquote className="mt-8 font-script text-2xl leading-snug text-burgundy md:text-3xl">
           &ldquo;{moment.quote}&rdquo;
         </blockquote>
       )}
@@ -116,7 +116,7 @@ export default async function MomentPage({ params }: PageProps<"/moment/[id]">) 
 
       {moment.hiddenFact && (
         <div className="mt-8 rounded-xl border border-gold/30 bg-gold/5 p-5">
-          <p className="text-sm font-medium text-gold">Between the rhinestones</p>
+          <p className="font-mono text-xs font-medium uppercase tracking-[0.16em] text-gold">Liner notes</p>
           <p className="mt-2 italic text-burgundy/75">{moment.hiddenFact}</p>
         </div>
       )}
@@ -151,7 +151,7 @@ export default async function MomentPage({ params }: PageProps<"/moment/[id]">) 
               <li key={r.id}>
                 <Link
                   href={`/moment/${r.id}`}
-                  className="font-semibold text-hot-pink hover:text-burgundy"
+                  className="font-semibold text-gold hover:text-burgundy"
                 >
                   {r.title}
                 </Link>

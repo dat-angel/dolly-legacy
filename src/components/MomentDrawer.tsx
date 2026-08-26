@@ -78,15 +78,15 @@ export function MomentDrawer({ moment, onClose, onSelect }: MomentDrawerProps) {
 
         <div className="mb-4 flex flex-wrap gap-2">
           {moment.year && (
-            <span className="rounded-full bg-blush/50 px-2.5 py-0.5 text-xs font-medium">
+            <span className="rounded-sm bg-burgundy-deep px-2.5 py-0.5 font-mono text-xs font-medium text-gold">
               {moment.year}
             </span>
           )}
-          <span className="rounded-full bg-cream px-2.5 py-0.5 text-xs capitalize">
+          <span className="rounded-sm border border-gold/40 bg-cream px-2.5 py-0.5 font-mono text-xs capitalize">
             {moment.category}
           </span>
           {moment.chapter && (
-            <span className="rounded-full border border-blush/50 px-2.5 py-0.5 text-xs capitalize">
+            <span className="rounded-sm border border-gold/40 px-2.5 py-0.5 font-mono text-xs capitalize">
               {moment.chapter}
             </span>
           )}
@@ -109,7 +109,7 @@ export function MomentDrawer({ moment, onClose, onSelect }: MomentDrawerProps) {
         )}
 
         {moment.quote && (
-          <blockquote className="mt-6 font-serif text-xl italic leading-snug text-burgundy rhinestone sm:text-2xl">
+          <blockquote className="mt-6 font-script text-xl leading-snug text-burgundy sm:text-2xl">
             &ldquo;{moment.quote}&rdquo;
           </blockquote>
         )}
@@ -120,7 +120,7 @@ export function MomentDrawer({ moment, onClose, onSelect }: MomentDrawerProps) {
 
         {moment.hiddenFact && (
           <div className="mt-6 rounded-xl border border-gold/30 bg-gold/5 p-4">
-            <p className="text-sm font-medium text-gold">Between the rhinestones</p>
+            <p className="font-mono text-xs font-medium uppercase tracking-[0.16em] text-gold">Liner notes</p>
             <p className="mt-2 text-sm italic text-burgundy/70">{moment.hiddenFact}</p>
           </div>
         )}
@@ -146,7 +146,7 @@ export function MomentDrawer({ moment, onClose, onSelect }: MomentDrawerProps) {
         />
 
         {related.length > 0 && (
-          <div className="mt-8 border-t border-blush/40 pt-6">
+          <div className="mt-8 border-t border-gold/25 pt-6">
             <p className="mb-3 text-sm font-medium text-burgundy/60">
               This connects to…
             </p>
@@ -156,7 +156,7 @@ export function MomentDrawer({ moment, onClose, onSelect }: MomentDrawerProps) {
                   key={r.id}
                   type="button"
                   onClick={() => onSelect(r)}
-                  className="min-h-11 rounded-full border border-blush/50 bg-white/60 px-4 py-2 text-sm text-burgundy transition hover:border-gold"
+                  className="min-h-11 rounded-sm border border-gold/40 bg-white/60 px-4 py-2 text-sm text-burgundy transition hover:border-gold"
                 >
                   {r.title}
                 </button>

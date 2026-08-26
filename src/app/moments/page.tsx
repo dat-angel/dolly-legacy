@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { MomentsArchive } from "@/components/MomentsArchive";
-import { SparkleField } from "@/components/decorative";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createPageMetadata({
@@ -21,11 +20,10 @@ export const metadata: Metadata = createPageMetadata({
 export default function MomentsPage() {
   return (
     <div className="relative overflow-hidden px-4 py-10 sm:px-6 md:py-16">
-      <SparkleField />
       <div className="relative mx-auto max-w-6xl">
         <Suspense
           fallback={
-            <p className="font-script text-2xl text-hot-pink">
+            <p className="font-script text-2xl text-gold">
               Loading moments…
             </p>
           }

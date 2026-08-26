@@ -2,12 +2,12 @@ export const OG_SIZE = { width: 1200, height: 630 } as const;
 export const STORY_SIZE = { width: 1080, height: 1920 } as const;
 
 export const OG_COLORS = {
-  burgundy: "#5c1830",
-  burgundyDeep: "#3d0f20",
-  hotPink: "#e91e8c",
-  gold: "#d4a017",
-  cream: "#fff8f0",
-  blush: "#ffc8d4",
+  burgundy: "#1c1814",
+  burgundyDeep: "#0c0b09",
+  hotPink: "#c9a227",
+  gold: "#c9a227",
+  cream: "#f7f3ea",
+  blush: "#e7dfd0",
 } as const;
 
 export const OG_BRAND = {

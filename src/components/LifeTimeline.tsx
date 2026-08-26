@@ -23,6 +23,7 @@ import { useDollyChat } from "./dolly-chat/DollyChatProvider";
 import { MomentDrawer } from "./MomentDrawer";
 import { Rhinestone } from "./decorative";
 import { ShareMenu } from "./ShareMenu";
+import { Typewriter } from "./Typewriter";
 import { dollyButtonClass } from "./ui/DollyButton";
 import { cn } from "@/lib/utils";
 
@@ -53,7 +54,7 @@ export function LifeTimeline() {
     () => window.location.search,
     () => "",
   );
-  const { setEra, openDock } = useDollyChat();
+  const { openDock } = useDollyChat();
   const urlIndex = indexFromParams(new URLSearchParams(search));
   const [userIndex, setUserIndex] = useState<number | null>(null);
   const [playing, setPlaying] = useState(false);
@@ -119,10 +120,8 @@ export function LifeTimeline() {
     goTo(index + (dx < 0 ? 1 : -1), true);
   }
 
-  function askFromThisTime() {
-    setEra(moment.era);
-    openDock();
-  }
+  const studioTypewriter =
+    moment.era === "1980s" && Boolean(moment.quote) && !reduceMotion;
 
   return (
     <section
@@ -192,7 +191,7 @@ export function LifeTimeline() {
         </div>
 
         <div className="relative z-10 flex flex-col justify-end px-4 pb-[max(1.25rem,env(safe-area-inset-bottom))] pt-5 sm:px-6 lg:justify-center lg:py-16">
-          <p className="font-script text-2xl text-hot-pink-light sm:text-3xl">
+          <p className="font-script text-2xl text-gold-light sm:text-3xl">
             slide her life
           </p>
           <p className="font-mono text-sm font-bold uppercase tracking-widest text-gold-light">
@@ -202,8 +201,26 @@ export function LifeTimeline() {
             {moment.title}
           </h2>
           {moment.quote ? (
-            <blockquote className="mt-3 font-serif text-lg italic leading-snug text-cream/95 sm:text-xl">
-              &ldquo;{moment.quote}&rdquo;
+            <blockquote className="mt-3">
+              {studioTypewriter ? (
+                <>
+                  <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.22em] text-gold/80">
+                    click-clack
+                  </p>
+                  <Typewriter
+                    key={moment.id}
+                    text={`“${moment.quote}”`}
+                    className="font-script text-lg leading-snug text-cream/95 sm:text-xl"
+                    speed={28}
+                    startOnView={false}
+                    playSound={!reduceMotion}
+                  />
+                </>
+              ) : (
+                <p className="font-script text-lg leading-snug text-cream/95 sm:text-xl">
+                  &ldquo;{moment.quote}&rdquo;
+                </p>
+              )}
             </blockquote>
           ) : (
             <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-cream/80 sm:text-base">
@@ -230,9 +247,9 @@ export function LifeTimeline() {
                       goTo(eraIndex, true);
                     }}
                     className={cn(
-                      "min-h-10 shrink-0 rounded-full px-3 text-xs font-bold uppercase tracking-wide",
+                      "min-h-10 shrink-0 rounded-sm px-3 font-mono text-xs font-bold uppercase tracking-wide",
                       active
-                        ? "bg-hot-pink text-cream"
+                        ? "bg-gold text-burgundy-deep"
                         : "bg-white/10 text-cream/80 hover:bg-white/20",
                     )}
                   >
@@ -268,7 +285,7 @@ export function LifeTimeline() {
                 type="button"
                 onClick={() => setPlaying((value) => !value)}
                 aria-pressed={playing}
-                className="inline-flex min-h-11 items-center rounded-full border border-cream/30 px-4 text-sm font-semibold text-cream hover:bg-white/10"
+                className="inline-flex min-h-11 items-center rounded-sm border border-cream/30 px-4 text-sm font-semibold text-cream hover:bg-white/10"
               >
                 {playing ? "Pause" : "Play"}
               </button>
@@ -283,13 +300,13 @@ export function LifeTimeline() {
             </button>
             <button
               type="button"
-              onClick={askFromThisTime}
+              onClick={openDock}
               className={dollyButtonClass(
                 "secondary",
                 "min-h-11 border-cream/40 bg-white/10 px-5 text-cream hover:bg-white/20",
               )}
             >
-              Ask her then
+              Ask Dolly
             </button>
             <ShareMenu
               title={moment.title}
@@ -306,7 +323,7 @@ export function LifeTimeline() {
           {chapter && moment.chapter && (
             <Link
               href={`/chapter/${moment.chapter}`}
-              className="mt-4 text-sm font-semibold text-hot-pink-light hover:text-gold-light"
+              className="mt-4 text-sm font-semibold text-gold-light hover:text-gold"
             >
               {chapter.title} →
             </Link>

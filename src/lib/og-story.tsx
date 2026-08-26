@@ -50,7 +50,7 @@ export function StoryCardMarkup({
               position: "absolute",
               inset: 0,
               background:
-                "linear-gradient(180deg, rgba(61,15,32,0.05) 40%, rgba(61,15,32,0.88) 100%)",
+                "linear-gradient(180deg, rgba(12,11,9,0.05) 40%, rgba(12,11,9,0.88) 100%)",
             }}
           />
         </div>

@@ -14,7 +14,7 @@ export const metadata: Metadata = createPageMetadata({
 export default function NotFound() {
   return (
     <div className="mx-auto flex min-h-[60vh] max-w-2xl flex-col items-center justify-center px-6 py-20 text-center">
-      <p className="font-script text-4xl text-hot-pink">lost in the holler</p>
+      <p className="font-script text-4xl text-gold">page not found</p>
       <h1 className="mt-4 font-serif text-4xl font-bold text-burgundy-deep md:text-5xl">
         Page not found
       </h1>

@@ -2,10 +2,10 @@ import { cn } from "@/lib/utils";
 
 const variants = {
   primary:
-    "bg-gradient-to-r from-hot-pink to-burgundy text-cream shadow-[0_4px_0_#3d1f24,0_6px_20px_rgba(233,30,140,0.35)] hover:shadow-[0_2px_0_#3d1f24,0_4px_16px_rgba(233,30,140,0.4)] hover:translate-y-0.5 active:translate-y-1 active:shadow-none",
+    "bg-gold text-burgundy-deep shadow-[0_4px_0_#0c0b09] hover:bg-gold-light hover:shadow-[0_2px_0_#0c0b09] hover:translate-y-0.5 active:translate-y-1 active:shadow-none",
   secondary:
-    "border-2 border-dashed border-hot-pink/50 bg-cream/80 text-burgundy hover:border-gold hover:bg-gold/10 hover:text-burgundy-deep",
-  ghost: "text-burgundy hover:text-hot-pink underline-offset-4 hover:underline",
+    "border border-gold/60 bg-transparent text-burgundy hover:border-gold hover:bg-gold/10",
+  ghost: "text-burgundy hover:text-gold underline-offset-4 hover:underline",
 };
 
 export function dollyButtonClass(
@@ -13,7 +13,7 @@ export function dollyButtonClass(
   className?: string,
 ) {
   return cn(
-    "inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-6 py-3.5 font-semibold transition-all duration-200 sm:px-8",
+    "inline-flex min-h-11 items-center justify-center gap-2 rounded-sm px-6 py-3.5 font-semibold transition-all duration-200 sm:px-8",
     variants[variant],
     className,
   );

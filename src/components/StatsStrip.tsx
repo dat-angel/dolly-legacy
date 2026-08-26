@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import { getImpactStats } from "@/lib/moments";
-import { Rhinestone, StarBurst } from "./decorative";
 
 const stats = [
   { key: "books" as const, label: "Books gifted", icon: "📚" },
@@ -57,11 +56,7 @@ export function StatsStrip() {
           </div>
         ))}
       </div>
-      <div className="mt-6 flex justify-center gap-3">
-        <Rhinestone size={12} className="text-gold-light/60" />
-        <StarBurst size={14} className="text-hot-pink-light/70" />
-        <Rhinestone size={12} className="text-gold-light/60" />
-      </div>
+      <div className="mx-auto mt-6 h-px max-w-xs bg-gold/30" />
     </section>
   );
 }

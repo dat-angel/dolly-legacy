@@ -3,7 +3,6 @@ import { Analytics } from "@vercel/analytics/next";
 import {
   Libre_Baskerville,
   Source_Sans_3,
-  Sacramento,
   Special_Elite,
 } from "next/font/google";
 import { DollyChatRoot } from "@/components/dolly-chat/DollyChatRoot";
@@ -24,13 +23,6 @@ const libreBaskerville = Libre_Baskerville({
 const sourceSans = Source_Sans_3({
   variable: "--font-sans-body",
   subsets: ["latin"],
-  display: "swap",
-});
-
-const sacramento = Sacramento({
-  variable: "--font-script-accent",
-  subsets: ["latin"],
-  weight: "400",
   display: "swap",
 });
 
@@ -120,7 +112,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${libreBaskerville.variable} ${sourceSans.variable} ${sacramento.variable} ${typewriter.variable} h-full antialiased`}
+      className={`${libreBaskerville.variable} ${sourceSans.variable} ${typewriter.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col overflow-x-clip font-sans text-burgundy-deep">
         <a href="#main-content" className="skip-link">

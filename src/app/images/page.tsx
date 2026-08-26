@@ -19,7 +19,7 @@ export default function ImagesPage() {
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-16">
-      <p className="font-script text-3xl text-hot-pink">photo credits</p>
+      <p className="font-script text-3xl text-gold">photo credits</p>
       <h1 className="font-serif text-4xl font-bold text-burgundy-deep md:text-5xl">
         Images &amp; licensing
       </h1>
@@ -30,7 +30,7 @@ export default function ImagesPage() {
           href="https://commons.wikimedia.org/wiki/Category:Dolly_Parton"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-semibold text-hot-pink hover:text-burgundy"
+          className="font-semibold text-gold hover:text-burgundy"
         >
           Wikimedia Commons
         </a>{" "}
@@ -58,7 +58,7 @@ export default function ImagesPage() {
           href="https://github.com/dat-angel/dolly-legacy/blob/main/CONTRIBUTING.md"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-hot-pink hover:text-burgundy"
+          className="text-gold hover:text-burgundy"
         >
           CONTRIBUTING.md
         </a>
@@ -67,7 +67,7 @@ export default function ImagesPage() {
 
       <Link
         href="/moments"
-        className="mt-8 inline-block font-semibold text-hot-pink hover:text-burgundy"
+        className="mt-8 inline-block font-semibold text-gold hover:text-burgundy"
       >
         ← Back to moments
       </Link>
@@ -87,7 +87,7 @@ function CreditList({
       {credits.map(({ key, label, credit }) => (
         <li
           key={key}
-          className="rounded-sm border-2 border-dashed border-blush-deep/40 bg-white/70 p-6"
+          className="rounded-sm border border-gold/30 bg-white/70 p-6"
         >
           <div className={showThumb ? "flex gap-5" : undefined}>
             {showThumb && (
@@ -114,7 +114,7 @@ function CreditList({
                       href={credit.commonsUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-hot-pink hover:text-burgundy"
+                      className="text-gold hover:text-burgundy"
                     >
                       {credit.commonsTitle}
                     </a>

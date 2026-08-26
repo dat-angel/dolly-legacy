@@ -81,13 +81,13 @@ export function ShareMenu({
   }
 
   const triggerClass = compact
-    ? "inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-gold/40 px-4 text-sm font-semibold text-gold transition hover:bg-gold/10 active:bg-gold/20"
-    : "inline-flex min-h-11 items-center justify-center rounded-full border-2 border-dashed border-hot-pink/40 bg-white/80 px-5 text-sm font-semibold text-burgundy transition hover:border-hot-pink hover:bg-hot-pink/10 hover:text-hot-pink active:bg-hot-pink/15";
+    ? "inline-flex min-h-11 min-w-11 items-center justify-center rounded-sm border border-gold/40 px-4 text-sm font-semibold text-gold transition hover:bg-gold/10 active:bg-gold/20"
+    : "inline-flex min-h-11 items-center justify-center rounded-sm border border-gold/50 bg-white/80 px-5 text-sm font-semibold text-burgundy transition hover:border-gold hover:bg-gold/10 hover:text-burgundy-deep active:bg-gold/15";
 
   const badgeClass =
-    "flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blush/50 text-xs font-bold text-burgundy-deep";
+    "flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-burgundy-deep text-xs font-bold text-gold";
   const rowClass =
-    "flex min-h-12 w-full items-center gap-3 rounded-2xl border border-blush-deep/30 bg-white/90 px-3 text-left text-base font-semibold text-burgundy-deep transition active:bg-blush/40";
+    "flex min-h-12 w-full items-center gap-3 rounded-sm border border-gold/30 bg-white/90 px-3 text-left text-base font-semibold text-burgundy-deep transition active:bg-gold/10";
 
   return (
     <div className={cn("relative", className)}>
@@ -117,10 +117,10 @@ export function ShareMenu({
             role="dialog"
             aria-modal="true"
             aria-labelledby={titleId}
-            className="relative z-10 w-full max-w-md rounded-t-3xl border-2 border-gold/40 bg-cream p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] shadow-2xl sm:rounded-3xl sm:p-6"
+            className="relative z-10 w-full max-w-md rounded-t-sm border border-gold/40 bg-cream p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] shadow-2xl sm:rounded-sm sm:p-6"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="mx-auto mb-4 h-1 w-12 rounded-full bg-blush-deep/50 sm:hidden" />
+            <div className="mx-auto mb-4 h-1 w-12 rounded-full bg-gold/40 sm:hidden" />
             <h2 id={titleId} className="font-serif text-2xl font-bold text-burgundy-deep">
               Share this
             </h2>
@@ -174,7 +174,7 @@ export function ShareMenu({
             </div>
 
             {status && (
-              <p className="mt-4 text-center text-sm font-semibold text-hot-pink" role="status">
+              <p className="mt-4 text-center text-sm font-semibold text-gold" role="status">
                 {status}
               </p>
             )}
@@ -182,7 +182,7 @@ export function ShareMenu({
             <button
               type="button"
               onClick={() => setOpen(false)}
-              className="mt-4 min-h-11 w-full rounded-full text-sm font-semibold text-burgundy/70 active:text-burgundy"
+              className="mt-4 min-h-11 w-full rounded-sm text-sm font-semibold text-burgundy/70 active:text-burgundy"
             >
               Close
             </button>

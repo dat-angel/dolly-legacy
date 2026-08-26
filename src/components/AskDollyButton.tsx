@@ -13,7 +13,7 @@ export function AskDollyButton({ className }: { className?: string }) {
     <Link
       href="/#what-would-dolly-say"
       className={cn(
-        "inline-flex min-h-11 items-center rounded-full bg-gradient-to-r from-hot-pink/10 to-gold/10 px-3 text-burgundy transition hover:from-hot-pink/20 hover:to-gold/20 sm:px-4",
+        "inline-flex min-h-11 items-center rounded-sm bg-gold px-3 font-mono text-xs font-semibold uppercase tracking-[0.16em] text-burgundy-deep transition hover:bg-gold-light sm:px-4",
         className,
       )}
       onClick={(event) => {

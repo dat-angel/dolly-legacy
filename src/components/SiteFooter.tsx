@@ -1,55 +1,46 @@
 import Link from "next/link";
-import { Rhinestone, StitchDivider, Butterfly } from "./decorative";
 
 export function SiteFooter() {
   return (
-    <footer className="relative border-t-2 border-dashed border-blush-deep/40 bg-gradient-to-t from-blush/20 to-cream py-12 pb-[max(3rem,env(safe-area-inset-bottom))] sm:py-14">
-      <Butterfly
-        size={36}
-        className="absolute bottom-8 left-[10%] text-hot-pink/30"
-      />
+    <footer className="relative border-t border-gold/20 bg-burgundy-deep py-12 pb-[max(3rem,env(safe-area-inset-bottom))] text-cream sm:py-14">
       <div className="mx-auto max-w-6xl px-4 text-center sm:px-6">
-        <div className="flex items-center justify-center gap-2">
-          <Rhinestone size={18} className="text-gold" />
-          <p className="font-serif text-2xl font-bold text-burgundy-deep">
-            A fan tribute to Dolly Parton
-          </p>
-          <Rhinestone size={18} className="text-gold" />
-        </div>
-        <p className="font-script mt-2 text-2xl text-hot-pink/80">
+        <p className="font-serif text-2xl font-bold text-cream">
+          A fan tribute to Dolly Parton
+        </p>
+        <p className="font-script mt-3 text-xl text-gold sm:text-2xl">
           find out who you are and do it on purpose
         </p>
-        <StitchDivider className="mx-auto max-w-sm" />
-        <p className="text-sm text-burgundy/60">
+        <div className="mx-auto my-6 h-px max-w-sm bg-gold/30" />
+        <p className="text-sm text-cream/60">
           Not affiliated with Dolly Parton, Dollywood, or the Imagination
           Library. Quotes attributed to public sources.
         </p>
-        <p className="mt-2 text-xs text-burgundy/50">
+        <p className="mt-2 text-xs text-cream/45">
           Code: MIT · Data:{" "}
           <a
             href="https://creativecommons.org/licenses/by/4.0/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-hot-pink"
+            className="text-gold hover:text-gold-light"
           >
             CC BY 4.0
           </a>
         </p>
-        <div className="mt-6 flex flex-wrap justify-center gap-6 text-sm font-semibold">
-          <Link href="/moments" className="text-burgundy hover:text-hot-pink">
+        <div className="mt-6 flex flex-wrap justify-center gap-6 font-mono text-xs font-semibold uppercase tracking-[0.14em]">
+          <Link href="/moments" className="text-cream/80 hover:text-gold">
             Explore moments
           </Link>
-          <Link href="/#what-would-dolly-say" className="text-burgundy hover:text-hot-pink">
+          <Link href="/#what-would-dolly-say" className="text-cream/80 hover:text-gold">
             Ask Dolly
           </Link>
-          <Link href="/images" className="text-burgundy hover:text-hot-pink">
+          <Link href="/images" className="text-cream/80 hover:text-gold">
             Photo credits
           </Link>
           <a
             href="https://imaginationlibrary.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-burgundy hover:text-hot-pink"
+            className="text-cream/80 hover:text-gold"
           >
             Imagination Library
           </a>

@@ -46,7 +46,7 @@ export function MomentCard({
     <article
       className={cn(
         "patch-card group overflow-hidden p-0",
-        onOpen && "cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-hot-pink",
+        onOpen && "cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold",
       )}
       style={{ ["--tilt" as string]: tilt }}
       onClick={onOpen}
@@ -74,19 +74,19 @@ export function MomentCard({
       <div className="p-4 sm:p-5">
       <div className="mb-2 flex flex-wrap items-center gap-2">
         {moment.year && (
-          <span className="rounded-sm border border-burgundy/20 bg-blush/40 px-2 py-0.5 font-mono text-xs font-bold text-burgundy">
+          <span className="rounded-sm border border-burgundy/20 bg-gold/10 px-2 py-0.5 font-mono text-xs font-bold text-burgundy">
             {moment.year}
           </span>
         )}
-        <span className="font-script text-lg text-hot-pink capitalize">
+        <span className="font-script text-lg text-gold capitalize">
           {moment.category}
         </span>
       </div>
-      <h3 className="font-serif text-xl font-bold text-burgundy-deep group-hover:text-hot-pink">
+      <h3 className="font-serif text-xl font-bold text-burgundy-deep group-hover:text-gold">
         {moment.title}
       </h3>
       {moment.quote ? (
-        <p className="mt-2 font-serif text-[0.95rem] italic leading-snug text-burgundy/90">
+        <p className="mt-2 font-script text-[0.95rem] leading-snug text-burgundy/90">
           &ldquo;
           {moment.quote.length > 90
             ? `${moment.quote.slice(0, 90)}…`
@@ -99,9 +99,9 @@ export function MomentCard({
         </p>
       )}
       {showHidden && moment.hiddenFact && (
-        <p className="mt-3 border-t-2 border-dashed border-blush/50 pt-3 text-sm italic text-burgundy/65">
+        <p className="mt-3 border-t border-gold/30 pt-3 text-sm italic text-burgundy/65">
           <span className="font-script text-lg not-italic text-gold">
-            between the rhinestones:{" "}
+            liner notes:{" "}
           </span>
           {moment.hiddenFact}
         </p>
@@ -111,7 +111,7 @@ export function MomentCard({
           {moment.tags.slice(0, 2).map((tag) => (
             <span
               key={tag}
-              className="rounded-full border border-blush-deep/30 bg-white/60 px-2.5 py-0.5 text-xs text-burgundy/70"
+              className="rounded-sm border border-gold/30 bg-white/60 px-2.5 py-0.5 text-xs text-burgundy/70"
             >
               {tag}
             </span>
@@ -132,7 +132,7 @@ export function MomentCard({
         ) : null}
         <Link
           href={`/moment/${moment.id}`}
-          className="inline-flex items-center gap-1 font-semibold text-hot-pink transition hover:text-burgundy"
+          className="inline-flex items-center gap-1 font-semibold text-gold transition hover:text-burgundy"
           onClick={(e) => e.stopPropagation()}
         >
           Read more
@@ -198,7 +198,7 @@ export function ChapterSection({
       <div className="mx-auto max-w-6xl">
         <div className="relative mb-12 grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
           <div className="max-w-2xl">
-            <p className="font-script text-2xl text-hot-pink md:text-3xl">
+            <p className="font-script text-2xl text-gold md:text-3xl">
               {accent.label}
             </p>
             <h2 className="font-serif text-3xl font-bold text-burgundy-deep md:text-5xl">

@@ -18,12 +18,12 @@ export function EraGallery({ activeEra = "all", onSelectEra }: EraGalleryProps) 
     <div className="mb-10">
       <div className="mb-4 flex items-end justify-between gap-3">
         <div>
-          <p className="font-script text-2xl text-hot-pink">through the decades</p>
+          <p className="font-script text-2xl text-gold">through the decades</p>
           <h2 className="font-serif text-2xl font-bold text-burgundy-deep">
             Dolly through the years
           </h2>
         </div>
-        <Link href="/images" className="shrink-0 text-xs font-semibold text-hot-pink hover:text-burgundy sm:text-sm">
+        <Link href="/images" className="shrink-0 text-xs font-semibold text-gold hover:text-burgundy sm:text-sm">
           All photo credits →
         </Link>
       </div>
@@ -52,8 +52,8 @@ export function EraGallery({ activeEra = "all", onSelectEra }: EraGalleryProps) 
               onClick={() => onSelectEra?.(isActive ? "all" : era)}
               className={cn(
                 "photo-frame relative min-h-11 aspect-[3/4] overflow-hidden text-left transition",
-                isActive && "ring-2 ring-hot-pink ring-offset-2 ring-offset-cream",
-                !image && "bg-gradient-to-br from-blush/40 to-gold/20",
+                isActive && "ring-2 ring-gold ring-offset-2 ring-offset-cream",
+                !image && "bg-gradient-to-br from-burgundy/80 to-gold/20",
               )}
               aria-pressed={isActive}
             >
