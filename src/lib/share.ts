@@ -45,7 +45,7 @@ export function getChapterShareText(chapterId: Chapter): string {
 }
 
 export function getEraShareText(era: Era): string {
-  return `Dolly in the ${era} — moments, quotes, and stories from the open Dolly Legacy scrapbook.`;
+  return `Dolly in the ${era} — moments, quotes, and stories from the open Dolly Legacy celebration.`;
 }
 
 export function getInstagramCaption(text: string, url: string): string {

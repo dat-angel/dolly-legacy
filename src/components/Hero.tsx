@@ -43,8 +43,8 @@ export function Hero() {
             Songs. Books. Backbone. A cup of ambition.
           </p>
           <p className="mt-5 max-w-lg text-base leading-relaxed text-burgundy/80 sm:text-lg">
-            A scrapbook — the hits, the typewriter, and everyone she stood
-            with. Play the tape. Steal a quote. Remix the open data.
+            An open celebration — the hits, the typewriter, and everyone she
+            stood with. Play the tape. Steal a quote. Remix the data.
           </p>
 
           <div className="mt-8 flex w-full flex-col gap-3 sm:flex-row sm:items-center">
@@ -64,7 +64,7 @@ export function Hero() {
 
           <ShareMenu
             title="Dolly Legacy"
-            text="Songs. Books. Backbone. An open scrapbook of Dolly Parton you can actually share and remix."
+            text="Songs. Books. Backbone. An open celebration of Dolly Parton you can share and remix."
             url={absoluteUrl("/")}
             imageSrc="/images/chapters/music.jpg"
             storySrc="/story-image"

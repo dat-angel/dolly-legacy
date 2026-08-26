@@ -6,7 +6,7 @@ import { dollyButtonClass } from "@/components/ui/DollyButton";
 export const metadata: Metadata = createPageMetadata({
   title: "Page not found",
   description:
-    "This page is not part of Dolly Legacy. Head home or browse the moments scrapbook.",
+    "This page is not part of Dolly Legacy. Head home or browse the moments archive.",
   path: "/404",
   noIndex: true,
 });
@@ -18,7 +18,7 @@ export default function NotFound() {
         Wrong turn, honey
       </h1>
       <p className="mt-4 text-lg text-burgundy/80">
-        That URL isn&apos;t in this scrapbook. Try home, the moments, or the
+        That URL isn&apos;t in this celebration. Try home, the moments, or the
         open data harbor.
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-4">

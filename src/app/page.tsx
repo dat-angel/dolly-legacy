@@ -12,10 +12,10 @@ import { dollyButtonClass } from "@/components/ui/DollyButton";
 import { createPageMetadata } from "@/lib/metadata";
 import { getMomentCount } from "@/lib/moments";
 import { PREVIEW_IMAGES, shareImageUrl } from "@/lib/preview-images";
-import { getSiteDescription } from "@/lib/site";
+import { getSiteDescription, SITE } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "A scrapbook of Dolly Parton",
+  title: SITE.title,
   description: getSiteDescription(),
   path: "/",
   includeStoryImage: false,
@@ -64,7 +64,7 @@ export default function HomePage() {
           for a surprise.
         </p>
         <Link href="/moments" className={dollyButtonClass("primary", "mt-8 w-full sm:w-auto")}>
-          Browse the scrapbook
+          Browse all moments
         </Link>
       </section>
     </>

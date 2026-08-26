@@ -34,7 +34,7 @@ export const SITE = {
 } as const;
 
 export function getSiteDescription(): string {
-  return `A scrapbook of Dolly Parton — ${getMomentCount()} moments, quotes, song and film stories, and the people she stood with. Open CC BY 4.0 data for anyone to use.`;
+  return `An open celebration of Dolly Parton — ${getMomentCount()} moments, quotes, song and film stories, and the people she stood with. CC BY 4.0 data anyone can remix.`;
 }
 
 export function getSiteUrl(): string {

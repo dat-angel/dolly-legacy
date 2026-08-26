@@ -18,7 +18,7 @@ export const PREVIEW_IMAGES = {
 } as const;
 
 /** Bump when replacing share JPGs so link unfurlers (especially LinkedIn) fetch fresh previews. */
-export const SHARE_IMAGE_VERSION = "5";
+export const SHARE_IMAGE_VERSION = "6";
 
 export function shareImageUrl(path: string): string {
   return `${path}?v=${SHARE_IMAGE_VERSION}`;
