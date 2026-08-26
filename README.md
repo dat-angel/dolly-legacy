@@ -2,7 +2,7 @@
 
 A fan celebration of Dolly Parton — her songs, books, backbone, and the people she stood with. The moments database is open (CC BY 4.0) so you can remix quotes, credits, and stories.
 
-**Live:** [dolly-legacy.vercel.app](https://dolly-legacy.vercel.app)
+**Live:** [dollyparton.page](https://dollyparton.page) (also [dolly-legacy.vercel.app](https://dolly-legacy.vercel.app))
 
 ## Features
 

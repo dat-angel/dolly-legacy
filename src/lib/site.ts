@@ -1,6 +1,6 @@
 import { getMomentCount } from "./moments";
 
-export const FALLBACK_SITE_URL = "https://dolly-legacy.vercel.app";
+export const FALLBACK_SITE_URL = "https://dollyparton.page";
 
 export const SITE = {
   name: "Dolly Legacy",
