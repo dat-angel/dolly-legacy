@@ -37,13 +37,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-t border-gold/20 bg-burgundy-deep px-4 py-16 text-center text-cream sm:px-6 md:py-20">
-        <h2 className="font-serif text-3xl font-bold md:text-4xl">
+      <section className="border-t border-burgundy/10 bg-cream px-4 py-16 text-center sm:px-6 md:py-20">
+        <h2 className="font-serif text-3xl font-bold text-burgundy-deep md:text-4xl">
           All 28 moments
         </h2>
-        <p className="mx-auto mt-4 max-w-lg text-cream/75">
+        <p className="mx-auto mt-4 max-w-lg text-burgundy/70">
           Filter by era, category, and theme. Press{" "}
-          <kbd className="border border-gold/40 px-2 py-0.5 font-mono text-xs text-gold">
+          <kbd className="border border-burgundy/20 px-2 py-0.5 font-mono text-xs text-burgundy">
             ?
           </kbd>{" "}
           for a surprise.

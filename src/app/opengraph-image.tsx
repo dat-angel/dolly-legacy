@@ -16,7 +16,7 @@ export default function OpenGraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: `linear-gradient(135deg, ${OG_COLORS.burgundyDeep} 0%, ${OG_COLORS.burgundy} 45%, ${OG_COLORS.hotPink} 100%)`,
+          background: `linear-gradient(135deg, ${OG_COLORS.forest} 0%, ${OG_COLORS.burgundyDeep} 55%, ${OG_COLORS.burgundy} 100%)`,
           color: OG_COLORS.cream,
           padding: "72px",
           fontFamily: "Georgia, serif",

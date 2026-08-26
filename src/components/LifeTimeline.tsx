@@ -240,7 +240,7 @@ export function LifeTimeline() {
                     className={cn(
                       "min-h-10 shrink-0 rounded-sm px-3 font-mono text-xs font-bold uppercase tracking-wide",
                       active
-                        ? "bg-gold text-burgundy-deep"
+                        ? "bg-cream text-burgundy-deep"
                         : "bg-white/10 text-cream/80 hover:bg-white/20",
                     )}
                   >

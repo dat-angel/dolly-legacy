@@ -61,7 +61,7 @@ export function MomentDrawer({ moment, onClose, onSelect }: MomentDrawerProps) {
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: 20, opacity: 0 }}
         transition={{ type: "spring", damping: 25, stiffness: 300 }}
-        className="relative max-h-[92vh] w-full max-w-2xl overflow-y-auto rounded-t-3xl border-4 border-double border-gold/50 bg-cream p-5 pb-[max(1.5rem,env(safe-area-inset-bottom))] shadow-2xl sm:max-h-[85vh] sm:rounded-sm sm:p-8"
+        className="relative max-h-[92vh] w-full max-w-2xl overflow-y-auto rounded-t-sm border border-burgundy/15 bg-cream p-5 pb-[max(1.5rem,env(safe-area-inset-bottom))] shadow-2xl sm:max-h-[85vh] sm:p-8"
         onClick={(e) => e.stopPropagation()}
         role="dialog"
         aria-modal="true"

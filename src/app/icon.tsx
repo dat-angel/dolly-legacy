@@ -14,7 +14,7 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: `linear-gradient(135deg, ${OG_COLORS.hotPink}, ${OG_COLORS.burgundy})`,
+          background: `linear-gradient(135deg, ${OG_COLORS.forest}, ${OG_COLORS.burgundy})`,
           color: OG_COLORS.cream,
           fontSize: 18,
           fontWeight: 700,

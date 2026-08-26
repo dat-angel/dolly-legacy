@@ -26,7 +26,7 @@ export default async function Image({
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: `linear-gradient(145deg, ${OG_COLORS.burgundyDeep}, ${OG_COLORS.burgundy} 55%, ${OG_COLORS.hotPink})`,
+          background: `linear-gradient(145deg, ${OG_COLORS.forest}, ${OG_COLORS.burgundyDeep} 55%, ${OG_COLORS.burgundy})`,
           color: OG_COLORS.cream,
           padding: "64px",
           fontFamily: "Georgia, serif",

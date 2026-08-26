@@ -2,10 +2,10 @@ import { cn } from "@/lib/utils";
 
 const variants = {
   primary:
-    "bg-gold text-burgundy-deep hover:bg-gold-light",
+    "bg-burgundy text-cream hover:bg-burgundy-deep",
   secondary:
-    "border border-gold/50 bg-transparent text-burgundy hover:border-gold hover:bg-gold/10",
-  ghost: "text-burgundy hover:text-gold underline-offset-4 hover:underline",
+    "border border-burgundy/30 bg-transparent text-burgundy hover:border-burgundy hover:bg-burgundy/5",
+  ghost: "text-burgundy hover:text-forest underline-offset-4 hover:underline",
 };
 
 export function dollyButtonClass(

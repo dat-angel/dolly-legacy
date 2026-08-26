@@ -22,7 +22,7 @@ export function StoryCardMarkup({
         height: "100%",
         display: "flex",
         flexDirection: "column",
-        background: `linear-gradient(180deg, ${OG_COLORS.burgundyDeep} 0%, ${OG_COLORS.burgundy} 55%, ${OG_COLORS.hotPink} 100%)`,
+        background: `linear-gradient(180deg, ${OG_COLORS.forest} 0%, ${OG_COLORS.burgundyDeep} 55%, ${OG_COLORS.burgundy} 100%)`,
         color: OG_COLORS.cream,
         fontFamily: "Georgia, serif",
       }}

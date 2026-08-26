@@ -28,8 +28,8 @@ export const SITE = {
   creator: "Dolly Legacy contributors",
   repository: "https://github.com/dat-angel/dolly-legacy",
   locale: "en_US",
-  themeColor: "#0c0b09",
-  backgroundColor: "#f4efe6",
+  themeColor: "#2c4034",
+  backgroundColor: "#f6f1e4",
 } as const;
 
 export function getSiteUrl(): string {

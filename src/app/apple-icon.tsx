@@ -17,7 +17,7 @@ export default function AppleIcon() {
           alignItems: "center",
           justifyContent: "center",
           gap: 8,
-          background: `linear-gradient(160deg, ${OG_COLORS.burgundyDeep}, ${OG_COLORS.hotPink})`,
+          background: `linear-gradient(160deg, ${OG_COLORS.forest}, ${OG_COLORS.burgundyDeep})`,
           color: OG_COLORS.cream,
           fontFamily: "Georgia, serif",
         }}
