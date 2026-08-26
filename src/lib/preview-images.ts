@@ -1,3 +1,6 @@
+/** LinkedIn/Facebook recommended landscape OG size (1.91:1). */
+export const SHARE_IMAGE_SIZE = { width: 1200, height: 630 } as const;
+
 /** Social preview photos — swap variants in opengraph-image routes. */
 export const PREVIEW_IMAGES = {
   literacy: {
@@ -14,8 +17,8 @@ export const PREVIEW_IMAGES = {
   },
 } as const;
 
-/** Bump when replacing share JPGs so link unfurlers fetch fresh previews. */
-export const SHARE_IMAGE_VERSION = "2";
+/** Bump when replacing share JPGs so link unfurlers (especially LinkedIn) fetch fresh previews. */
+export const SHARE_IMAGE_VERSION = "3";
 
 export function shareImageUrl(path: string): string {
   return `${path}?v=${SHARE_IMAGE_VERSION}`;

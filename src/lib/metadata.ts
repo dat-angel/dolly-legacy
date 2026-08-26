@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { absoluteUrl, SITE } from "./site";
-import { PREVIEW_IMAGES, shareImageUrl } from "./preview-images";
+import { PREVIEW_IMAGES, SHARE_IMAGE_SIZE, shareImageUrl } from "./preview-images";
 
 type OgType = "website" | "article";
 
@@ -41,12 +41,19 @@ export function createPageMetadata({
   );
   const landscapeAlt = image?.alt ?? title;
 
-  const ogImages = [
+  const ogImages: Array<{
+    url: string;
+    width: number;
+    height: number;
+    alt: string;
+    type?: string;
+  }> = [
     {
       url: landscapeUrl,
-      width: 1200,
-      height: 630,
+      width: SHARE_IMAGE_SIZE.width,
+      height: SHARE_IMAGE_SIZE.height,
       alt: landscapeAlt,
+      type: "image/jpeg",
     },
   ];
 
