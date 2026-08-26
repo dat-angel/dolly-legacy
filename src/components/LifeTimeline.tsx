@@ -1,9 +1,8 @@
 "use client";
 
-import { useCallback, useEffect, useId, useRef, useState } from "react";
+import { useCallback, useEffect, useId, useRef, useState, useSyncExternalStore } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { LIFE_STAGES } from "@/lib/dolly-say";
 import { getEraImage, getMomentImage } from "@/lib/images";
@@ -41,12 +40,21 @@ function indexFromParams(params: { get(name: string): string | null }): number {
   return 0;
 }
 
+function subscribeToSearch(onChange: () => void) {
+  window.addEventListener("popstate", onChange);
+  return () => window.removeEventListener("popstate", onChange);
+}
+
 export function LifeTimeline() {
   const sliderId = useId();
   const reduceMotion = useReducedMotion();
-  const searchParams = useSearchParams();
+  const search = useSyncExternalStore(
+    subscribeToSearch,
+    () => window.location.search,
+    () => "",
+  );
   const { setEra, openDock } = useDollyChat();
-  const urlIndex = indexFromParams(searchParams);
+  const urlIndex = indexFromParams(new URLSearchParams(search));
   const [userIndex, setUserIndex] = useState<number | null>(null);
   const [playing, setPlaying] = useState(false);
   const [selected, setSelected] = useState<Moment | null>(null);

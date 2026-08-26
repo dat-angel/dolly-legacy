@@ -30,9 +30,7 @@ export default function HomePage() {
       </Suspense>
       <Hero />
       <StatsStrip />
-      <Suspense fallback={<section id="life" className="min-h-[100svh] bg-burgundy-deep" />}>
-        <LifeTimeline />
-      </Suspense>
+      <LifeTimeline />
 
       <section className="section-warm px-4 py-12 sm:px-6 md:py-24">
         <div className="mx-auto max-w-4xl">
