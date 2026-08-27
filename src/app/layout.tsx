@@ -10,7 +10,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { getRootMetadata } from "@/lib/root-metadata";
-import { absoluteUrl, getSiteDescription, SITE } from "@/lib/site";
+import { absoluteUrl, AUTHOR, getSiteDescription, SITE } from "@/lib/site";
 import "./globals.css";
 
 const libreBaskerville = Libre_Baskerville({
@@ -55,6 +55,12 @@ const websiteJsonLd = {
     "@type": "Organization",
     name: SITE.name,
     url: absoluteUrl("/"),
+  },
+  author: {
+    "@type": "Person",
+    name: AUTHOR.name,
+    url: AUTHOR.site,
+    sameAs: [AUTHOR.linkedin, AUTHOR.github],
   },
 };
 

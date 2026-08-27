@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { absoluteUrl, SITE } from "./site";
+import { absoluteUrl, AUTHOR, SITE } from "./site";
 import { PREVIEW_IMAGES, SHARE_IMAGE_SIZE, shareImageUrl } from "./preview-images";
 
 type OgType = "website" | "article";
@@ -70,8 +70,11 @@ export function createPageMetadata({
     title,
     description,
     keywords: mergedKeywords,
-    authors: [{ name: SITE.creator, url: SITE.repository }],
-    creator: SITE.creator,
+    authors: [
+      { name: AUTHOR.name, url: AUTHOR.site },
+      { name: SITE.creator, url: SITE.repository },
+    ],
+    creator: AUTHOR.name,
     publisher: SITE.name,
     category: "entertainment",
     alternates: {

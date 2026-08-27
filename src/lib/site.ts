@@ -3,6 +3,15 @@ import { getMomentCount } from "./moments";
 export const FALLBACK_SITE_URL = "https://www.dollyparton.page";
 export const CANONICAL_SITE_URL = "https://www.dollyparton.page";
 
+export const AUTHOR = {
+  name: "Beatriz",
+  linkedin: "https://www.linkedin.com/in/bzdata",
+  site: "https://beatriz.page",
+  siteLabel: "Beatriz.page",
+  github: "https://github.com/dat-angel",
+  githubHandle: "dat-angel",
+} as const;
+
 export const SITE = {
   name: "Dolly Legacy",
   title: "Dolly Legacy — A celebration of Dolly Parton",
