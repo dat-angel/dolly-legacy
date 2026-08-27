@@ -46,6 +46,15 @@ export function SiteFooter() {
           >
             {AUTHOR.siteLabel}
           </a>
+          {" · "}
+          <a
+            href={AUTHOR.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-burgundy hover:text-burgundy-deep"
+          >
+            {AUTHOR.githubHandle}
+          </a>
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm font-medium">
           <Link href="/moments" className="text-burgundy hover:text-burgundy-deep">

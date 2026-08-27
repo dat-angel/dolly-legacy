@@ -60,7 +60,7 @@ const websiteJsonLd = {
     "@type": "Person",
     name: AUTHOR.name,
     url: AUTHOR.site,
-    sameAs: [AUTHOR.linkedin],
+    sameAs: [AUTHOR.linkedin, AUTHOR.github],
   },
 };
 

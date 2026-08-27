@@ -8,6 +8,8 @@ export const AUTHOR = {
   linkedin: "https://www.linkedin.com/in/bzdata",
   site: "https://beatriz.page",
   siteLabel: "Beatriz.page",
+  github: "https://github.com/dat-angel",
+  githubHandle: "dat-angel",
 } as const;
 
 export const SITE = {
