@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AUTHOR } from "@/lib/site";
 
 export function SiteFooter() {
   return (
@@ -24,6 +25,26 @@ export function SiteFooter() {
             className="text-burgundy hover:text-burgundy-deep"
           >
             CC BY 4.0
+          </a>
+        </p>
+        <p className="mt-3 text-xs text-burgundy/50">
+          Written by{" "}
+          <a
+            href={AUTHOR.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-burgundy hover:text-burgundy-deep"
+          >
+            {AUTHOR.name}
+          </a>{" "}
+          at{" "}
+          <a
+            href={AUTHOR.site}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-burgundy hover:text-burgundy-deep"
+          >
+            {AUTHOR.siteLabel}
           </a>
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm font-medium">
